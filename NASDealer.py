@@ -3,6 +3,9 @@ import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from bs4 import NavigableString
+import pickle
+import copy
+
 
 class NASDealer:
     def __init__(self):
@@ -10,8 +13,14 @@ class NASDealer:
                                      "Chrome/64.0.3282.119 Safari/537.36"}
         self.is_debug = True
         self.page_prefix = "http://www.nasonline.org/member-directory/"
+        self.interval_time = 5
+        self.timeout = 20
         self.prf_list = []
         pass
+
+    def temp_dump(self):
+        with open("lastget.bin", "wb") as f1:
+            pickle.dump(self.prf_list, f1)
 
     def logger(self, words, debug=False):
         if debug is True:
@@ -24,11 +33,12 @@ class NASDealer:
     def get_soup(self, url):
         req = urllib2.Request(url, headers=self.header)
         try:
-            response = urllib2.urlopen(req)
+            response = urllib2.urlopen(req, timeout=self.timeout)
         except urllib2.HTTPError, e:
             print e.code
         except urllib2.URLError, e:
             print e.reason
+            return None
         soup = BeautifulSoup(response.read(), "lxml")
         return soup
 
@@ -37,6 +47,9 @@ class NASDealer:
         Give it a url and it'll return a dictionary which tells all info you want.
         """
         soup = self.get_soup(url)
+        if soup is None:
+            self.logger("Gotta Null soup, game stopped.")
+            return 0
         res = {}
 
         # professor's name
@@ -105,6 +118,8 @@ class NASDealer:
                 _complete_text.append(_interest)
             res['interest'] = "".join(_complete_text)
             self.logger(res['interest'], True)
+
+        self.prf_list.append(copy.deepcopy(res))
         return res
 
     def one_page(self, url):
@@ -114,8 +129,8 @@ class NASDealer:
         soup = BeautifulSoup(url, "lxml")
         for tag in soup.find_all("a", ctype="c"):
             print tag['href']
-            self.prf_list.append(self.one_professor(tag['href']))
-            time.sleep(2)
+            self.one_professor(tag['href'])
+            time.sleep(self.interval_time)
         print len(self.prf_list)
 
     def page_router(self, url):
@@ -127,7 +142,14 @@ class NASDealer:
             self.logger("No more Next.")
         while elem is not None:
             self.logger("Once next page.", True)
-            self.one_page(browser.page_source)
+            try:
+                self.one_page(browser.page_source)
+            except BaseException, e:
+                self.logger("Now We Occur to a Exception, you can have the url when it broke down. Error message:")
+                print e.message
+                print browser.current_url
+                return 0
+            self.temp_dump()
             elem.click()
             try:
                 elem = browser.find_element_by_xpath("//*[@ctype=\"nav.next\"]")
@@ -136,6 +158,11 @@ class NASDealer:
                 browser.quit()
                 return
 
+    def continue_from_point(self, url):
+        with open("lastget.bin", "rb") as f:
+            _temp_list = pickle.load(f)
+            self.prf_list = copy.deepcopy(_temp_list)
+        self.page_router(url)
 
     @staticmethod
     def only_one_space(src_str):
@@ -145,7 +172,13 @@ class NASDealer:
 
 if __name__ == '__main__':
     nasd = NASDealer()
-    # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041821.html")
+    # nasd.one_professor("http://www.nasonline.org/member-directory/members/56129.html")
     # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041739.html")
     # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041763.html")
-    nasd.page_router("http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=(member_electionyear:2017)")
+    # nasd.page_router("http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=(member_electionyear:2009|member_electionyear:2008|member_electionyear:2007|member_electionyear:2006|member_electionyear:2005|member_electionyear:2004|member_electionyear:2003|member_electionyear:2002|member_electionyear:2001|member_electionyear:2000)")
+    # nasd.temp_dump()
+    nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&access=p&entqr=3&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&ie=UTF-8&ip=144.171.1.33&num=15&oe=UTF-8&requiredfields=(member_electionyear:2009%7Cmember_electionyear:2008%7Cmember_electionyear:2007%7Cmember_electionyear:2006%7Cmember_electionyear:2005%7Cmember_electionyear:2004%7Cmember_electionyear:2003%7Cmember_electionyear:2002%7Cmember_electionyear:2001%7Cmember_electionyear:2000)&sort=meta:metadata_sort&ud=1&ulang=&entqrm=0&wc=200&wc_mc=1&jsonp=jsonp1517075808140&start=720")
+
+    # with open("lastget.bin", "rb") as f:
+    #     a2 = pickle.load(f)
+    #     print a2
