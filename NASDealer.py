@@ -15,11 +15,13 @@ class NASDealer:
         self.page_prefix = "http://www.nasonline.org/member-directory/"
         self.interval_time = 5
         self.timeout = 20
+        self.request_prefix = "http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=("
+        self.tmp_save_name = "lastget.bin"
         self.prf_list = []
         pass
 
     def temp_dump(self):
-        with open("lastget.bin", "wb") as f1:
+        with open(self.tmp_save_name, "wb") as f1:
             pickle.dump(self.prf_list, f1)
 
     def logger(self, words, debug=False):
@@ -37,8 +39,12 @@ class NASDealer:
         except urllib2.HTTPError, e:
             print e.code
         except urllib2.URLError, e:
-            print e.reason
-            return None
+            self.logger("We got a ERROR named: " + e.reason + ", and now we'll take another chance.")
+            try:
+                response = urllib2.urlopen(req, timeout=self.timeout + 10)
+            except urllib2.URLError, e:
+                self.logger("We tried twice, but failed neither. Reason: " + e.reason)
+                return
         soup = BeautifulSoup(response.read(), "lxml")
         return soup
 
@@ -157,12 +163,31 @@ class NASDealer:
                 self.logger("No more Next.")
                 browser.quit()
                 return
+            finally:
+                self.temp_dump()
 
     def continue_from_point(self, url):
-        with open("lastget.bin", "rb") as f:
+        with open(self.tmp_save_name, "rb") as f:
             _temp_list = pickle.load(f)
             self.prf_list = copy.deepcopy(_temp_list)
         self.page_router(url)
+
+    def get_start_by_year(self, start, end):
+        _url = self.request_prefix
+        if start == end:
+            _url += "member_electionyear:" + str(start) +")"
+        elif start > end:
+            self.get_start_by_year(end, start)
+        else:
+            _i = start
+            while _i != end:
+                _url += "member_electionyear:" + str(_i) + "|"
+                _i += 1
+            _url += "member_electionyear:" + str(_i) + ")"
+        self.logger("url: " + _url, True)
+        return _url
+
+
 
     @staticmethod
     def only_one_space(src_str):
@@ -177,8 +202,8 @@ if __name__ == '__main__':
     # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041763.html")
     # nasd.page_router("http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=(member_electionyear:2009|member_electionyear:2008|member_electionyear:2007|member_electionyear:2006|member_electionyear:2005|member_electionyear:2004|member_electionyear:2003|member_electionyear:2002|member_electionyear:2001|member_electionyear:2000)")
     # nasd.temp_dump()
-    nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&access=p&entqr=3&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&ie=UTF-8&ip=144.171.1.33&num=15&oe=UTF-8&requiredfields=(member_electionyear:2009%7Cmember_electionyear:2008%7Cmember_electionyear:2007%7Cmember_electionyear:2006%7Cmember_electionyear:2005%7Cmember_electionyear:2004%7Cmember_electionyear:2003%7Cmember_electionyear:2002%7Cmember_electionyear:2001%7Cmember_electionyear:2000)&sort=meta:metadata_sort&ud=1&ulang=&entqrm=0&wc=200&wc_mc=1&jsonp=jsonp1517075808140&start=720")
-
+    # nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&access=p&entqr=3&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&ie=UTF-8&ip=144.171.1.33&num=15&oe=UTF-8&requiredfields=(member_electionyear:2009%7Cmember_electionyear:2008%7Cmember_electionyear:2007%7Cmember_electionyear:2006%7Cmember_electionyear:2005%7Cmember_electionyear:2004%7Cmember_electionyear:2003%7Cmember_electionyear:2002%7Cmember_electionyear:2001%7Cmember_electionyear:2000)&sort=meta:metadata_sort&ud=1&ulang=&entqrm=0&wc=200&wc_mc=1&jsonp=jsonp1517075808140&start=720")
+    nasd.page_router(nasd.get_start_by_year(2000, 2009))
     # with open("lastget.bin", "rb") as f:
     #     a2 = pickle.load(f)
     #     print a2

@@ -10,5 +10,6 @@ class NAEDealer(NASD):
 if __name__ == '__main__':
     nae = NAEDealer()
     nae.logger("no")
-    soup = nae.get_soup("https://www.nae.edu/MembersSection/MemberDirectory/30595.aspx")
+    # soup = nae.get_soup("https://www.nae.edu/MembersSection/MemberDirectory/30595.aspx")
+    soup = nae.get_soup("https://www.nae.edu/MembersSection/MemberDirectory.aspx")
     print soup.prettify()
