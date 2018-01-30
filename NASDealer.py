@@ -11,7 +11,7 @@ class NASDealer:
     def __init__(self):
         self.header = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                                      "Chrome/64.0.3282.119 Safari/537.36"}
-        self.is_debug = True
+        self.is_debug = False
         self.page_prefix = "http://www.nasonline.org/member-directory/"
         self.interval_time = 5
         self.timeout = 40
@@ -21,6 +21,7 @@ class NASDealer:
         self.nas_page_list = []
         self.nas_page_list_save_name = "nas_pl.tmp"
         self.url_list = None
+        self.failed_list = []
         pass
 
     def temp_dump(self):
@@ -228,12 +229,32 @@ class NASDealer:
             print len(a1)
         self.url_list = copy.deepcopy(a1)
 
+    def crawl_from_url_list(self, filename, limit=-1):
+        with open(filename, "rb") as f:
+            self.url_list = pickle.load(f)
+        print len(self.url_list)
+        for i in range(len(self.url_list)):
+            if limit > 0:
+                limit -= 1
+            if limit == 0:
+                break
+            time.sleep(2)
+            try:
+                self.one_professor(self.url_list[i])
+            except BaseException, e:
+                self.logger("Now we get a EXCEPTION: " + e.message + ", we skip it and add it to a failed list.")
+                self.failed_list.append(self.url_list[i])
+                self.save_obj(self.failed_list, "nas_failed_list.url")
+            print i, '/', len(self.url_list)
+            if i % 15 == 0:
+                self.logger("At i = " + str(i) + ", we save once.")
+                self.save_obj(self.prf_list, "nas.bin")
 
     @staticmethod
     def only_one_space(src_str):
         return src_str.strip()
 
-
+    
 
 if __name__ == '__main__':
     nasd = NASDealer()
@@ -248,6 +269,7 @@ if __name__ == '__main__':
     # with open("lastget.bin", "rb") as f:
     #     a2 = pickle.load(f)
     #     print a2
-    nasd.merge_list()
-    nasd.save_obj(nasd.url_list, "nas_pl.tmp")
-    print len(nasd.url_list)
+    # nasd.merge_list()
+    # nasd.save_obj(nasd.url_list, "nas_pl.tmp")
+    # print len(nasd.url_list)
+    nasd.crawl_from_url_list("nas_pl.tmp")
