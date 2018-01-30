@@ -1,8 +1,7 @@
 from NASDealer import NASDealer as NASD
-import NASDealer
 from selenium import webdriver
 from bs4 import BeautifulSoup
-import bs4
+import copy
 import pickle
 
 
@@ -22,7 +21,6 @@ class NAEDealer(NASD, object):
         else:
             with open("pagelist.tmp", "a") as f:
                 pickle.dump(self.page_list, f)
-
 
     def one_professor(self, url):
         soup = self.get_soup(url)
@@ -49,14 +47,18 @@ class NAEDealer(NASD, object):
                         _ans = self.only_one_space(tags.string)
                 res[_key] = _ans
 
-        for __tag in soup.find_all("div", class_="sectionBox"):
-            for _tag in __tag.find_all("div", class_="content-box"):
-                for tag in _tag.find_all("div", class_="description"):
-                    print 'h', tag
-
+        for __tag in soup.find_all("div", class_="content-box"):
+            for e in __tag.children:
+                if e.name == "div" and e['class'][0] == "description":
+                    if e.string is not None:
+                        res['citation'] = self.only_one_space(e.string)
 
         for k in res:
-            print k, res[k]
+            print k, ' : ', res[k]
+        print '-------------------'
+
+        self.prf_list.append(copy.deepcopy(res))
+        return
 
 
     def page_router(self, url, xpath="//*[@title=\"Next Page\"]"):
@@ -69,6 +71,10 @@ class NAEDealer(NASD, object):
             elem = browser.find_element_by_xpath(xpath)
         except BaseException:
             self.logger("No more Next.")
+            self.one_page(browser.page_source)
+            self.save_obj(self.page_list, self.page_list_save_name)
+            browser.quit()
+            return
         while elem is not None:
             self.logger("Once next page.", True)
             try:
@@ -104,6 +110,18 @@ class NAEDealer(NASD, object):
         self.store_page_list()
         print len(self.page_list)
 
+    def crawl_from_url_list(self, filename, limit=-1):
+        with open(filename, "rb") as f:
+            url_list = pickle.load(f)
+        print len(url_list)
+        for i in range(len(url_list)):
+            if limit > 0:
+                limit -= 1
+            if limit == 0:
+                break
+            self.one_professor(self.page_prefix + url_list[i])
+            print i, '/', len(url_list)
+
 
 if __name__ == '__main__':
     nae = NAEDealer()
@@ -112,4 +130,5 @@ if __name__ == '__main__':
     # soup = nae.get_soup("https://www.nae.edu/MembersSection/MemberDirectory.aspx")
     # print soup.prettify()
     # nae.page_router(nae.mem_dir_page)
-    nae.one_professor("https://www.nae.edu/MembersSection/MemberDirectory/30265.aspx")
+    # nae.one_professor("https://www.nae.edu/MembersSection/MemberDirectory/30265.aspx")
+    nae.crawl_from_url_list("nae_pl.tmp", 20)

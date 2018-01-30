@@ -20,6 +20,7 @@ class NASDealer:
         self.prf_list = []
         self.nas_page_list = []
         self.nas_page_list_save_name = "nas_pl.tmp"
+        self.url_list = None
         pass
 
     def temp_dump(self):
@@ -131,6 +132,10 @@ class NASDealer:
             res['interest'] = "".join(_complete_text)
             self.logger(res['interest'], True)
 
+        for k in res:
+            print k, ': ', res[k]
+        print '--------------------'
+
         self.prf_list.append(copy.deepcopy(res))
         return res
 
@@ -205,6 +210,23 @@ class NASDealer:
         self.logger("url: " + _url, True)
         return _url
 
+    def merge_list(self):
+        with open("./nas_pl/nas_1958-.tmp", "rb") as f:
+            a1 = pickle.load(f)
+            print len(a1)
+        with open("./nas_pl/nas_1958-1987.tmp", "rb") as f:
+            a1 += pickle.load(f)
+            print len(a1)
+        with open("./nas_pl/nas_1988-1997.tmp", "rb") as f:
+            a1 += pickle.load(f)
+            print len(a1)
+        with open("./nas_pl/nas_1998-2007.tmp", "rb") as f:
+            a1 += pickle.load(f)
+            print len(a1)
+        with open("./nas_pl/nas_2007-2018.tmp", "rb") as f:
+            a1 += pickle.load(f)
+            print len(a1)
+        self.url_list = copy.deepcopy(a1)
 
 
     @staticmethod
@@ -221,8 +243,11 @@ if __name__ == '__main__':
     # nasd.page_router("http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=(member_electionyear:2009|member_electionyear:2008|member_electionyear:2007|member_electionyear:2006|member_electionyear:2005|member_electionyear:2004|member_electionyear:2003|member_electionyear:2002|member_electionyear:2001|member_electionyear:2000)")
     # nasd.temp_dump()
     # nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&num=15&requiredfields=(member_electionyear:1968%7Cmember_electionyear:1969%7Cmember_electionyear:1970%7Cmember_electionyear:1971%7Cmember_electionyear:1972%7Cmember_electionyear:1973%7Cmember_electionyear:1974%7Cmember_electionyear:1975%7Cmember_electionyear:1976%7Cmember_electionyear:1977%7Cmember_electionyear:1978%7Cmember_electionyear:1979%7Cmember_electionyear:1980%7Cmember_electionyear:1981%7Cmember_electionyear:1982%7Cmember_electionyear:1983%7Cmember_electionyear:1984%7Cmember_electionyear:1985%7Cmember_electionyear:1986%7Cmember_electionyear:1987)&sort=meta:metadata_sort&jsonp=jsonp1517312357704&oe=UTF-8&ie=UTF-8&ulang=&ip=144.171.1.33&access=p&entqr=3&entqrm=0&wc=200&wc_mc=1&ud=1&start=15")
-    nasd.page_router(nasd.get_start_by_year(2008, 2018))
-    nasd.save_obj(nasd.nas_page_list, nasd.nas_page_list_save_name)
+    # nasd.page_router(nasd.get_start_by_year(2008, 2018))
+    # nasd.save_obj(nasd.nas_page_list, nasd.nas_page_list_save_name)
     # with open("lastget.bin", "rb") as f:
     #     a2 = pickle.load(f)
     #     print a2
+    nasd.merge_list()
+    nasd.save_obj(nasd.url_list, "nas_pl.tmp")
+    print len(nasd.url_list)
