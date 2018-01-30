@@ -43,5 +43,5 @@ class ExcelWriter:
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("1988-2018NAS.bin")
-    ew.write_excel("NAS1988-2018.xls")
+    ew = ExcelWriter("nae.bin")
+    ew.write_excel("nae.xls")
