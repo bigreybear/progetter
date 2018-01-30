@@ -3,6 +3,7 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import copy
 import pickle
+import time
 
 
 class NAEDealer(NASD, object):
@@ -112,15 +113,24 @@ class NAEDealer(NASD, object):
 
     def crawl_from_url_list(self, filename, limit=-1):
         with open(filename, "rb") as f:
-            url_list = pickle.load(f)
-        print len(url_list)
-        for i in range(len(url_list)):
+            self.url_list = pickle.load(f)
+        print len(self.url_list)
+        for i in range(len(self.url_list)):
             if limit > 0:
                 limit -= 1
             if limit == 0:
                 break
-            self.one_professor(self.page_prefix + url_list[i])
-            print i, '/', len(url_list)
+            time.sleep(2)
+            try:
+                self.one_professor(self.page_prefix + self.url_list[i])
+            except BaseException, e:
+                self.logger("Now we get a EXCEPTION: " + e.message + ", we skip it and add it to a failed list.")
+                self.failed_list.append(self.url_list[i])
+                self.save_obj(self.failed_list, "nae_failed_list.url")
+            print i, '/', len(self.url_list)
+            if i % 15 == 0:
+                self.logger("At i = " + str(i) + ", we save once.")
+                self.save_obj(self.prf_list, "nae.bin")
 
 
 if __name__ == '__main__':
@@ -131,4 +141,4 @@ if __name__ == '__main__':
     # print soup.prettify()
     # nae.page_router(nae.mem_dir_page)
     # nae.one_professor("https://www.nae.edu/MembersSection/MemberDirectory/30265.aspx")
-    nae.crawl_from_url_list("nae_pl.tmp", 20)
+    nae.crawl_from_url_list("nae_pl.tmp")
