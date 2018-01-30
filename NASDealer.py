@@ -14,15 +14,21 @@ class NASDealer:
         self.is_debug = True
         self.page_prefix = "http://www.nasonline.org/member-directory/"
         self.interval_time = 5
-        self.timeout = 20
+        self.timeout = 40
         self.request_prefix = "http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=("
         self.tmp_save_name = "lastget.bin"
         self.prf_list = []
+        self.nas_page_list = []
+        self.nas_page_list_save_name = "nas_pl.tmp"
         pass
 
     def temp_dump(self):
         with open(self.tmp_save_name, "wb") as f1:
             pickle.dump(self.prf_list, f1)
+
+    def save_obj(self, obj, filename):
+        with open(filename, "wb") as f:
+            pickle.dump(obj, f)
 
     def logger(self, words, debug=False):
         if debug is True:
@@ -135,17 +141,23 @@ class NASDealer:
         soup = BeautifulSoup(url, "lxml")
         for tag in soup.find_all("a", ctype="c"):
             print tag['href']
-            self.one_professor(tag['href'])
-            time.sleep(self.interval_time)
-        print len(self.prf_list)
+            self.nas_page_list.append(tag['href'])
+            # self.one_professor(tag['href'])
+            # time.sleep(self.interval_time)
+        # self.save_obj(self.nas_page_list, "nas_pl.tmp")
+        print len(self.nas_page_list)
 
-    def page_router(self, url):
+    def page_router(self, url, xpath="//*[@ctype=\"nav.next\"]"):
         browser = webdriver.Chrome()
         browser.get(url)
         try:
-            elem = browser.find_element_by_xpath("//*[@ctype=\"nav.next\"]")
+            elem = browser.find_element_by_xpath(xpath)
         except BaseException :
             self.logger("No more Next.")
+            self.one_page(browser.page_source)
+            self.save_obj(self.nas_page_list, self.nas_page_list_save_name)
+            browser.quit()
+            return
         while elem is not None:
             self.logger("Once next page.", True)
             try:
@@ -153,18 +165,24 @@ class NASDealer:
             except BaseException, e:
                 self.logger("Now We Occur to a Exception, you can have the url when it broke down. Error message:")
                 print e.message
+                print e.args
                 print browser.current_url
                 return 0
             self.temp_dump()
             elem.click()
             try:
-                elem = browser.find_element_by_xpath("//*[@ctype=\"nav.next\"]")
-            except BaseException:
+                elem = browser.find_element_by_xpath(xpath)
+            except BaseException, e:
+                self.one_page(browser.page_source)
                 self.logger("No more Next.")
+                print e.message
                 browser.quit()
-                return
+                self.save_obj(self.nas_page_list, self.nas_page_list_save_name)
+                break
             finally:
-                self.temp_dump()
+                self.save_obj(self.nas_page_list, self.nas_page_list_save_name)
+
+        return
 
     def continue_from_point(self, url):
         with open(self.tmp_save_name, "rb") as f:
@@ -197,13 +215,14 @@ class NASDealer:
 
 if __name__ == '__main__':
     nasd = NASDealer()
-    # nasd.one_professor("http://www.nasonline.org/member-directory/members/56129.html")
-    # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041739.html")
+    # nasd.one_professor("http://www.nasonline.org/member-directory/members/47100.html")
+    # nasd.one_professor("http://www.nasonline.org/member-directory/members/58107.html")
     # nasd.one_professor("http://www.nasonline.org/member-directory/members/20041763.html")
     # nasd.page_router("http://www.nasonline.org/member-directory/?q=&site=nas_members&requiredfields=(member_electionyear:2009|member_electionyear:2008|member_electionyear:2007|member_electionyear:2006|member_electionyear:2005|member_electionyear:2004|member_electionyear:2003|member_electionyear:2002|member_electionyear:2001|member_electionyear:2000)")
     # nasd.temp_dump()
-    # nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&access=p&entqr=3&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&ie=UTF-8&ip=144.171.1.33&num=15&oe=UTF-8&requiredfields=(member_electionyear:2009%7Cmember_electionyear:2008%7Cmember_electionyear:2007%7Cmember_electionyear:2006%7Cmember_electionyear:2005%7Cmember_electionyear:2004%7Cmember_electionyear:2003%7Cmember_electionyear:2002%7Cmember_electionyear:2001%7Cmember_electionyear:2000)&sort=meta:metadata_sort&ud=1&ulang=&entqrm=0&wc=200&wc_mc=1&jsonp=jsonp1517075808140&start=720")
-    nasd.page_router(nasd.get_start_by_year(2000, 2009))
+    # nasd.continue_from_point("http://www.nasonline.org/member-directory/?q=&site=nas_members&client=nas_members&proxystylesheet=nas_members&output=xml_no_dtd&filter=0&GSAhost=search.nationalacademies.org&unitsite=nas_members&unitname=NAS+Member+Directory&theme=gray&requestencoding=utf-8&s=&getfields=member_institution.member_section.member_secondary.member_fullname.member_lastname.member_firstname.member_date_of_birth.member_date_of_death.member_photopath&num=15&requiredfields=(member_electionyear:1968%7Cmember_electionyear:1969%7Cmember_electionyear:1970%7Cmember_electionyear:1971%7Cmember_electionyear:1972%7Cmember_electionyear:1973%7Cmember_electionyear:1974%7Cmember_electionyear:1975%7Cmember_electionyear:1976%7Cmember_electionyear:1977%7Cmember_electionyear:1978%7Cmember_electionyear:1979%7Cmember_electionyear:1980%7Cmember_electionyear:1981%7Cmember_electionyear:1982%7Cmember_electionyear:1983%7Cmember_electionyear:1984%7Cmember_electionyear:1985%7Cmember_electionyear:1986%7Cmember_electionyear:1987)&sort=meta:metadata_sort&jsonp=jsonp1517312357704&oe=UTF-8&ie=UTF-8&ulang=&ip=144.171.1.33&access=p&entqr=3&entqrm=0&wc=200&wc_mc=1&ud=1&start=15")
+    nasd.page_router(nasd.get_start_by_year(2008, 2018))
+    nasd.save_obj(nasd.nas_page_list, nasd.nas_page_list_save_name)
     # with open("lastget.bin", "rb") as f:
     #     a2 = pickle.load(f)
     #     print a2
