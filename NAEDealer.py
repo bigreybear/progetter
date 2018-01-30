@@ -112,7 +112,7 @@ class NAEDealer(NASD, object):
         print len(self.page_list)
 
     def crawl_from_url_list(self, filename, limit=-1):
-        with open(filename, "rb") as f:
+        with open(filename, "r") as f:
             self.url_list = pickle.load(f)
         print len(self.url_list)
         for i in range(len(self.url_list)):
