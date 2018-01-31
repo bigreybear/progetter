@@ -120,7 +120,7 @@ class NAEDealer(NASD, object):
                 limit -= 1
             if limit == 0:
                 break
-            time.sleep(2)
+            time.sleep(1)
             try:
                 self.one_professor(self.page_prefix + self.url_list[i])
             except BaseException, e:
