@@ -6,13 +6,14 @@ import pickle
 import time
 
 
+
 class NAEDealer(NASD, object):
     def __init__(self):
         NASD.__init__(self)
-        self.mem_dir_page = "https://www.nae.edu/MembersSection/MemberDirectory.aspx"
+        self.mem_dir_page = "https://www.nae.edu/MembersSection/MemberDirectory.aspx?id=20412"
         self.page_list = []  # url of target list
         self.page_prefix = "https://www.nae.edu"
-        self.page_list_save_name = "nae_pl.tmp"
+        self.page_list_save_name = "nae_pl_2018.tmp"
         pass
 
     def store_page_list(self, rewrite=True):
@@ -62,12 +63,13 @@ class NAEDealer(NASD, object):
         return
 
 
-    def page_router(self, url, xpath="//*[@title=\"Next Page\"]"):
+    def page_router(self, url, xpath="//*[@title=\"Next Page\" and @class=\"next_page\"]"):
         """
         Manager for next page and so on. url is the member directory page.
         """
         browser = webdriver.Chrome()
         browser.get(url)
+
         try:
             elem = browser.find_element_by_xpath(xpath)
         except BaseException:
@@ -87,7 +89,10 @@ class NAEDealer(NASD, object):
                 print browser.current_url
                 return 0
             self.temp_dump()
-            elem.click()
+            # elem.click()
+            # elem = WebDriverWait(browser, 40).until(EC.element_to_be_clickable((By.XPATH, xpath)))
+            browser.execute_script(elem.get_attribute("href"))
+            # elem.click()
             try:
                 elem = browser.find_element_by_xpath(xpath)
             except BaseException, e:
@@ -130,7 +135,7 @@ class NAEDealer(NASD, object):
             print i, '/', len(self.url_list)
             if i % 15 == 0:
                 self.logger("At i = " + str(i) + ", we save once.")
-                self.save_obj(self.prf_list, "nae.bin")
+                self.save_obj(self.prf_list, "nae_2018.bin")
 
 
 if __name__ == '__main__':
@@ -140,5 +145,5 @@ if __name__ == '__main__':
     # soup = nae.get_soup("https://www.nae.edu/MembersSection/MemberDirectory.aspx")
     # print soup.prettify()
     # nae.page_router(nae.mem_dir_page)
-    # nae.one_professor("https://www.nae.edu/MembersSection/MemberDirectory/30265.aspx")
-    nae.crawl_from_url_list("nae_pl.tmp")
+    # nae.one_professor("https://www.nae.edu/MembersSection/MemberDirectory/178246.aspx")
+    nae.crawl_from_url_list(nae.page_list_save_name)

@@ -43,5 +43,5 @@ class ExcelWriter:
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("nae.bin")
-    ew.write_excel("nae.xls")
+    ew = ExcelWriter("nae_2018.bin")
+    ew.write_excel("nae_2018.xls")
