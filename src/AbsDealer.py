@@ -15,18 +15,22 @@ class AbsDealer:
         self.interval_time = 5
         self.timeout = 40
         self.request_prefix = ""
-        self.tmp_save_name = ""
+
         self.nas_page_list = []
         self.nas_page_list_save_name = ""
         self.url_list = None
         self.failed_list = []
 
+        # periodically, pickle dump the PRF_LIST to middle/TMP_SAVE_NAME to save the process
+        self.tmp_save_name = ""
         # page_prefix is the main crawl page root, crawler start here.
         self.page_prefix = ""
         # crawl counter.
         self.cnt = 0
         # professor data list, each of which is a dictionary.
         self.prf_list = []
+        # specify how to pick data from lowest page
+        self.xpath_dic = {}
         pass
 
     def pros_page(self, url=None):
@@ -44,10 +48,15 @@ class AbsDealer:
         :return:
         """
 
-    def one_page_pros(self, url=None):
+    def one_page_pros(self, content_=None):
         """
         To deal a page of pros, get every professor's personal page url and pass it (if necessary).
-
-        :param url:
+        :param content_: urllib2 read output of the pros_page.
         :return:
         """
+
+    @staticmethod
+    def dict_printer(dict_):
+        for key, value in sorted(dict_.items()):
+            print key, ": ", value
+        print("-----------------")
