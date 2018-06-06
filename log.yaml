@@ -2,7 +2,7 @@ version: 1
 disable_existing_loggers: False
 formatters:
     simple:
-        format: "%(asctime)s  %(funcName)s  %(levelname)s  %(message)s"
+        format: "%(asctime)s %(levelname)s <%(funcName)s> %(message)s"
 handlers:
     console:
         class: logging.StreamHandler
@@ -13,7 +13,7 @@ handlers:
         level: INFO
         formatter: simple
         filename: ProGetter.log
-        maxBytes: 10240
+        maxBytes: 200240
         backupCount: 5
         encoding: "utf8"
 

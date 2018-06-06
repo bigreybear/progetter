@@ -1,18 +1,12 @@
-import json
-import logging
-from bs4 import BeautifulSoup
 from loggetter import logger
-import urllib2
-import urllib
-import lxml
-import lxml.html as HTML
 import lxml.etree as etree
 from src.AbsDealer import AbsDealer as AD
+from src.AbsDealer import LAST_PAGE, ERROR_PAGE, NORMAL_PAGE
 
 # To note the router-profs page flag.
-LAST_PAGE = -1
-ERROR_PAGE = 0
-NORMAL_PAGE = 1
+# LAST_PAGE = -1
+# ERROR_PAGE = 0
+# NORMAL_PAGE = 1
 
 
 class RSCDealer(AD, object):
@@ -32,24 +26,18 @@ class RSCDealer(AD, object):
 
         # to complete the next page url in this website
         self.next_url_head = 'http://www.rsc.ca'
+
+        # UDP: user define parameters
+        self.valve = 80
+        self.tmp_save_name = "rsc.tmp"
+        self.fin_save_name = "rsc.bin"
         pass
 
-    def pros_page(self, url=None):
-        if url is None:
-            url = self.page_prefix
-        _req = urllib2.Request(url, headers=self.header)
-        _content = urllib2.urlopen(_req, timeout=self.timeout*1000)
-        _ret = _content.read()
-        _content.close()
-        statement_ = "Processing url: {}".format(url)
-        logger.debug(statement_)
-        return _ret
-
     def one_page_pros(self, content_=None):
-        # RSC has only a card for every professor, so it can make it can pick data here to list.
+        # RSC has only a card for every professor, so it can make it can pick data here to list directly.
         tree = etree.HTML(content_)
         self.next_url = tree.xpath(self.xpath_next)
-        # To judge if the last page
+        # To judge if the last page, and get the next page url correctly
         if len(self.next_url) == 0:
             self.next_url = None
         else:
@@ -71,12 +59,17 @@ class RSCDealer(AD, object):
     def router(self, cmds=None):
         current_page = self.page_prefix
         while self.one_page_pros(self.pros_page(current_page)) == NORMAL_PAGE:
+            logger.info("Load data successfully, {} professors have been picked.".format(len(self.prf_list)))
             current_page = self.next_url
-        pass
+            self.dealer_dump(prf_=True)
+        logger.info("Now we have all {} professors data.".format(len(self.prf_list)))
+        self.dealer_dump(prf_=True, fin_=True)
 
 
 if __name__ == '__main__':
     rsc = RSCDealer()
+    rsc.router()
     # rsc.one_page_pros(rsc.pros_page())
-    print rsc.one_page_pros(rsc.pros_page("http://www.rsc.ca/en/search-fellows?page=199"))
-    print rsc.next_url
+    # print rsc.one_page_pros(rsc.pros_page("http://www.rsc.ca/en/search-fellows?page=199"))
+    # print rsc.next_url
+    # print len(rsc.prf_list)

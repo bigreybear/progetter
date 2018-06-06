@@ -2,6 +2,7 @@ import xlwt
 import pickle
 import copy
 
+
 class ExcelWriter:
     def __init__(self, src_file):
         self.coord_index = {}
@@ -37,11 +38,11 @@ class ExcelWriter:
             for a_key in a_row:
                 if a_key not in self.coord_index:
                     self.modify_coordination(a_key)
-                self.sheet.write(row_count, self.coord_index[a_key], a_row[a_key])
+                self.sheet.write(row_count, self.coord_index[a_key], a_row[a_key].decode('utf-8'))
             row_count += 1
         self.wbk.save(filename)
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("nae_2018.bin")
-    ew.write_excel("nae_2018.xls")
+    ew = ExcelWriter("./raw/prf_aas.bin")
+    ew.write_excel("./out/prf_aas.xls")
