@@ -69,7 +69,7 @@ class AbsDealer:
         for tries in range(self.max_retry):
             try:
                 time.sleep(self.interval_time)
-                _content = urllib2.urlopen(_req, timeout=self.timeout * 1000)
+                _content = urllib2.urlopen(_req, timeout=self.timeout * 1000, data=data_)
                 break
             except urllib2.URLError:
                 if tries < (self.max_retry - 1):
