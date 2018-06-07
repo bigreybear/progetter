@@ -16,8 +16,9 @@ class NAMDealer(AD):
         self.header = {
             'Accept': "*/*",
             'Accept-Encoding': "utf-8",
-            'Accept-Language': "zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7,es;q=0.6,zh-TW;q=0.5",
-            'Connection': "keep-alive",
+            'Accept-Language': "en;q=0.8,ja;q=0.7,es;q=0.6,zh-TW;q=0.5",
+            # 'Connection': "keep-alive",
+            'Connection': "close",
             'Content-Length': "144",
             'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8",
             'Cookie': "PHPSESSID=8c85983495fb2cd211785c026dae8bbe; _ga=GA1.2.1003375805.1528273268; _gid=GA1.2.1678407113.1528273268; wordpress_test_cookie=WP+Cookie+check; __qca=P0-28642638-1528273288115; __atuvc=10%7C23",
@@ -25,8 +26,9 @@ class NAMDealer(AD):
             'Host': "nam.edu",
             'Origin': "https://nam.edu",
             'Referer': "https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1",
-            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                          "Chrome/66.0.3359.181 Safari/537.36",
+            # 'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+            #                          "Chrome/64.0.3282.119 Safari/537.36",
+            'User-Agent': "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0",
             'X-Requested-With': "XMLHttpRequest"
         }
 
@@ -42,6 +44,7 @@ class NAMDealer(AD):
         self.person_page_root = "https://www.science.org.au/"
         self.current_page = ""
         self.valve = 50
+        self.timeout = 5
 
     def one_page_pros(self, content_=None):
         # In AAS, you need pick all urls of personal page first.
@@ -107,7 +110,12 @@ class NAMDealer(AD):
     def to_debug(self):
         target_url = "https://nam.edu/wp-content/themes/NAMTheme/directory/index.php"
         form_data = {'page': 1, 'orderBy': 1, 'presence': 1}
-        c_ = self.pros_page(target_url, POST, form_data)
+        try:
+            c_ = self.pros_page(target_url, POST, form_data)
+        except BaseException as e:
+            logger.error("Its down.")
+            logger.error(e.message)
+            exit()
         print(c_)
         print(type(c_))
         print(dict(c_))
