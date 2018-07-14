@@ -7,6 +7,7 @@ from src.AbsDealer import LAST_PAGE, ERROR_PAGE, NORMAL_PAGE, POST, GET
 import urllib2
 import urllib
 import time
+from selenium import webdriver
 import socket
 
 
@@ -14,22 +15,20 @@ class NAMDealer(AD):
     def __init__(self):
         AD.__init__(self)
         self.header = {
-            'Accept': "*/*",
-            'Accept-Encoding': "utf-8",
-            'Accept-Language': "en;q=0.8,ja;q=0.7,es;q=0.6,zh-TW;q=0.5",
-            # 'Connection': "keep-alive",
-            'Connection': "close",
-            'Content-Length': "144",
-            'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8",
-            'Cookie': "PHPSESSID=8c85983495fb2cd211785c026dae8bbe; _ga=GA1.2.1003375805.1528273268; _gid=GA1.2.1678407113.1528273268; wordpress_test_cookie=WP+Cookie+check; __qca=P0-28642638-1528273288115; __atuvc=10%7C23",
-            'DNT': "1",
+            'POST': "/wp-content/themes/NAMTheme/directory/index.php HTTP/1.1",
             'Host': "nam.edu",
+            'Connection': "keep-alive",
+            'Content-Length': "27",
+            'Accept': "*/*",
             'Origin': "https://nam.edu",
+            'X-Requested-With': "XMLHttpRequest",
+            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36",
+            'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8",
+            'DNT': "1",
             'Referer': "https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1",
-            # 'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-            #                          "Chrome/64.0.3282.119 Safari/537.36",
-            'User-Agent': "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0",
-            'X-Requested-With': "XMLHttpRequest"
+            'Accept-Encoding': "utf-8",
+            'Accept-Language': "en",
+            'Cookie': "PHPSESSID=0af4ccb79dd34cbbe5c882d520353588; _ga=GA1.2.1390685861.1531564907; _gid=GA1.2.334374399.1531564907; __qca=P0-1027726874-1531564908621; __atuvc=5%7C28; __atuvs=5b49d383a698a885004"
         }
 
         self.page_prefix = "https://nam.edu/directory/?lastName=&firstName=&parentInstitution=" \
@@ -45,6 +44,8 @@ class NAMDealer(AD):
         self.current_page = ""
         self.valve = 50
         self.timeout = 5
+        self.max_retry = 8
+        self.interval_time = 3
 
     def one_page_pros(self, content_=None):
         # In AAS, you need pick all urls of personal page first.
@@ -108,24 +109,32 @@ class NAMDealer(AD):
         logger.info("Accumulated {} data.".format(len(self.prf_list)))
 
     def to_debug(self):
-        target_url = "https://nam.edu/wp-content/themes/NAMTheme/directory/index.php"
-        form_data = {'page': 1, 'orderBy': 1, 'presence': 1}
+
+        browser = webdriver.Chrome()
+        browser.get("https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1")
+        xpath = '//*[@class="page-link next"]'
+        xpath_a = '//*[@class="dir-member-name"]/a'
+        for tries in range(self.max_retry):
+            try:
+                el1 = browser.find_element_by_xpath(xpath)
+                el2 = browser.find_element_by_xpath(xpath_a)
+            except BaseException as e:
+                if tries < (self.max_retry - 1):
+                    time.sleep(self.interval_time)
+                    logger.info("{}...".format(tries))
+                    continue
+                else:
+                    raise e
+
+        print(el2)
+        el1.click()
         try:
-            c_ = self.pros_page(target_url, POST, form_data)
-        except BaseException as e:
-            logger.error("Its down.")
-            logger.error(e.message)
-            exit()
-        print(c_)
-        print(type(c_))
-        print(dict(c_))
-        # print(chardet.detect(c_))
-        # self.one_page_pros(c_)
-        # c_ = self.pros_page(target_url)
-        # self.one_page_pros(target_url)
-        # for i in self.url_list:
-        #     print(i)
-        # self.personal_page("https://www.science.org.au///fellowship/fellows/professor-geordie-williamson")
+            elem = browser.find_element_by_xpath(xpath)
+        except BaseException:
+            logger.info("No more Next.")
+            browser.quit()
+            return
+        return
 
     def pros_page(self, url=None, method_=GET, data_=None):
         logger.info("Test pros_page.")
@@ -143,25 +152,76 @@ class NAMDealer(AD):
         else:
             _req = urllib2.Request(url, headers=self.header)
             logger.info("Formed a GET request for url: {}".format(_req))
+
         for tries in range(self.max_retry):
             try:
                 time.sleep(self.interval_time)
+                logger.info("Start to open...")
                 _content = urllib2.urlopen(_req, timeout=self.timeout * 1000, data=data_)
                 break
-            except urllib2.URLError, socket.error:
+            except BaseException as e:
                 if tries < (self.max_retry - 1):
+                    logger.error("Catch a exception of {}.".format(e.message))
+                    logger.error("Connection failed, try {} time(s), at url: {}".format(tries, url))
                     continue
                 else:
                     logger.error("Tried {} times to connect url:{}, but failed.".format(self.max_retry, url))
-                    raise urllib2.URLError
+                    logger.error(e.message)
+                    exit()
         _ret = _content.read()
         _content.close()
         logger.debug("Processing url: {}".format(url))
         return _ret
 
+    def selenium_worker(self, _start_url=""):
+        """
+        While there is anti-crawler strategy, we can get the content this way.
+        :return:
+        """
+        browser = webdriver.Chrome()
+        browser.get(_start_url)
+        self.xpath_dic['next_button'] = '//*[@class="page-link next"]'
+        self.xpath_dic['url_elem'] = '//*[@class="dir-member-name"]/a'
+        tries = 0
+        page_count = 1
+        new_page = True  # Means info in this page had been processed.
+        while tries < self.max_retry:
+            try:
+                if new_page:
+                    url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
+                    next_elem = browser.find_element_by_xpath(self.xpath_dic['next_button'])
+                    if next_elem is None:
+                        logger.info("Finally finished.")
+                        self.dealer_dump(True, False, True)
+                        break
+                    for elem in url_elems:
+                        self.url_list.append(elem.get_attribute("href"))
+
+                    logger.info("Finished page {}, {} urls had been recorded.".format(page_count, len(self.url_list)))
+                    new_page = False
+
+                if not new_page:
+                    next_elem.click()  # Means only click "ONCE"
+                    new_page = True
+                    if new_page:
+                        page_count += 1
+                        tries = 0
+            except BaseException as e:
+                tries += 1
+                time.sleep(self.timeout)
+                if tries > self.max_retry:
+                    logger.info("Tried too many times, and we got at this page: X")
+                    self.dealer_dump(True)
+                    print(e.message)
+                    raise e
+                else:
+                    logger.info("Trid for {} time(s) at page {}.".format(tries, page_count))
+                    continue
+        browser.quit()
+        return
 
 if __name__ == '__main__':
     nam = NAMDealer()
     # nam.router({'phase': 1, 'url_rebuild_src': "tmp"})
-    nam.to_debug()
-
+    # nam.to_debug()
+    nam.selenium_worker("https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1")
