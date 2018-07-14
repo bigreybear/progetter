@@ -32,3 +32,229 @@
 2018-06-05 22:20:46,961  <module>  INFO  Process path: F:\PyProject\ProfGetter\src
 2018-06-05 22:20:57,950  <module>  INFO  Process path: F:\PyProject\ProfGetter\src
 2018-06-05 22:21:31,880  <module>  INFO  Process path: F:\PyProject\ProfGetter\src
+2018-06-07 16:15:30,802 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-06-07 16:15:30,917 INFO <pros_page> Test pros_page.
+2018-06-07 16:15:30,917 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-06-07 16:16:35,576 ERROR <to_debug> Its down.
+2018-06-07 16:16:35,576 ERROR <to_debug> 
+2018-06-07 16:30:43,365 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-06-07 16:30:43,381 INFO <pros_page> Test pros_page.
+2018-06-07 16:30:43,381 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-06-07 16:32:54,927 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-06-07 16:32:54,943 INFO <pros_page> Test pros_page.
+2018-06-07 16:32:54,943 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-06-07 16:33:58,483 ERROR <pros_page> Connection failed, try 0 time(s), at url: https://nam.edu/wp-content/themes/NAMTheme/directory/index.php
+2018-06-07 16:35:01,444 ERROR <pros_page> Connection failed, try 1 time(s), at url: https://nam.edu/wp-content/themes/NAMTheme/directory/index.php
+2018-06-07 16:36:01,236 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-06-07 16:36:01,250 INFO <pros_page> Test pros_page.
+2018-06-07 16:36:01,250 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-06-07 16:37:04,750 ERROR <pros_page> Catch a exception of .
+2018-06-07 16:37:04,750 ERROR <pros_page> Connection failed, try 0 time(s), at url: https://nam.edu/wp-content/themes/NAMTheme/directory/index.php
+2018-06-07 16:38:08,704 ERROR <pros_page> Tried 2 times to connect url:https://nam.edu/wp-content/themes/NAMTheme/directory/index.php, but failed.
+2018-06-07 16:38:08,704 ERROR <pros_page> 
+2018-06-07 16:38:08,704 ERROR <to_debug> Its down.
+2018-06-07 16:38:08,704 ERROR <to_debug> None
+2018-06-07 16:50:32,069 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-06-07 16:50:32,069 INFO <pros_page> Test pros_page.
+2018-06-07 16:50:32,069 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-07-14 19:11:54,513 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:11:54,617 INFO <pros_page> Test pros_page.
+2018-07-14 19:11:54,617 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-07-14 19:12:58,131 ERROR <pros_page> Catch a exception of .
+2018-07-14 19:12:58,131 ERROR <pros_page> Connection failed, try 0 time(s), at url: https://nam.edu/wp-content/themes/NAMTheme/directory/index.php
+2018-07-14 19:14:51,750 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:14:51,765 INFO <pros_page> Test pros_page.
+2018-07-14 19:14:51,766 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-07-14 19:16:23,223 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:16:23,234 INFO <pros_page> Test pros_page.
+2018-07-14 19:16:23,236 INFO <pros_page> Formed a POST request for url: orderBy=1&page=1&presence=1
+2018-07-14 19:17:26,753 ERROR <pros_page> Catch a exception of .
+2018-07-14 19:17:26,753 ERROR <pros_page> Connection failed, try 0 time(s), at url: https://nam.edu/wp-content/themes/NAMTheme/directory/index.php
+2018-07-14 19:18:29,726 ERROR <pros_page> Tried 2 times to connect url:https://nam.edu/wp-content/themes/NAMTheme/directory/index.php, but failed.
+2018-07-14 19:18:29,726 ERROR <pros_page> 
+2018-07-14 19:18:29,726 ERROR <to_debug> Its down.
+2018-07-14 19:18:29,726 ERROR <to_debug> None
+2018-07-14 19:40:47,068 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:40:47,078 INFO <pros_page> Test pros_page.
+2018-07-14 19:40:47,078 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003F6AD48>
+2018-07-14 19:41:31,671 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:41:31,683 INFO <pros_page> Test pros_page.
+2018-07-14 19:41:31,683 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003FB1D48>
+2018-07-14 19:42:35,194 ERROR <pros_page> Tried 1 times to connect url:https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1, but failed.
+2018-07-14 19:42:35,196 ERROR <pros_page> 
+2018-07-14 19:42:35,197 ERROR <to_debug> Its down.
+2018-07-14 19:42:35,197 ERROR <to_debug> None
+2018-07-14 19:43:52,290 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 19:43:52,328 INFO <pros_page> Test pros_page.
+2018-07-14 19:43:52,328 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003FBBCC8>
+2018-07-14 19:43:53,328 INFO <pros_page> Start to open...
+2018-07-14 19:44:55,984 ERROR <pros_page> Tried 1 times to connect url:https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1, but failed.
+2018-07-14 19:44:55,984 ERROR <pros_page> 
+2018-07-14 19:44:55,986 ERROR <to_debug> Its down.
+2018-07-14 19:44:55,986 ERROR <to_debug> None
+2018-07-14 20:00:07,355 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:00:07,368 INFO <pros_page> Test pros_page.
+2018-07-14 20:00:07,368 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003F18D88>
+2018-07-14 20:00:08,369 INFO <pros_page> Start to open...
+2018-07-14 20:00:08,951 ERROR <pros_page> Tried 1 times to connect url:https://nam.edu/wp-content/themes/NAMTheme/directory/index.php, but failed.
+2018-07-14 20:00:08,953 ERROR <pros_page> Invalid header name '\n            \'Accept\': "*/*",\n            \'Accept-Encoding\': "Utf-8",\n            \'Accept-Language\': "En;Q=0.8,Ja;Q=0.7,Es;Q=0.6,Zh-Tw;Q=0.5",\n            # \'Connection\': "Keep-Alive",\n            \'Connection\': "Close",\n            \'Content-Length\': "144",\n            \'Content-Type\': "Application/X-Www-Form-Urlencoded; Charset=Utf-8",\n            \'Cookie\': "Phpsessid=8C85983495Fb2Cd211785C026Dae8Bbe; _Ga=Ga1.2.1003375805.1528273268; _Gid=Ga1.2.1678407113.1528273268; Wordpress_Test_Cookie=Wp+Cookie+Check; __Qca=P0-28642638-1528273288115; __Atuvc=10%7C23",\n            \'Dnt\': "1",\n            \'Host\': "Nam.Edu",\n            \'Origin\': "Https://Nam.Edu",\n            \'Referer\': "Https://Nam.Edu/Directory/?Lastname=&Firstname=&Parentinstitution=&Yearstart=&Yearend=&Presence=1",\n            # \'User-Agent\': "Mozilla/5.0 (Windows Nt 10.0; Win64; X64) Applewebkit/537.36 (Khtml, Like Gecko) "\n            #                          "Chrome/64.0.3282.119 Safari/537.36",\n            \'User-Agent\': "Mozilla/5.0 (Windows Nt 6.2; Wow64; Rv:22.0) Gecko/20100101 Firefox/22.0",\n            \'X-Requested-With\': "Xmlhttprequest"\n            Post'
+2018-07-14 20:00:08,953 ERROR <to_debug> Its down.
+2018-07-14 20:00:08,953 ERROR <to_debug> None
+2018-07-14 20:01:22,661 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:01:22,671 INFO <pros_page> Test pros_page.
+2018-07-14 20:01:22,673 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003F38D88>
+2018-07-14 20:01:23,673 INFO <pros_page> Start to open...
+2018-07-14 20:01:24,273 ERROR <pros_page> Tried 1 times to connect url:https://nam.edu/wp-content/themes/NAMTheme/directory/index.php, but failed.
+2018-07-14 20:01:24,273 ERROR <pros_page> Invalid header name '\n            \'Accept\': "*/*",\n            \'Accept-Encoding\': "Utf-8",\n            \'Accept-Language\': "En;Q=0.8,Ja;Q=0.7,Es;Q=0.6,Zh-Tw;Q=0.5",\n            # \'Connection\': "Keep-Alive",\n            \'Connection\': "Close",\n            \'Content-Length\': "144",\n            \'Content-Type\': "Application/X-Www-Form-Urlencoded; Charset=Utf-8",\n            \'Cookie\': "Phpsessid=8C85983495Fb2Cd211785C026Dae8Bbe; _Ga=Ga1.2.1003375805.1528273268; _Gid=Ga1.2.1678407113.1528273268; Wordpress_Test_Cookie=Wp+Cookie+Check; __Qca=P0-28642638-1528273288115; __Atuvc=10%7C23",\n            \'Dnt\': "1",\n            \'Host\': "Nam.Edu",\n            \'Origin\': "Https://Nam.Edu",\n            \'Referer\': "Https://Nam.Edu/Directory/?Lastname=&Firstname=&Parentinstitution=&Yearstart=&Yearend=&Presence=1",\n            # \'User-Agent\': "Mozilla/5.0 (Windows Nt 10.0; Win64; X64) Applewebkit/537.36 (Khtml, Like Gecko) "\n            #                          "Chrome/64.0.3282.119 Safari/537.36",\n            \'User-Agent\': "Mozilla/5.0 (Windows Nt 6.2; Wow64; Rv:22.0) Gecko/20100101 Firefox/22.0",\n            \'X-Requested-With\': "Xmlhttprequest"\n            Post'
+2018-07-14 20:01:24,273 ERROR <to_debug> Its down.
+2018-07-14 20:01:24,273 ERROR <to_debug> None
+2018-07-14 20:01:57,068 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:01:57,079 INFO <pros_page> Test pros_page.
+2018-07-14 20:01:57,081 INFO <pros_page> Formed a GET request for url: <urllib2.Request instance at 0x0000000003EAED88>
+2018-07-14 20:01:58,081 INFO <pros_page> Start to open...
+2018-07-14 20:03:01,095 ERROR <pros_page> Tried 1 times to connect url:https://nam.edu/wp-content/themes/NAMTheme/directory/index.php, but failed.
+2018-07-14 20:03:01,095 ERROR <pros_page> 
+2018-07-14 20:03:01,096 ERROR <to_debug> Its down.
+2018-07-14 20:03:01,096 ERROR <to_debug> None
+2018-07-14 20:07:10,437 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:10:24,336 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:14:10,181 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:14:44,806 INFO <to_debug> 0...
+2018-07-14 20:14:47,828 INFO <to_debug> 1...
+2018-07-14 20:15:50,785 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:16:23,519 INFO <to_debug> 0...
+2018-07-14 20:16:26,543 INFO <to_debug> 1...
+2018-07-14 20:16:29,568 INFO <to_debug> 2...
+2018-07-14 20:16:32,592 INFO <to_debug> 3...
+2018-07-14 20:22:35,767 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:23:10,767 INFO <to_debug> 0...
+2018-07-14 20:23:13,773 INFO <to_debug> 1...
+2018-07-14 20:23:16,802 INFO <to_debug> 2...
+2018-07-14 20:23:19,829 INFO <to_debug> 3...
+2018-07-14 20:23:22,855 INFO <to_debug> 4...
+2018-07-14 20:23:25,881 INFO <to_debug> 5...
+2018-07-14 20:23:28,898 INFO <to_debug> 6...
+2018-07-14 20:24:40,315 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:25:14,967 INFO <to_debug> 0...
+2018-07-14 20:25:17,992 INFO <to_debug> 1...
+2018-07-14 20:25:21,006 INFO <to_debug> 2...
+2018-07-14 20:25:24,032 INFO <to_debug> 3...
+2018-07-14 20:25:27,085 INFO <to_debug> 4...
+2018-07-14 20:25:30,125 INFO <to_debug> 5...
+2018-07-14 20:25:33,170 INFO <to_debug> 6...
+2018-07-14 20:26:59,609 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:27:29,391 INFO <to_debug> 0...
+2018-07-14 20:27:32,418 INFO <to_debug> 1...
+2018-07-14 20:27:35,444 INFO <to_debug> 2...
+2018-07-14 20:27:38,471 INFO <to_debug> 3...
+2018-07-14 20:45:23,326 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:54:12,286 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 20:54:50,555 INFO <selenium_worker> Trid for 1 time(s) at page 1.
+2018-07-14 20:54:55,584 INFO <selenium_worker> Trid for 2 time(s) at page 1.
+2018-07-14 20:54:55,694 INFO <selenium_worker> Finished page 1, 10 urls had been recorded.
+2018-07-14 20:54:55,809 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 20:55:00,842 INFO <selenium_worker> Trid for 1 time(s) at page 3.
+2018-07-14 20:55:00,882 INFO <selenium_worker> Finished page 3, 10 urls had been recorded.
+2018-07-14 20:55:05,923 INFO <selenium_worker> Trid for 1 time(s) at page 4.
+2018-07-14 20:55:05,967 INFO <selenium_worker> Finished page 4, 10 urls had been recorded.
+2018-07-14 20:55:11,006 INFO <selenium_worker> Trid for 1 time(s) at page 5.
+2018-07-14 20:55:11,128 INFO <selenium_worker> Finished page 5, 20 urls had been recorded.
+2018-07-14 20:55:11,190 INFO <selenium_worker> Finished page 6, 20 urls had been recorded.
+2018-07-14 20:55:16,224 INFO <selenium_worker> Trid for 1 time(s) at page 7.
+2018-07-14 20:55:16,270 INFO <selenium_worker> Finished page 7, 20 urls had been recorded.
+2018-07-14 20:55:21,323 INFO <selenium_worker> Trid for 1 time(s) at page 8.
+2018-07-14 20:55:21,364 INFO <selenium_worker> Finished page 8, 20 urls had been recorded.
+2018-07-14 20:55:26,398 INFO <selenium_worker> Trid for 1 time(s) at page 9.
+2018-07-14 20:55:26,529 INFO <selenium_worker> Finished page 9, 30 urls had been recorded.
+2018-07-14 20:55:26,602 INFO <selenium_worker> Finished page 10, 30 urls had been recorded.
+2018-07-14 20:55:31,635 INFO <selenium_worker> Trid for 1 time(s) at page 11.
+2018-07-14 20:55:31,677 INFO <selenium_worker> Finished page 11, 30 urls had been recorded.
+2018-07-14 20:55:36,717 INFO <selenium_worker> Trid for 1 time(s) at page 12.
+2018-07-14 20:55:36,760 INFO <selenium_worker> Finished page 12, 30 urls had been recorded.
+2018-07-14 20:55:41,812 INFO <selenium_worker> Trid for 1 time(s) at page 13.
+2018-07-14 20:55:41,921 INFO <selenium_worker> Finished page 13, 40 urls had been recorded.
+2018-07-14 20:55:41,977 INFO <selenium_worker> Finished page 14, 40 urls had been recorded.
+2018-07-14 20:55:47,015 INFO <selenium_worker> Trid for 1 time(s) at page 15.
+2018-07-14 20:55:47,058 INFO <selenium_worker> Finished page 15, 40 urls had been recorded.
+2018-07-14 20:55:52,114 INFO <selenium_worker> Trid for 1 time(s) at page 16.
+2018-07-14 20:55:52,148 INFO <selenium_worker> Finished page 16, 40 urls had been recorded.
+2018-07-14 20:55:57,210 INFO <selenium_worker> Trid for 1 time(s) at page 17.
+2018-07-14 20:55:57,296 INFO <selenium_worker> Finished page 17, 50 urls had been recorded.
+2018-07-14 20:55:57,368 INFO <selenium_worker> Finished page 18, 50 urls had been recorded.
+2018-07-14 20:56:02,403 INFO <selenium_worker> Trid for 1 time(s) at page 19.
+2018-07-14 20:56:02,444 INFO <selenium_worker> Finished page 19, 50 urls had been recorded.
+2018-07-14 20:56:07,493 INFO <selenium_worker> Trid for 1 time(s) at page 20.
+2018-07-14 20:56:07,549 INFO <selenium_worker> Finished page 20, 50 urls had been recorded.
+2018-07-14 20:56:12,582 INFO <selenium_worker> Trid for 1 time(s) at page 21.
+2018-07-14 20:56:12,634 INFO <selenium_worker> Finished page 21, 60 urls had been recorded.
+2018-07-14 20:56:12,697 INFO <selenium_worker> Finished page 22, 60 urls had been recorded.
+2018-07-14 20:56:17,730 INFO <selenium_worker> Trid for 1 time(s) at page 23.
+2018-07-14 20:56:17,766 INFO <selenium_worker> Finished page 23, 60 urls had been recorded.
+2018-07-14 20:56:22,801 INFO <selenium_worker> Trid for 1 time(s) at page 24.
+2018-07-14 20:56:22,835 INFO <selenium_worker> Finished page 24, 60 urls had been recorded.
+2018-07-14 20:56:27,894 INFO <selenium_worker> Trid for 1 time(s) at page 25.
+2018-07-14 20:56:28,023 INFO <selenium_worker> Finished page 25, 70 urls had been recorded.
+2018-07-14 20:56:28,115 INFO <selenium_worker> Finished page 26, 70 urls had been recorded.
+2018-07-14 20:56:33,154 INFO <selenium_worker> Trid for 1 time(s) at page 27.
+2018-07-14 20:56:33,186 INFO <selenium_worker> Finished page 27, 70 urls had been recorded.
+2018-07-14 20:56:38,226 INFO <selenium_worker> Trid for 1 time(s) at page 28.
+2018-07-14 20:56:38,253 INFO <selenium_worker> Finished page 28, 70 urls had been recorded.
+2018-07-14 20:56:43,292 INFO <selenium_worker> Trid for 1 time(s) at page 29.
+2018-07-14 20:56:43,434 INFO <selenium_worker> Finished page 29, 80 urls had been recorded.
+2018-07-14 20:56:43,507 INFO <selenium_worker> Finished page 30, 80 urls had been recorded.
+2018-07-14 20:56:48,542 INFO <selenium_worker> Trid for 1 time(s) at page 31.
+2018-07-14 20:56:48,585 INFO <selenium_worker> Finished page 31, 80 urls had been recorded.
+2018-07-14 20:56:53,641 INFO <selenium_worker> Trid for 1 time(s) at page 32.
+2018-07-14 20:56:53,684 INFO <selenium_worker> Finished page 32, 80 urls had been recorded.
+2018-07-14 20:56:58,736 INFO <selenium_worker> Trid for 1 time(s) at page 33.
+2018-07-14 20:56:58,838 INFO <selenium_worker> Finished page 33, 90 urls had been recorded.
+2018-07-14 20:56:58,901 INFO <selenium_worker> Finished page 34, 90 urls had been recorded.
+2018-07-14 20:57:03,934 INFO <selenium_worker> Trid for 1 time(s) at page 35.
+2018-07-14 20:57:03,980 INFO <selenium_worker> Finished page 35, 90 urls had been recorded.
+2018-07-14 20:57:09,038 INFO <selenium_worker> Trid for 1 time(s) at page 36.
+2018-07-14 20:57:09,082 INFO <selenium_worker> Finished page 36, 90 urls had been recorded.
+2018-07-14 20:57:14,131 INFO <selenium_worker> Trid for 1 time(s) at page 37.
+2018-07-14 20:57:14,246 INFO <selenium_worker> Finished page 37, 100 urls had been recorded.
+2018-07-14 20:57:14,323 INFO <selenium_worker> Finished page 38, 100 urls had been recorded.
+2018-07-14 20:57:19,358 INFO <selenium_worker> Trid for 1 time(s) at page 39.
+2018-07-14 20:57:19,398 INFO <selenium_worker> Finished page 39, 100 urls had been recorded.
+2018-07-14 20:57:24,444 INFO <selenium_worker> Trid for 1 time(s) at page 40.
+2018-07-14 20:57:24,483 INFO <selenium_worker> Finished page 40, 100 urls had been recorded.
+2018-07-14 20:57:29,519 INFO <selenium_worker> Trid for 1 time(s) at page 41.
+2018-07-14 20:57:29,630 INFO <selenium_worker> Finished page 41, 110 urls had been recorded.
+2018-07-14 20:57:29,687 INFO <selenium_worker> Finished page 42, 110 urls had been recorded.
+2018-07-14 20:57:34,719 INFO <selenium_worker> Trid for 1 time(s) at page 43.
+2018-07-14 20:57:34,763 INFO <selenium_worker> Finished page 43, 110 urls had been recorded.
+2018-07-14 20:57:39,821 INFO <selenium_worker> Trid for 1 time(s) at page 44.
+2018-07-14 20:57:39,845 INFO <selenium_worker> Finished page 44, 110 urls had been recorded.
+2018-07-14 20:57:44,885 INFO <selenium_worker> Trid for 1 time(s) at page 45.
+2018-07-14 20:57:45,038 INFO <selenium_worker> Finished page 45, 120 urls had been recorded.
+2018-07-14 20:57:45,118 INFO <selenium_worker> Finished page 46, 120 urls had been recorded.
+2018-07-14 20:57:50,151 INFO <selenium_worker> Trid for 1 time(s) at page 47.
+2018-07-14 20:57:50,188 INFO <selenium_worker> Finished page 47, 120 urls had been recorded.
+2018-07-14 20:57:55,220 INFO <selenium_worker> Trid for 1 time(s) at page 48.
+2018-07-14 20:57:55,250 INFO <selenium_worker> Finished page 48, 120 urls had been recorded.
+2018-07-14 20:58:00,293 INFO <selenium_worker> Trid for 1 time(s) at page 49.
+2018-07-14 20:58:00,380 INFO <selenium_worker> Finished page 49, 130 urls had been recorded.
+2018-07-14 20:58:00,453 INFO <selenium_worker> Finished page 50, 130 urls had been recorded.
+2018-07-14 20:58:05,484 INFO <selenium_worker> Trid for 1 time(s) at page 51.
+2018-07-14 20:58:05,539 INFO <selenium_worker> Finished page 51, 130 urls had been recorded.
+2018-07-14 20:58:10,611 INFO <selenium_worker> Trid for 1 time(s) at page 52.
+2018-07-14 20:58:10,650 INFO <selenium_worker> Finished page 52, 130 urls had been recorded.
+2018-07-14 20:58:15,684 INFO <selenium_worker> Trid for 1 time(s) at page 53.
+2018-07-14 20:58:15,759 INFO <selenium_worker> Finished page 53, 140 urls had been recorded.
+2018-07-14 20:58:15,818 INFO <selenium_worker> Finished page 54, 140 urls had been recorded.
+2018-07-14 20:58:20,855 INFO <selenium_worker> Trid for 1 time(s) at page 55.
+2018-07-14 20:58:20,898 INFO <selenium_worker> Finished page 55, 140 urls had been recorded.
+2018-07-14 20:58:25,957 INFO <selenium_worker> Trid for 1 time(s) at page 56.
+2018-07-14 20:58:25,997 INFO <selenium_worker> Finished page 56, 140 urls had been recorded.
+2018-07-14 20:58:31,052 INFO <selenium_worker> Trid for 1 time(s) at page 57.
+2018-07-14 20:58:31,177 INFO <selenium_worker> Finished page 57, 150 urls had been recorded.
+2018-07-14 20:58:31,242 INFO <selenium_worker> Finished page 58, 150 urls had been recorded.
+2018-07-14 20:58:36,273 INFO <selenium_worker> Trid for 1 time(s) at page 59.
+2018-07-14 20:58:36,289 INFO <selenium_worker> Finished page 59, 150 urls had been recorded.
+2018-07-14 20:58:41,306 INFO <selenium_worker> Trid for 1 time(s) at page 60.
+2018-07-14 20:58:41,354 INFO <selenium_worker> Finished page 60, 150 urls had been recorded.
+2018-07-14 20:58:46,388 INFO <selenium_worker> Trid for 1 time(s) at page 61.
+2018-07-14 20:58:46,460 INFO <selenium_worker> Finished page 61, 160 urls had been recorded.
+2018-07-14 20:58:46,516 INFO <selenium_worker> Finished page 62, 160 urls had been recorded.
