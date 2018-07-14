@@ -258,3 +258,199 @@
 2018-07-14 20:58:46,388 INFO <selenium_worker> Trid for 1 time(s) at page 61.
 2018-07-14 20:58:46,460 INFO <selenium_worker> Finished page 61, 160 urls had been recorded.
 2018-07-14 20:58:46,516 INFO <selenium_worker> Finished page 62, 160 urls had been recorded.
+2018-07-14 21:13:45,634 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:14:28,059 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:15:05,990 INFO <selenium_worker> Trid for 1 time(s) at page 1.
+2018-07-14 21:15:11,039 INFO <selenium_worker> Trid for 2 time(s) at page 1.
+2018-07-14 21:15:11,168 INFO <selenium_worker> Finished page 1, 10 urls had been recorded.
+2018-07-14 21:15:11,233 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:15:16,267 INFO <selenium_worker> Trid for 1 time(s) at page 3.
+2018-07-14 21:15:16,285 INFO <selenium_worker> Finished page 3, 10 urls had been recorded.
+2018-07-14 21:15:21,305 INFO <selenium_worker> Trid for 1 time(s) at page 4.
+2018-07-14 21:15:21,339 INFO <selenium_worker> Finished page 4, 10 urls had been recorded.
+2018-07-14 21:15:26,377 INFO <selenium_worker> Trid for 1 time(s) at page 5.
+2018-07-14 21:15:26,441 INFO <selenium_worker> Finished page 5, 20 urls had been recorded.
+2018-07-14 21:15:26,503 INFO <selenium_worker> Finished page 6, 20 urls had been recorded.
+2018-07-14 21:15:31,536 INFO <selenium_worker> Trid for 1 time(s) at page 7.
+2018-07-14 21:15:31,553 INFO <selenium_worker> Finished page 7, 20 urls had been recorded.
+2018-07-14 21:15:36,601 INFO <selenium_worker> Trid for 1 time(s) at page 8.
+2018-07-14 21:15:36,627 INFO <selenium_worker> Finished page 8, 20 urls had been recorded.
+2018-07-14 21:15:41,653 INFO <selenium_worker> Trid for 1 time(s) at page 9.
+2018-07-14 21:15:41,836 INFO <selenium_worker> Finished page 9, 30 urls had been recorded.
+2018-07-14 21:15:41,938 INFO <selenium_worker> Finished page 10, 30 urls had been recorded.
+2018-07-14 21:15:46,973 INFO <selenium_worker> Trid for 1 time(s) at page 11.
+2018-07-14 21:15:47,016 INFO <selenium_worker> Finished page 11, 30 urls had been recorded.
+2018-07-14 21:15:52,069 INFO <selenium_worker> Trid for 1 time(s) at page 12.
+2018-07-14 21:15:52,108 INFO <selenium_worker> Finished page 12, 30 urls had been recorded.
+2018-07-14 21:15:57,142 INFO <selenium_worker> Trid for 1 time(s) at page 13.
+2018-07-14 21:15:57,197 INFO <selenium_worker> Finished page 13, 40 urls had been recorded.
+2018-07-14 21:15:57,253 INFO <selenium_worker> Finished page 14, 40 urls had been recorded.
+2018-07-14 21:16:02,288 INFO <selenium_worker> Trid for 1 time(s) at page 15.
+2018-07-14 21:16:02,331 INFO <selenium_worker> Finished page 15, 40 urls had been recorded.
+2018-07-14 21:16:07,381 INFO <selenium_worker> Trid for 1 time(s) at page 16.
+2018-07-14 21:16:07,411 INFO <selenium_worker> Finished page 16, 40 urls had been recorded.
+2018-07-14 21:16:12,436 INFO <selenium_worker> Trid for 1 time(s) at page 17.
+2018-07-14 21:16:12,562 INFO <selenium_worker> Finished page 17, 50 urls had been recorded.
+2018-07-14 21:16:12,634 INFO <selenium_worker> Finished page 18, 50 urls had been recorded.
+2018-07-14 21:16:43,226 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:17:15,117 INFO <selenium_worker> Trid for 1 time(s) at page 1.
+2018-07-14 21:17:20,131 INFO <selenium_worker> Trid for 2 time(s) at page 1.
+2018-07-14 21:17:20,259 INFO <selenium_worker> Finished page 1, 10 urls had been recorded.
+2018-07-14 21:17:20,378 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:17:25,413 INFO <selenium_worker> Trid for 1 time(s) at page 2.
+2018-07-14 21:17:25,448 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:17:30,486 INFO <selenium_worker> Trid for 2 time(s) at page 2.
+2018-07-14 21:17:30,509 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:17:35,535 INFO <selenium_worker> Trid for 3 time(s) at page 2.
+2018-07-14 21:17:35,680 INFO <selenium_worker> Finished page 2, 20 urls had been recorded.
+2018-07-14 21:17:35,742 INFO <selenium_worker> Finished page 3, 20 urls had been recorded.
+2018-07-14 21:17:40,780 INFO <selenium_worker> Trid for 1 time(s) at page 3.
+2018-07-14 21:17:40,822 INFO <selenium_worker> Finished page 3, 20 urls had been recorded.
+2018-07-14 21:17:45,875 INFO <selenium_worker> Trid for 2 time(s) at page 3.
+2018-07-14 21:17:45,903 INFO <selenium_worker> Finished page 3, 20 urls had been recorded.
+2018-07-14 21:17:50,934 INFO <selenium_worker> Trid for 3 time(s) at page 3.
+2018-07-14 21:17:50,982 INFO <selenium_worker> Finished page 3, 30 urls had been recorded.
+2018-07-14 21:17:51,039 INFO <selenium_worker> Finished page 4, 30 urls had been recorded.
+2018-07-14 21:18:51,917 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:19:37,555 INFO <selenium_worker> before find
+2018-07-14 21:19:37,625 INFO <selenium_worker> after find
+2018-07-14 21:19:37,690 INFO <selenium_worker> before click
+2018-07-14 21:19:37,740 INFO <selenium_worker> after click
+2018-07-14 21:19:37,740 INFO <selenium_worker> before find
+2018-07-14 21:19:37,753 INFO <selenium_worker> after find
+2018-07-14 21:19:37,753 INFO <selenium_worker> before click
+2018-07-14 21:19:42,788 INFO <selenium_worker> Trid for 1 time(s) at page 2.
+2018-07-14 21:19:42,788 INFO <selenium_worker> before find
+2018-07-14 21:19:42,819 INFO <selenium_worker> after find
+2018-07-14 21:19:42,819 INFO <selenium_worker> before click
+2018-07-14 21:19:47,851 INFO <selenium_worker> Trid for 2 time(s) at page 2.
+2018-07-14 21:19:47,851 INFO <selenium_worker> before find
+2018-07-14 21:19:47,894 INFO <selenium_worker> after find
+2018-07-14 21:19:47,894 INFO <selenium_worker> before click
+2018-07-14 21:19:52,937 INFO <selenium_worker> Trid for 3 time(s) at page 2.
+2018-07-14 21:19:52,937 INFO <selenium_worker> before find
+2018-07-14 21:19:52,980 INFO <selenium_worker> after find
+2018-07-14 21:19:53,059 INFO <selenium_worker> before click
+2018-07-14 21:19:53,107 INFO <selenium_worker> after click
+2018-07-14 21:19:53,107 INFO <selenium_worker> before find
+2018-07-14 21:19:53,121 INFO <selenium_worker> after find
+2018-07-14 21:19:53,121 INFO <selenium_worker> before click
+2018-07-14 21:19:58,155 INFO <selenium_worker> Trid for 1 time(s) at page 3.
+2018-07-14 21:19:58,155 INFO <selenium_worker> before find
+2018-07-14 21:19:58,203 INFO <selenium_worker> after find
+2018-07-14 21:19:58,203 INFO <selenium_worker> before click
+2018-07-14 21:20:03,259 INFO <selenium_worker> Trid for 2 time(s) at page 3.
+2018-07-14 21:20:03,259 INFO <selenium_worker> before find
+2018-07-14 21:20:03,305 INFO <selenium_worker> after find
+2018-07-14 21:20:03,305 INFO <selenium_worker> before click
+2018-07-14 21:20:08,361 INFO <selenium_worker> Trid for 3 time(s) at page 3.
+2018-07-14 21:20:08,361 INFO <selenium_worker> before find
+2018-07-14 21:20:08,377 INFO <selenium_worker> after find
+2018-07-14 21:20:08,443 INFO <selenium_worker> before click
+2018-07-14 21:20:08,496 INFO <selenium_worker> after click
+2018-07-14 21:20:08,496 INFO <selenium_worker> before find
+2018-07-14 21:20:08,512 INFO <selenium_worker> after find
+2018-07-14 21:20:08,512 INFO <selenium_worker> before click
+2018-07-14 21:20:13,546 INFO <selenium_worker> Trid for 1 time(s) at page 4.
+2018-07-14 21:20:13,546 INFO <selenium_worker> before find
+2018-07-14 21:20:13,581 INFO <selenium_worker> after find
+2018-07-14 21:20:13,581 INFO <selenium_worker> before click
+2018-07-14 21:20:18,621 INFO <selenium_worker> Trid for 2 time(s) at page 4.
+2018-07-14 21:20:18,621 INFO <selenium_worker> before find
+2018-07-14 21:20:18,644 INFO <selenium_worker> after find
+2018-07-14 21:20:18,644 INFO <selenium_worker> before click
+2018-07-14 21:20:23,677 INFO <selenium_worker> Trid for 3 time(s) at page 4.
+2018-07-14 21:20:23,677 INFO <selenium_worker> before find
+2018-07-14 21:20:23,687 INFO <selenium_worker> after find
+2018-07-14 21:20:23,726 INFO <selenium_worker> before click
+2018-07-14 21:20:23,773 INFO <selenium_worker> after click
+2018-07-14 21:20:23,773 INFO <selenium_worker> before find
+2018-07-14 21:20:23,789 INFO <selenium_worker> after find
+2018-07-14 21:20:23,789 INFO <selenium_worker> before click
+2018-07-14 21:20:28,822 INFO <selenium_worker> Trid for 1 time(s) at page 5.
+2018-07-14 21:20:28,822 INFO <selenium_worker> before find
+2018-07-14 21:20:28,848 INFO <selenium_worker> after find
+2018-07-14 21:20:28,849 INFO <selenium_worker> before click
+2018-07-14 21:20:33,887 INFO <selenium_worker> Trid for 2 time(s) at page 5.
+2018-07-14 21:20:33,887 INFO <selenium_worker> before find
+2018-07-14 21:20:33,928 INFO <selenium_worker> after find
+2018-07-14 21:20:33,928 INFO <selenium_worker> before click
+2018-07-14 21:20:38,967 INFO <selenium_worker> Trid for 3 time(s) at page 5.
+2018-07-14 21:20:38,967 INFO <selenium_worker> before find
+2018-07-14 21:20:38,999 INFO <selenium_worker> after find
+2018-07-14 21:20:39,081 INFO <selenium_worker> before click
+2018-07-14 21:20:39,141 INFO <selenium_worker> after click
+2018-07-14 21:20:39,141 INFO <selenium_worker> before find
+2018-07-14 21:20:39,155 INFO <selenium_worker> after find
+2018-07-14 21:20:39,155 INFO <selenium_worker> before click
+2018-07-14 21:20:44,188 INFO <selenium_worker> Trid for 1 time(s) at page 6.
+2018-07-14 21:20:44,188 INFO <selenium_worker> before find
+2018-07-14 21:20:44,232 INFO <selenium_worker> after find
+2018-07-14 21:20:44,233 INFO <selenium_worker> before click
+2018-07-14 21:20:49,273 INFO <selenium_worker> Trid for 2 time(s) at page 6.
+2018-07-14 21:20:49,273 INFO <selenium_worker> before find
+2018-07-14 21:20:49,321 INFO <selenium_worker> after find
+2018-07-14 21:20:49,321 INFO <selenium_worker> before click
+2018-07-14 21:20:54,358 INFO <selenium_worker> Trid for 3 time(s) at page 6.
+2018-07-14 21:20:54,358 INFO <selenium_worker> before find
+2018-07-14 21:20:54,380 INFO <selenium_worker> after find
+2018-07-14 21:20:54,424 INFO <selenium_worker> before click
+2018-07-14 21:20:54,476 INFO <selenium_worker> after click
+2018-07-14 21:20:54,477 INFO <selenium_worker> before find
+2018-07-14 21:20:54,493 INFO <selenium_worker> after find
+2018-07-14 21:20:54,493 INFO <selenium_worker> before click
+2018-07-14 21:20:59,525 INFO <selenium_worker> Trid for 1 time(s) at page 7.
+2018-07-14 21:20:59,525 INFO <selenium_worker> before find
+2018-07-14 21:20:59,555 INFO <selenium_worker> after find
+2018-07-14 21:20:59,555 INFO <selenium_worker> before click
+2018-07-14 21:21:04,588 INFO <selenium_worker> Trid for 2 time(s) at page 7.
+2018-07-14 21:21:04,588 INFO <selenium_worker> before find
+2018-07-14 21:21:04,618 INFO <selenium_worker> after find
+2018-07-14 21:21:04,618 INFO <selenium_worker> before click
+2018-07-14 21:21:09,654 INFO <selenium_worker> Trid for 3 time(s) at page 7.
+2018-07-14 21:21:09,654 INFO <selenium_worker> before find
+2018-07-14 21:21:09,694 INFO <selenium_worker> after find
+2018-07-14 21:21:09,776 INFO <selenium_worker> before click
+2018-07-14 21:21:09,825 INFO <selenium_worker> after click
+2018-07-14 21:21:09,825 INFO <selenium_worker> before find
+2018-07-14 21:21:09,841 INFO <selenium_worker> after find
+2018-07-14 21:21:09,841 INFO <selenium_worker> before click
+2018-07-14 21:21:14,881 INFO <selenium_worker> Trid for 1 time(s) at page 8.
+2018-07-14 21:21:14,881 INFO <selenium_worker> before find
+2018-07-14 21:21:14,927 INFO <selenium_worker> after find
+2018-07-14 21:21:14,927 INFO <selenium_worker> before click
+2018-07-14 21:21:19,989 INFO <selenium_worker> Trid for 2 time(s) at page 8.
+2018-07-14 21:21:19,989 INFO <selenium_worker> before find
+2018-07-14 21:21:20,039 INFO <selenium_worker> after find
+2018-07-14 21:21:20,039 INFO <selenium_worker> before click
+2018-07-14 21:25:25,719 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:26:00,460 INFO <selenium_worker> Trid for 1 time(s) at page 1.
+2018-07-14 21:26:05,482 INFO <selenium_worker> Trid for 2 time(s) at page 1.
+2018-07-14 21:26:10,496 INFO <selenium_worker> Trid for 3 time(s) at page 1.
+2018-07-14 21:26:10,549 INFO <selenium_worker> Finished page 1, 10 urls had been recorded.
+2018-07-14 21:26:10,618 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:26:15,651 INFO <selenium_worker> Trid for 1 time(s) at page 2.
+2018-07-14 21:26:20,667 INFO <selenium_worker> Trid for 2 time(s) at page 2.
+2018-07-14 21:26:25,730 INFO <selenium_worker> Trid for 3 time(s) at page 2.
+2018-07-14 21:26:30,737 INFO <selenium_worker> Trid for 4 time(s) at page 2.
+2018-07-14 21:26:35,746 INFO <selenium_worker> Trid for 5 time(s) at page 2.
+2018-07-14 21:26:40,756 INFO <selenium_worker> Trid for 6 time(s) at page 2.
+2018-07-14 21:26:45,762 INFO <selenium_worker> Trid for 7 time(s) at page 2.
+2018-07-14 21:26:50,769 INFO <selenium_worker> Trid for 8 time(s) at page 2.
+2018-07-14 21:27:29,049 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:27:36,006 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:27:53,395 INFO <selenium_worker> Trid for 1 time(s) at page 1.
+2018-07-14 21:27:58,414 INFO <selenium_worker> Trid for 2 time(s) at page 1.
+2018-07-14 21:27:58,473 INFO <selenium_worker> Finished page 1, 10 urls had been recorded.
+2018-07-14 21:27:58,539 INFO <selenium_worker> Finished page 2, 10 urls had been recorded.
+2018-07-14 21:28:03,575 INFO <selenium_worker> Trid for 1 time(s) at page 2.
+2018-07-14 21:28:08,596 INFO <selenium_worker> Trid for 2 time(s) at page 2.
+2018-07-14 21:28:13,655 INFO <selenium_worker> Trid for 3 time(s) at page 2.
+2018-07-14 21:28:18,671 INFO <selenium_worker> Trid for 4 time(s) at page 2.
+2018-07-14 21:28:23,686 INFO <selenium_worker> Trid for 5 time(s) at page 2.
+2018-07-14 21:28:28,700 INFO <selenium_worker> Trid for 6 time(s) at page 2.
+2018-07-14 21:28:33,713 INFO <selenium_worker> Trid for 7 time(s) at page 2.
+2018-07-14 21:30:45,095 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:30:56,262 INFO <<module>> Process path: D:\GitRepo\progetter\src
+2018-07-14 21:31:50,528 INFO <selenium_worker> Finished page 1, 0 urls had been recorded.
+2018-07-14 21:32:24,351 INFO <<module>> Process path: D:\GitRepo\progetter\src

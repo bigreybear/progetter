@@ -184,28 +184,35 @@ class NAMDealer(AD):
         self.xpath_dic['url_elem'] = '//*[@class="dir-member-name"]/a'
         tries = 0
         page_count = 1
+        new_page = True  # Means info in this page had been processed.
         while tries < self.max_retry:
             try:
-                url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
-                next_elem = browser.find_element_by_xpath(self.xpath_dic['next_button'])
+                if new_page:
+                    url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
+                    next_elem = browser.find_element_by_xpath(self.xpath_dic['next_button'])
+                    if next_elem is None:
+                        logger.info("Finally finished.")
+                        self.dealer_dump(True, False, True)
+                        break
+                    for elem in url_elems:
+                        self.url_list.append(elem.get_attribute("href"))
 
-                if next_elem is None:
-                    logger.info("Finally finished.")
-                    self.dealer_dump(True, False, True)
-                    break
+                    logger.info("Finished page {}, {} urls had been recorded.".format(page_count, len(self.url_list)))
+                    new_page = False
 
-                for elem in url_elems:
-                    self.url_list.append(elem.get_attribute("href"))
-                logger.info("Finished page {}, {} urls had been recorded.".format(page_count, len(self.url_list)))
-                page_count += 1
-                tries = 0
-                next_elem.click()
+                if not new_page:
+                    next_elem.click()  # Means only click "ONCE"
+                    new_page = True
+                    if new_page:
+                        page_count += 1
+                        tries = 0
             except BaseException as e:
                 tries += 1
                 time.sleep(self.timeout)
                 if tries > self.max_retry:
                     logger.info("Tried too many times, and we got at this page: X")
                     self.dealer_dump(True)
+                    print(e.message)
                     raise e
                 else:
                     logger.info("Trid for {} time(s) at page {}.".format(tries, page_count))
