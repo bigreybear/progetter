@@ -24,8 +24,8 @@ class AbsDealer:
         self.timeout = 40
         self.request_prefix = ""
 
-        # self.prj_loc = "F:\PyProject\ProfGetter\\"
-        self.prj_loc = "D:\GitRepo\progetter\\"
+        self.prj_loc = "F:\PyProject\ProfGetter\\"
+        # self.prj_loc = "D:\GitRepo\progetter\\"
         # periodically, pickle dump the PRF_LIST or URL_LIST to middle/TMP_SAVE_NAME to save the process,
         # and the finished file name.
         self.tmp_save_name = ""
