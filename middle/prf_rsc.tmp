@@ -1,0 +1,5075 @@
+(lp0
+(dp1
+S'academy'
+p2
+S'Academy of Science'
+p3
+sS'year_selected'
+p4
+S'2012'
+p5
+sS'name'
+p6
+S'Jonathan Abbatt'
+p7
+sS'affiliation'
+p8
+S'University of Toronto'
+p9
+sa(dp10
+S'discipline'
+p11
+S'Law'
+p12
+sg2
+S'Academy of Social Sciences'
+p13
+sg4
+S'1997'
+p14
+sg6
+S'Justice Rosalie Abella'
+p15
+sg8
+S'Supreme Court of Canada'
+p16
+sa(dp17
+g11
+S'History'
+p18
+sg2
+S'Academy of the Arts and Humanities'
+p19
+sg4
+S'1993'
+p20
+sg6
+S'Dr. Irving Abella'
+p21
+sg8
+S'York University'
+p22
+sa(dp23
+g2
+S'Academy of Science'
+p24
+sg4
+S'2013'
+p25
+sg6
+S'Simaan AbouRizk'
+p26
+sg8
+S'University of Alberta'
+p27
+sa(dp28
+g11
+S'Astronomical Sciences'
+p29
+sg2
+S'Academy of Science'
+p30
+sg4
+S'2015'
+p31
+sg6
+S'Roberto Abraham'
+p32
+sg8
+S'University of Toronto'
+p33
+sa(dp34
+g11
+S'Animal Biology'
+p35
+sg2
+S'Academy of Science'
+p36
+sg4
+S'2005'
+p37
+sg6
+S'Peter Abrams'
+p38
+sg8
+S'University of Toronto'
+p39
+sa(dp40
+g11
+S'Mathematics and Computer Sciences'
+p41
+sg2
+S'Academy of Science'
+p42
+sg4
+S'1971'
+p43
+sg6
+VDr. János Aczél
+p44
+sg8
+S'University of Waterloo'
+p45
+sa(dp46
+g11
+S'Sociology'
+p47
+sg2
+S'Academy of Social Sciences'
+p48
+sg4
+S'2000'
+p49
+sg6
+S'Dr. Heribert Adam'
+p50
+sg8
+S'Simon Fraser University'
+p51
+sa(dp52
+g11
+S'Economics'
+p53
+sg2
+S'Academy of Social Sciences'
+p54
+sg4
+S'2007'
+p55
+sg6
+S'Wiktor Adamowicz'
+p56
+sg8
+S'University of Alberta'
+p57
+sa(dp58
+g2
+S'Academy of Social Sciences'
+p59
+sg4
+S'2013'
+p60
+sg6
+S'Emanuel Adler'
+p61
+sg8
+S'University of Toronto'
+p62
+sa(dp63
+g11
+S'Administration / Management'
+p64
+sg2
+S'Academy of Social Sciences'
+p65
+sg4
+S'2004'
+p66
+sg6
+S'Dr. Nancy Adler'
+p67
+sg8
+S'McGill University'
+p68
+sa(dp69
+g11
+S'Physics'
+p70
+sg2
+S'Academy of Science'
+p71
+sg4
+S'1991'
+p72
+sg6
+S'Dr. Ian Affleck'
+p73
+sg8
+S'The University of British Columbia'
+p74
+sa(dp75
+g11
+S'Philosophy / Ethics'
+p76
+sg2
+S'Academy of the Arts and Humanities'
+p77
+sg4
+S'1993'
+p78
+sg6
+S'Dr. Joseph Agassi'
+p79
+sg8
+S'York University'
+p80
+sa(dp81
+g11
+S'Medical Sciences'
+p82
+sg2
+S'Academy of Science'
+p83
+sg4
+S'1984'
+p84
+sg6
+S'Dr. Albert Aguayo'
+p85
+sg8
+S'McGill University'
+p86
+sa(dp87
+g2
+S'Academy of Science'
+p88
+sg4
+S'2013'
+p89
+sg6
+S'Alfred Aho'
+p90
+sg8
+S'Columbia University'
+p91
+sa(dp92
+g11
+S'Engineering'
+p93
+sg2
+S'Academy of Science'
+p94
+sg4
+S'2010'
+p95
+sg6
+S'J. Stewart Aitchison'
+p96
+sg8
+S'University of Toronto'
+p97
+sa(dp98
+g2
+S'Academy of Science'
+p99
+sg4
+S'2017'
+p100
+sg6
+S'Sally Aitken'
+p101
+sg8
+S'The University of British Columbia'
+p102
+sa(dp103
+g11
+S'Mathematics and Computer Sciences'
+p104
+sg2
+S'Academy of Science'
+p105
+sg4
+S'1978'
+p106
+sg6
+S'Dr. Mustafa Akcoglu'
+p107
+sg8
+S'University of Toronto'
+p108
+sa(dp109
+g11
+S'Physics'
+p110
+sg2
+S'Academy of Science'
+p111
+sg4
+S'1982'
+p112
+sg6
+S'Dr. A. John Alcock'
+p113
+sg8
+S'National Research Council Canada'
+p114
+sa(dp115
+g11
+S'Physics'
+p116
+sg2
+S'Academy of Science'
+p117
+sg4
+S'1982'
+p118
+sg6
+S'Dr. A. John Alcock'
+p119
+sg8
+S'National Research Council'
+p120
+sa(dp121
+g11
+S'Administration / Management'
+p122
+sg2
+S'Academy of Social Sciences'
+p123
+sg4
+S'1990'
+p124
+sg6
+S'Mr. Yvan Allaire'
+p125
+sg8
+VUniversité de Montréal
+p126
+sa(dp127
+g11
+S'Literature'
+p128
+sg2
+S'Academy of the Arts and Humanities'
+p129
+sg4
+S'2005'
+p130
+sg6
+S'Jacques Allard'
+p131
+sg8
+VUniversité du Québec à Montréal
+p132
+sa(dp133
+g11
+S'Medical Sciences'
+p134
+sg2
+S'Academy of Science'
+p135
+sg4
+S'2005'
+p136
+sg6
+S'Theresa Allen'
+p137
+sg8
+S'University of Alberta'
+p138
+sa(dp139
+g11
+S'Economics'
+p140
+sg2
+S'Academy of Social Sciences'
+p141
+sg4
+S'1994'
+p142
+sg6
+S'Dr. Robert Allen'
+p143
+sg8
+S'Nuffield College'
+p144
+sa(dp145
+g11
+S'Medical Sciences'
+p146
+sg2
+S'Academy of Science'
+p147
+sg4
+S'2005'
+p148
+sg6
+S'Theresa Allen'
+p149
+sg8
+S'University of Alberta'
+p150
+sa(dp151
+g11
+S'Chemistry'
+p152
+sg2
+S'Academy of Science'
+p153
+sg4
+S'1984'
+p154
+sg6
+S'Howard Alper'
+p155
+sg8
+S'University of Ottawa'
+p156
+sa(dp157
+g11
+S'Engineering'
+p158
+sg2
+S'Academy of Science'
+p159
+sg4
+S'2010'
+p160
+sg6
+S'Yusuf Altintas'
+p161
+sg8
+S'The University of British Columbia'
+p162
+sa(dp163
+g11
+S'Animal Biology'
+p164
+sg2
+S'Academy of Science'
+p165
+sg4
+S'2008'
+p166
+sg6
+S'Shimon Amir'
+p167
+sg8
+S'Concordia University'
+p168
+sa(dp169
+g11
+S'Engineering'
+p170
+sg2
+S'Academy of Science'
+p171
+sg4
+S'2011'
+p172
+sg6
+S'Cristina Amon'
+p173
+sg8
+S'University of Toronto'
+p174
+sa(dp175
+g11
+S'History'
+p176
+sg2
+S'Academy of the Arts and Humanities'
+p177
+sg4
+S'2012'
+p178
+sg6
+S'Pierre Anctil'
+p179
+sg8
+S'University of Ottawa'
+p180
+sa(dp181
+g11
+S'Medical Sciences'
+p182
+sg2
+S'Academy of Science'
+p183
+sg4
+S'2011'
+p184
+sg6
+S'Prof. Frederick Andermann'
+p185
+sg8
+S'McGill University'
+p186
+sa(dp187
+g11
+S'Chemistry'
+p188
+sg2
+S'Academy of Science'
+p189
+sg4
+S'2000'
+p190
+sg6
+S'Raymond Andersen'
+p191
+sg8
+S'The University of British Columbia'
+p192
+sa(dp193
+g11
+S'Literature'
+p194
+sg2
+S'Academy of the Arts and Humanities'
+p195
+sg4
+S'2001'
+p196
+sg6
+VBernard Andrès
+p197
+sg8
+VUniversité du Québec à Montréal
+p198
+sa(dp199
+g11
+S'Political Science'
+p200
+sg2
+S'Academy of Social Sciences'
+p201
+sg4
+S'2007'
+p202
+sg6
+S'Caroline Andrew'
+p203
+sg8
+S'University of Ottawa'
+p204
+sa(dp205
+g11
+S'Microbiology and Biochemistry'
+p206
+sg2
+S'Academy of Science'
+p207
+sg4
+S'2005'
+p208
+sg6
+S'Dr. Brenda Andrews'
+p209
+sg8
+S'University of Toronto'
+p210
+sa(dp211
+g11
+S'Applied Science'
+p212
+sg2
+S'Academy of Science'
+p213
+sg4
+S'2003'
+p214
+sg6
+S'Jorge Angeles'
+p215
+sg8
+S'McGill University'
+p216
+sa(dp217
+g11
+S'Languages / Philology'
+p218
+sg2
+S'Academy of the Arts and Humanities'
+p219
+sg4
+S'1985'
+p220
+sg6
+S'Mr. Marc Angenot'
+p221
+sg8
+S'McGill University'
+p222
+sa(dp223
+g11
+S'Medical Sciences'
+p224
+sg2
+S'Academy of Science'
+p225
+sg4
+S'2010'
+p226
+sg6
+S'Prof. Hymie Anisman'
+p227
+sg8
+S'Carleton University'
+p228
+sa(dp229
+g11
+S'History'
+p230
+sg2
+S'Academy of the Arts and Humanities'
+p231
+sg4
+S'1995'
+p232
+sg6
+S'Timothy Anna'
+p233
+sg8
+S'University of Manitoba'
+p234
+sa(dp235
+g11
+S'Law'
+p236
+sg2
+S'Academy of Social Sciences'
+p237
+sg4
+S'1992'
+p238
+sg6
+S'Master Nabil Antaki'
+p239
+sg8
+VUniversité de Montréal
+p240
+sa(dp241
+g11
+S'Psychology'
+p242
+sg2
+S'Academy of Social Sciences'
+p243
+sg4
+S'2013'
+p244
+sg6
+S'Dr. Martin M. Antony'
+p245
+sg8
+S'Ryerson University'
+p246
+sa(dp247
+g11
+S'Molecular Biology and Genetics'
+p248
+sg2
+S'Academy of Science'
+p249
+sg4
+S'2016'
+p250
+sg6
+S'Dr. Samuel Aparicio'
+p251
+sg8
+S'The University of British Columbia'
+p252
+sa(dp253
+g11
+S'Earth Sciences'
+p254
+sg2
+S'Academy of Science'
+p255
+sg4
+S'2005'
+p256
+sg6
+S'Dr. Jafar Arkani-Hamed'
+p257
+sg8
+S'University of Toronto'
+p258
+sa(dp259
+g11
+S'Physics'
+p260
+sg2
+S'Academy of Science'
+p261
+sg4
+S'1979'
+p262
+sg6
+S'Dr. Robin Armstrong'
+p263
+sg8
+S'University of Toronto'
+p264
+sa(dp265
+g11
+S'Sociology'
+p266
+sg2
+S'Academy of Social Sciences'
+p267
+sg4
+S'2011'
+p268
+sg6
+S'Pat Armstrong'
+p269
+sg8
+S'York University'
+p270
+sa(dp271
+g11
+S'Physics'
+p272
+sg2
+S'Academy of Science'
+p273
+sg4
+S'1979'
+p274
+sg6
+S'Dr. Robin Armstrong'
+p275
+sg8
+S'University of New Brunswick'
+p276
+sa(dp277
+g11
+S'Physics'
+p278
+sg2
+S'Academy of Science'
+p279
+sg4
+S'1979'
+p280
+sg6
+S'Dr. Robin Armstrong'
+p281
+sg8
+S'University of Toronto, University of New Brunswick'
+p282
+sa(dp283
+g11
+S'Medical Sciences'
+p284
+sg2
+S'Academy of Science'
+p285
+sg4
+S'2010'
+p286
+sg6
+S'Paul  Armstrong'
+p287
+sg8
+S'University of Alberta'
+p288
+sa(dp289
+g11
+S'Physics'
+p290
+sg2
+S'Academy of Science'
+p291
+sg4
+S'1983'
+p292
+sg6
+S'Dr. Anthony Arrott'
+p293
+sg8
+S'Simon Fraser University'
+p294
+sa(dp295
+g11
+S'Mathematics and Computer Sciences'
+p296
+sg2
+S'Academy of Science'
+p297
+sg4
+S'1981'
+p298
+sg6
+S'Dr. James Arthur'
+p299
+sg8
+S'University of Toronto'
+p300
+sa(dp301
+g11
+S'Law'
+p302
+sg2
+S'Academy of Social Sciences'
+p303
+sg4
+S'1982'
+p304
+sg6
+S'Prof. Harry Arthurs'
+p305
+sg8
+S'York University'
+p306
+sa(dp307
+g2
+S'Academy of the Arts and Humanities'
+p308
+sg6
+S'English Arts'
+p309
+sg8
+Nsa(dp310
+g2
+S'Academy of the Arts and Humanities'
+p311
+sg6
+S'French Arts'
+p312
+sg8
+Nsa(dp313
+g11
+S'Anthropology / Archaeology'
+p314
+sg2
+S'Academy of Social Sciences'
+p315
+sg4
+S'2002'
+p316
+sg6
+S'Michael Asch'
+p317
+sg8
+S'University of Victoria'
+p318
+sa(dp319
+g2
+S'Academy of Science'
+p320
+sg6
+S'French ASE'
+p321
+sg8
+Nsa(dp322
+g2
+S'Academy of Science'
+p323
+sg6
+S'English ASE'
+p324
+sg8
+Nsa(dp325
+g11
+S'Philosophy / Ethics'
+p326
+sg2
+S'Academy of the Arts and Humanities'
+p327
+sg4
+S'1991'
+p328
+sg6
+S'Dr. E. Jennifer Ashworth'
+p329
+sg8
+S'University of Waterloo'
+p330
+sa(dp331
+g11
+S'Psychology'
+p332
+sg2
+S'Academy of Social Sciences'
+p333
+sg4
+S'2009'
+p334
+sg6
+S'Gordon Asmundson'
+p335
+sg8
+S'University of Regina'
+p336
+sa(dp337
+g11
+S'Applied Science'
+p338
+sg2
+S'Academy of Science'
+p339
+sg4
+S'1995'
+p340
+sg6
+S'David Atherton'
+p341
+sg8
+S"Queen's University"
+p342
+sa(dp343
+g2
+S'Academy of Science'
+p344
+sg4
+S'2014'
+p345
+sg6
+S'Gail Marie Atkinson'
+p346
+sg8
+S'Western University'
+p347
+sa(dp348
+g11
+S'Creative Writing'
+p349
+sg2
+S'Academy of the Arts and Humanities'
+p350
+sg4
+S'1987'
+p351
+sg6
+S'Margaret Atwood'
+p352
+sg8
+S'McClelland & Stewart'
+p353
+sa(dp354
+g11
+S'Animal Biology'
+p355
+sg2
+S'Academy of Science'
+p356
+sg4
+S'1982'
+p357
+sg6
+S'Harold Atwood'
+p358
+sg8
+S'University of Toronto'
+p359
+sa(dp360
+g2
+S'Academy of Social Sciences'
+p361
+sg4
+S'2016'
+p362
+sg6
+VMichèle Audette
+p363
+sg8
+Nsa(dp364
+g11
+S'Animal Biology'
+p365
+sg2
+S'Academy of Science'
+p366
+sg4
+S'1999'
+p367
+sg6
+S'Lorne Babiuk'
+p368
+sg8
+S'University of Alberta'
+p369
+sa(dp370
+g11
+S'Law'
+p371
+sg2
+S'Academy of Social Sciences'
+p372
+sg4
+S'2004'
+p373
+sg6
+S'Constance Backhouse'
+p374
+sg8
+S'University of Ottawa'
+p375
+sa(dp376
+g11
+S'Medical Sciences'
+p377
+sg2
+S'Academy of Science'
+p378
+sg4
+S'2008'
+p379
+sg6
+S'Peter Backx'
+p380
+sg8
+S'University of Toronto'
+p381
+sa(dp382
+g2
+S'Academy of the Arts and Humanities'
+p383
+sg4
+S'2013'
+p384
+sg6
+S'Gauvin Bailey'
+p385
+sg8
+S"Queen's University"
+p386
+sa(dp387
+g11
+S'Musicology'
+p388
+sg2
+S'Academy of the Arts and Humanities'
+p389
+sg4
+S'1984'
+p390
+sg6
+S'Dr. Terence Bailey'
+p391
+sg8
+S'Western University'
+p392
+sa(dp393
+g11
+S'Earth Sciences'
+p394
+sg2
+S'Academy of Science'
+p395
+sg4
+S'1958'
+p396
+sg6
+S'Dr. David Baird'
+p397
+sg8
+S'Parks Canada'
+p398
+sa(dp399
+g11
+S'Molecular Biology and Genetics'
+p400
+sg2
+S'Academy of Science'
+p401
+sg4
+S'2001'
+p402
+sg6
+S'Prof. Patricia Baird'
+p403
+sg8
+S'The University of British Columbia'
+p404
+sa(dp405
+g11
+S'Chemistry'
+p406
+sg2
+S'Academy of Science'
+p407
+sg4
+S'2003'
+p408
+sg6
+S'Michael Baird'
+p409
+sg8
+S"Queen's University"
+p410
+sa(dp411
+g11
+S'Philosophy / Ethics'
+p412
+sg2
+S'Academy of the Arts and Humanities'
+p413
+sg4
+S'2016'
+p414
+sg6
+S'David Bakhurst'
+p415
+sg8
+S"Queen's University"
+p416
+sa(dp417
+g11
+S'Political Science'
+p418
+sg2
+S'Academy of Social Sciences'
+p419
+sg4
+S'2011'
+p420
+sg6
+S'Isabella Bakker'
+p421
+sg8
+S'York University'
+p422
+sa(dp423
+g11
+S'Law'
+p424
+sg2
+S'Academy of Social Sciences'
+p425
+sg4
+S'2013'
+p426
+sg6
+S'Nicholas C. Bala'
+p427
+sg8
+S"Queen's University"
+p428
+sa(dp429
+g11
+S'Anthropology'
+p430
+sg2
+S'Academy of Social Sciences'
+p431
+sg4
+S'1984'
+p432
+sg6
+S'Asen Balikci'
+p433
+sg8
+S'Association for Balkan Anthropology'
+p434
+sa(dp435
+g11
+S'Mathematics and Computer Sciences'
+p436
+sg2
+S'Academy of Science'
+p437
+sg4
+S'1962'
+p438
+sg6
+S'Bernhard Banaschewski'
+p439
+sg8
+S'McMaster University'
+p440
+sa(dp441
+g11
+S'Chemistry'
+p442
+sg2
+S'Academy of Science'
+p443
+sg4
+S'1979'
+p444
+sg6
+S'Dr. G. Michael Bancroft'
+p445
+sg8
+S'Western University'
+p446
+sa(dp447
+g11
+S'Engineering'
+p448
+sg2
+S'Academy of Science'
+p449
+sg4
+S'1986'
+p450
+sg6
+S'Dr. John Bandler'
+p451
+sg8
+S'McMaster University'
+p452
+sa(dp453
+g11
+S'Chemistry'
+p454
+sg2
+S'Academy of Science'
+p455
+sg4
+S'1992'
+p456
+sg6
+VAndré Bandrauk
+p457
+sg8
+VUniversité de Sherbrooke
+p458
+sa(dp459
+g11
+S'Engineering'
+p460
+sg2
+S'Academy of Science'
+p461
+sg4
+S'2011'
+p462
+sg6
+S'Nemkumar Banthia'
+p463
+sg8
+S'The University of British Columbia'
+p464
+sa(dp465
+g11
+S'Political Science'
+p466
+sg2
+S'Academy of Social Sciences'
+p467
+sg4
+S'2012'
+p468
+sg6
+S'Keith Banting'
+p469
+sg8
+S"Queen's University"
+p470
+sa(dp471
+g11
+S'Physics'
+p472
+sg2
+S'Academy of Science'
+p473
+sg4
+S'2009'
+p474
+sg6
+S'Xiaoyi Bao'
+p475
+sg8
+S'University of Ottawa'
+p476
+sa(dp477
+g11
+S'Earth Sciences'
+p478
+sg2
+S'Academy of Science'
+p479
+sg4
+S'2016'
+p480
+sg6
+S'David Barber'
+p481
+sg8
+S'University of Manitoba'
+p482
+sa(dp483
+g11
+S'Administration / Management'
+p484
+sg2
+S'Academy of Social Sciences'
+p485
+sg4
+S'2003'
+p486
+sg6
+S'Mr. Henri Barki'
+p487
+sg8
+VUniversité de Montréal
+p488
+sa(dp489
+g11
+S'Political Science'
+p490
+sg2
+S'Academy of Social Sciences'
+p491
+sg4
+S'2002'
+p492
+sg6
+S'Dr. Julian Barling'
+p493
+sg8
+S"Queen's University"
+p494
+sa(dp495
+g11
+S'Mathematics and Computer Sciences'
+p496
+sg2
+S'Academy of Science'
+p497
+sg4
+S'1998'
+p498
+sg6
+S'Martin Barlow'
+p499
+sg8
+S'The University of British Columbia'
+p500
+sa(dp501
+g11
+S'History'
+p502
+sg2
+S'Academy of the Arts and Humanities'
+p503
+sg4
+S'2002'
+p504
+sg6
+S'Jean Barman'
+p505
+sg8
+S'The University of British Columbia'
+p506
+sa(dp507
+g11
+S'Earth Sciences'
+p508
+sg2
+S'Academy of Science'
+p509
+sg4
+S'1982'
+p510
+sg6
+S'Christopher Barnes'
+p511
+sg8
+S'University of Victoria'
+p512
+sa(dp513
+g11
+S'Geography'
+p514
+sg2
+S'Academy of Social Sciences'
+p515
+sg4
+S'2011'
+p516
+sg6
+S'Trevor Barnes'
+p517
+sg8
+S'The University of British Columbia'
+p518
+sa(dp519
+g11
+S'Classics / Humanities'
+p520
+sg2
+S'Academy of the Arts and Humanities'
+p521
+sg4
+S'1985'
+p522
+sg6
+S'Prof. Timothy Barnes'
+p523
+sg8
+S'University of Toronto'
+p524
+sa(dp525
+g11
+S'Psychology'
+p526
+sg2
+S'Academy of Social Sciences'
+p527
+sg4
+S'2016'
+p528
+sg6
+S'Louise Barrett'
+p529
+sg8
+S'University of Lethbridge'
+p530
+sa(dp531
+g11
+S'Plant Biology'
+p532
+sg2
+S'Academy of Science'
+p533
+sg4
+S'1998'
+p534
+sg6
+S'Prof. Spencer Barrett'
+p535
+sg8
+S'University of Toronto'
+p536
+sa(dp537
+g11
+S'Classics / Humanities'
+p538
+sg2
+S'Academy of the Arts and Humanities'
+p539
+sg4
+S'2000'
+p540
+sg6
+S'Anthony Barrett'
+p541
+sg8
+S'The University of British Columbia'
+p542
+sa(dp543
+g11
+S'Psychology'
+p544
+sg2
+S'Academy of Social Sciences'
+p545
+sg4
+S'2012'
+p546
+sg6
+S'Lisa Barrett'
+p547
+sg8
+S'Northeastern University'
+p548
+sa(dp549
+g11
+S'Atmospheric Sciences'
+p550
+sg2
+S'Academy of Science'
+p551
+sg4
+S'2000'
+p552
+sg6
+S'Dr. Leonard Barrie'
+p553
+sg8
+S'World Meteorological Organization'
+p554
+sa(dp555
+g11
+S'Classics / Humanities'
+p556
+sg2
+S'Academy of the Arts and Humanities'
+p557
+sg4
+S'1996'
+p558
+sg6
+S'Robin Barrow'
+p559
+sg8
+S'Simon Fraser University'
+p560
+sa(dp561
+g11
+S'Applied Science'
+p562
+sg2
+S'Academy of Science'
+p563
+sg4
+S'1988'
+p564
+sg6
+S'Mr. Raymond Bartnikas'
+p565
+sg8
+VInstitut de recherche d'Hydro-Québec
+p566
+sa(dp567
+g11
+S'Political Science'
+p568
+sg2
+S'Academy of Social Sciences'
+p569
+sg4
+S'2001'
+p570
+sg6
+S'Sylvia Beth Bashevkin'
+p571
+sg8
+S'University of Toronto'
+p572
+sa(dp573
+g11
+S'History'
+p574
+sg2
+S'Academy of the Arts and Humanities'
+p575
+sg4
+S'2008'
+p576
+sg6
+S'Peter Baskerville'
+p577
+sg8
+S'University of Alberta'
+p578
+sa(dp579
+g11
+S'Engineering'
+p580
+sg2
+S'Academy of Science'
+p581
+sg4
+S'2017'
+p582
+sg6
+S'Richard Bathurst'
+p583
+sg8
+S'Royal Military College of Canada'
+p584
+sa(dp585
+g11
+S'Astronomical Sciences'
+p586
+sg2
+S'Academy of Science'
+p587
+sg4
+S'1977'
+p588
+sg6
+S'Dr. Alan Batten'
+p589
+sg8
+S'National Research Council Canada'
+p590
+sa(dp591
+g11
+S'Astronomical Sciences'
+p592
+sg2
+S'Academy of Science'
+p593
+sg4
+S'1977'
+p594
+sg6
+S'Dr. Alan Batten'
+p595
+sg8
+S'National Research Council'
+p596
+sa(dp597
+g11
+S'History & Philosophy of Science'
+p598
+sg2
+S'Academy of the Arts and Humanities'
+p599
+sg4
+S'2009'
+p600
+sg6
+S'Prof. Robert Batterman'
+p601
+sg8
+S'Western University'
+p602
+sa(dp603
+g2
+S'Academy of the Arts and Humanities'
+p604
+sg4
+S'2013'
+p605
+sg6
+S'Marie Battiste'
+p606
+sg8
+S'University of Saskatchewan'
+p607
+sa(dp608
+g11
+S'Literature'
+p609
+sg2
+S'Academy of the Arts and Humanities'
+p610
+sg4
+S'1993'
+p611
+sg6
+S'Mr. Alain Baudot'
+p612
+sg8
+S'York University'
+p613
+sa(dp614
+g11
+S'Law'
+p615
+sg2
+S'Academy of Social Sciences'
+p616
+sg4
+S'1979'
+p617
+sg6
+S'Jean-Louis Baudouin'
+p618
+sg8
+VCour d'appel du Québec
+p619
+sa(dp620
+g11
+S'Plant Biology'
+p621
+sg2
+S'Academy of Science'
+p622
+sg4
+S'1981'
+p623
+sg6
+S'Dr. Bernard Baum'
+p624
+sg8
+S'Agriculture and Agrifood Canada'
+p625
+sa(dp626
+g11
+S'Psychology'
+p627
+sg2
+S'Academy of Social Sciences'
+p628
+sg4
+S'1995'
+p629
+sg6
+S'Janet Bavelas'
+p630
+sg8
+S'University of Victoria'
+p631
+sa(dp632
+g2
+S'Academy of the Arts and Humanities'
+p633
+sg4
+S'2013'
+p634
+sg6
+S'Mr. Iain Baxter&'
+p635
+sg8
+S'University of Windsor'
+p636
+sa(dp637
+g11
+S'Philosophy / Ethics'
+p638
+sg2
+S'Academy of the Arts and Humanities'
+p639
+sg4
+S'2007'
+p640
+sg6
+VDr. Françoise Baylis
+p641
+sg8
+S'Dalhousie University'
+p642
+sa(dp643
+g11
+S'Philosophy / Ethics'
+p644
+sg2
+S'Academy of the Arts and Humanities'
+p645
+sg4
+S'1995'
+p646
+sg6
+VMr. Bernardo Bazán
+p647
+sg8
+S'University of Ottawa'
+p648
+sa(dp649
+g11
+S'Theology / Religious Studies'
+p650
+sg2
+S'Academy of the Arts and Humanities'
+p651
+sg4
+S'2015'
+p652
+sg6
+S'Lori G. Beaman'
+p653
+sg8
+S'University of Ottawa'
+p654
+sa(dp655
+g11
+S'Atmospheric Sciences'
+p656
+sg2
+S'Academy of Science'
+p657
+sg4
+S'2000'
+p658
+sg6
+S'Richard Beamish'
+p659
+sg8
+S'Fisheries and Oceans Canada'
+p660
+sa(dp661
+g11
+S'Administration / Management'
+p662
+sg2
+S'Academy of Social Sciences'
+p663
+sg4
+S'2009'
+p664
+sg6
+S'Dr. Paul Beamish'
+p665
+sg8
+S'Western University'
+p666
+sa(dp667
+g11
+S'Medical Sciences'
+p668
+sg2
+S'Academy of Science'
+p669
+sg4
+S'1989'
+p670
+sg6
+S'Dr. Joyce Beare-Rogers'
+p671
+sg8
+S'Health Canada'
+p672
+sa(dp673
+g11
+S'Medical Sciences'
+p674
+sg2
+S'Academy of Science'
+p675
+sg4
+S'2012'
+p676
+sg6
+S'Alain Beaudet'
+p677
+sg8
+S'Canadian Institute of Health Research'
+p678
+sa(dp679
+g11
+S'Applied Science'
+p680
+sg2
+S'Academy of Science'
+p681
+sg4
+S'1999'
+p682
+sg6
+S'James Beaudoin'
+p683
+sg8
+S'National Research Council Canada'
+p684
+sa(dp685
+g11
+S'Applied Science'
+p686
+sg2
+S'Academy of Science'
+p687
+sg4
+S'1999'
+p688
+sg6
+S'James Beaudoin'
+p689
+sg8
+S'National Research Council'
+p690
+sa(dp691
+g11
+S'Economics'
+p692
+sg2
+S'Academy of Social Sciences'
+p693
+sg4
+S'2004'
+p694
+sg6
+S'Dr. Paul Beaudry'
+p695
+sg8
+S'The University of British Columbia'
+p696
+sa(dp697
+g2
+S'Academy of Social Sciences'
+p698
+sg4
+S'2017'
+p699
+sg6
+S'Marie Beaulieu'
+p700
+sg8
+VUniversité de Sherbrooke
+p701
+sa(dp702
+g11
+S'Engineering'
+p703
+sg2
+S'Academy of Science'
+p704
+sg4
+S'2002'
+p705
+sg6
+S'Dr. Norman Beaulieu'
+p706
+sg8
+S'University of Alberta'
+p707
+sa(dp708
+g11
+S'Medical Sciences'
+p709
+sg2
+S'Academy of Science'
+p710
+sg4
+S'1970'
+p711
+sg6
+S'John Beck'
+p712
+sg8
+S'University of California Los Angeles'
+p713
+sa(dp714
+g11
+S'Chemistry'
+p715
+sg2
+S'Academy of Science'
+p716
+sg4
+S'2000'
+p717
+sg6
+S'Axel Becke'
+p718
+sg8
+S'Dalhousie University'
+p719
+sa(dp720
+g11
+S'Literature'
+p721
+sg2
+S'Academy of the Arts and Humanities'
+p722
+sg4
+S'2004'
+p723
+sg6
+S'Mrs. Sandra Beckett'
+p724
+sg8
+S'Brock University'
+p725
+sa(dp726
+g11
+S'Medical Sciences'
+p727
+sg2
+S'Academy of Science'
+p728
+sg4
+S'1991'
+p729
+sg6
+S'Dr. Margaret Becklake'
+p730
+sg8
+S'McGill University'
+p731
+sa(dp732
+g11
+S'Literature'
+p733
+sg2
+S'Academy of the Arts and Humanities'
+p734
+sg4
+S'2016'
+p735
+sg6
+S'Donald Beecher'
+p736
+sg8
+S'Carleton University'
+p737
+sa(dp738
+g11
+S'Sociology'
+p739
+sg2
+S'Academy of Social Sciences'
+p740
+sg4
+S'1996'
+p741
+sg6
+VMonique Bégin
+p742
+sg8
+S'University of Ottawa'
+p743
+sa(dp744
+g11
+S'Engineering'
+p745
+sg2
+S'Academy of Science'
+p746
+sg4
+S'2008'
+p747
+sg6
+S'Leo Behie'
+p748
+sg8
+S'University of Calgary'
+p749
+sa(dp750
+g11
+S'History'
+p751
+sg2
+S'Academy of the Arts and Humanities'
+p752
+sg4
+S'2011'
+p753
+sg6
+S'Michael Behiels'
+p754
+sg8
+S'University of Ottawa'
+p755
+sa(dp756
+g11
+S'Microbiology and Biochemistry'
+p757
+sg2
+S'Academy of Science'
+p758
+sg4
+S'2017'
+p759
+sg6
+S'Marcel A. Behr'
+p760
+sg8
+S'McGill University'
+p761
+sa(dp762
+g11
+S'Political Science'
+p763
+sg2
+S'Academy of Social Sciences'
+p764
+sg4
+S'2006'
+p765
+sg6
+S'Ronald Steven Beiner'
+p766
+sg8
+S'University of Toronto'
+p767
+sa(dp768
+g11
+S'Art History'
+p769
+sg2
+S'Academy of the Arts and Humanities'
+p770
+sg4
+S'2009'
+p771
+sg6
+VMr. Mario Béland
+p772
+sg8
+VMusée National des Beaux-Arts du Québec
+p773
+sa(dp774
+g11
+S'Economics'
+p775
+sg2
+S'Academy of Social Sciences'
+p776
+sg4
+S'1982'
+p777
+sg6
+VGérard Bélanger
+p778
+sg8
+VUniversité Laval
+p779
+sa(dp780
+g11
+S'Political Science'
+p781
+sg2
+S'Academy of Social Sciences'
+p782
+sg4
+S'1988'
+p783
+sg6
+VMr. André-Jacques Bélanger
+p784
+sg8
+VUniversité de Montréal
+p785
+sa(dp786
+g11
+S'Applied Science'
+p787
+sg2
+S'Academy of Science'
+p788
+sg4
+S'1990'
+p789
+sg6
+VGuy Bélanger
+p790
+sg8
+Nsa(dp791
+g11
+S'Animal Biology'
+p792
+sg2
+S'Academy of Science'
+p793
+sg4
+S'1994'
+p794
+sg6
+S'Graham Bell'
+p795
+sg8
+S'McGill University'
+p796
+sa(dp797
+g11
+S'Theology / Religious Studies'
+p798
+sg2
+S'Academy of the Arts and Humanities'
+p799
+sg4
+S'2008'
+p800
+sg6
+S'David Bell'
+p801
+sg8
+S'Memorial University'
+p802
+sa(dp803
+g2
+S'Academy of Science'
+p804
+sg4
+S'2013'
+p805
+sg6
+S'John Bell'
+p806
+sg8
+S'University of Ottawa'
+p807
+sa(dp808
+g11
+S'Arts'
+p809
+sg2
+S'Academy of the Arts and Humanities'
+p810
+sg4
+S'2007'
+p811
+sg6
+S'Allan Bell'
+p812
+sg8
+S'University of Calgary'
+p813
+sa(dp814
+g11
+S'Philosophy / Ethics'
+p815
+sg2
+S'Academy of the Arts and Humanities'
+p816
+sg4
+S'2009'
+p817
+sg6
+S'John Bell'
+p818
+sg8
+S'Western University'
+p819
+sa(dp820
+g11
+S'Theology / Religious Studies'
+p821
+sg2
+S'Academy of the Arts and Humanities'
+p822
+sg4
+S'2008'
+p823
+sg6
+S'David Bell'
+p824
+sg8
+S'Memorial University of Newfoundland'
+p825
+sa(dp826
+g11
+S'Law'
+p827
+sg2
+S'Academy of Social Sciences'
+p828
+sg4
+S'2015'
+p829
+sg6
+S'Marie-Claire Belleau'
+p830
+sg8
+VUniversité Laval
+p831
+sa(dp832
+g11
+S'Journalism'
+p833
+sg2
+S'Academy of Social Sciences'
+p834
+sg4
+S'2005'
+p835
+sg6
+S'Jean-Guy Belley'
+p836
+sg8
+S'McGill University'
+p837
+sa(dp838
+g11
+S'Animal Biology'
+p839
+sg2
+S'Academy of Science'
+p840
+sg4
+S'2008'
+p841
+sg6
+S'Miodrag Belosevic'
+p842
+sg8
+S'University of Alberta'
+p843
+sa(dp844
+g11
+S'Anthropology / Archaeology'
+p845
+sg2
+S'Academy of Social Sciences'
+p846
+sg4
+S'1969'
+p847
+sg6
+S'Dr. Cyril Belshaw'
+p848
+sg8
+S'The University of British Columbia'
+p849
+sa(dp850
+g11
+S'Administration / Management'
+p851
+sg2
+S'Academy of Social Sciences'
+p852
+sg4
+S'2005'
+p853
+sg6
+S'Dr. Izak Benbasat'
+p854
+sg8
+S'The University of British Columbia'
+p855
+sa(dp856
+g11
+S'Mathematics and Computer Sciences'
+p857
+sg2
+S'Academy of Science'
+p858
+sg4
+S'2017'
+p859
+sg6
+S'M. Yoshua Bengio'
+p860
+sg8
+VUniversité de Montréal
+p861
+sa(dp862
+g11
+S'Law'
+p863
+sg2
+S'Academy of Social Sciences'
+p864
+sg4
+S'2016'
+p865
+sg6
+S'Jamie Benidickson'
+p866
+sg8
+S'University of Ottawa'
+p867
+sa(dp868
+g2
+S'Academy of Science'
+p869
+sg4
+S'2013'
+p870
+sg6
+S'Brahim Benmokrane'
+p871
+sg8
+VUniversité de Sherbrooke
+p872
+sa(dp873
+g11
+S'Literature'
+p874
+sg2
+S'Academy of the Arts and Humanities'
+p875
+sg4
+S'2016'
+p876
+sg6
+S'Susan Bennett'
+p877
+sg8
+S'University of Calgary'
+p878
+sa(dp879
+g2
+S'Academy of Social Sciences'
+p880
+sg4
+S'2013'
+p881
+sg6
+S'Cecilia Benoit'
+p882
+sg8
+S'University of Victoria'
+p883
+sa(dp884
+g11
+S'Languages / Philology'
+p885
+sg2
+S'Academy of the Arts and Humanities'
+p886
+sg4
+S'1999'
+p887
+sg6
+S'David Bentley'
+p888
+sg8
+S'Western University'
+p889
+sa(dp890
+g11
+S'History'
+p891
+sg2
+S'Academy of the Arts and Humanities'
+p892
+sg4
+S'1988'
+p893
+sg6
+S'Dr. David Bercuson'
+p894
+sg8
+S'University of Calgary'
+p895
+sa(dp896
+g11
+S'Atmospheric Sciences'
+p897
+sg2
+S'Academy of Science'
+p898
+sg4
+S'2007'
+p899
+sg6
+VProf. André Berger
+p900
+sg8
+VUniversité Catholique de Louvain
+p901
+sa(dp902
+g11
+S'History'
+p903
+sg2
+S'Academy of the Arts and Humanities'
+p904
+sg4
+S'1977'
+p905
+sg6
+S'Carl Berger'
+p906
+sg8
+S'University of Toronto'
+p907
+sa(dp908
+g11
+S'Plant Biology'
+p909
+sg2
+S'Academy of Science'
+p910
+sg4
+S'2010'
+p911
+sg6
+S'Dr. Yves Bergeron'
+p912
+sg8
+VUniversité du Québec à Montréal
+p913
+sa(dp914
+g11
+S'Plant Biology'
+p915
+sg2
+S'Academy of Science'
+p916
+sg4
+S'2010'
+p917
+sg6
+S'Dr. Yves Bergeron'
+p918
+sg8
+VUniversité du Québec en Abitibi-Temiscamingue
+p919
+sa(dp920
+g11
+S'Plant Biology'
+p921
+sg2
+S'Academy of Science'
+p922
+sg4
+S'2010'
+p923
+sg6
+S'Dr. Yves Bergeron'
+p924
+sg8
+VUniversité du Québec à Montréal
+p925
+sa(dp926
+g11
+S'Geography'
+p927
+sg2
+S'Academy of Social Sciences'
+p928
+sg4
+S'2015'
+p929
+sg6
+S'Fikret Berkes'
+p930
+sg8
+S'University of Manitoba'
+p931
+sa(dp932
+g11
+S'Microbiology and Biochemistry'
+p933
+sg2
+S'Academy of Science'
+p934
+sg4
+S'1969'
+p935
+sg6
+S'Mr. Louis Berlinguet'
+p936
+sg8
+VUniversité du Québec à Montréal
+p937
+sa(dp938
+g11
+S'Economics'
+p939
+sg2
+S'Academy of Social Sciences'
+p940
+sg4
+S'2009'
+p941
+sg6
+S'Jean-Thomas Bernard'
+p942
+sg8
+S'University of Ottawa'
+p943
+sa(dp944
+g11
+S'Political Science'
+p945
+sg2
+S'Academy of Social Sciences'
+p946
+sg4
+S'1995'
+p947
+sg6
+VMr. André Bernard
+p948
+sg8
+VUniversité du Québec à Montréal
+p949
+sa(dp950
+g11
+S'Molecular Biology and Genetics'
+p951
+sg2
+S'Academy of Science'
+p952
+sg4
+S'2011'
+p953
+sg6
+S'Louis Bernatchez'
+p954
+sg8
+VUniversité Laval
+p955
+sa(dp956
+g11
+S'Anthropology'
+p957
+sg2
+S'Academy of Social Sciences'
+p958
+sg4
+S'2011'
+p959
+sg6
+S'Mr. Bernard Bernier'
+p960
+sg8
+VUniversité de Montréal
+p961
+sa(dp962
+g11
+S'Literature'
+p963
+sg2
+S'Academy of the Arts and Humanities'
+p964
+sg4
+S'2015'
+p965
+sg6
+VMarc-André Bernier
+p966
+sg8
+VUniversité du Québec à Trois-Rivières
+p967
+sa(dp968
+g11
+S'History'
+p969
+sg2
+S'Academy of Social Sciences'
+p970
+sg4
+S'2001'
+p971
+sg6
+S'Serge Bernier'
+p972
+sg8
+VNational Defence - Défense nationale
+p973
+sa(dp974
+g11
+S'Medical Sciences'
+p975
+sg2
+S'Academy of Science'
+p976
+sg4
+S'1991'
+p977
+sg6
+S'Alan Bernstein'
+p978
+sg8
+S'Canadian Institute of Health Research'
+p979
+sa(dp980
+g11
+S'Medical Sciences'
+p981
+sg2
+S'Academy of Science'
+p982
+sg4
+S'2012'
+p983
+sg6
+S'Charles Bernstein'
+p984
+sg8
+S'University of Manitoba'
+p985
+sa(dp986
+g11
+S'Medical Sciences'
+p987
+sg2
+S'Academy of Science'
+p988
+sg4
+S'1991'
+p989
+sg6
+S'Alan Bernstein'
+p990
+sg8
+S'CIFAR'
+p991
+sa(dp992
+g11
+S'Economics'
+p993
+sg2
+S'Academy of Social Sciences'
+p994
+sg4
+S'1997'
+p995
+sg6
+S'Dr. R. Albert Berry'
+p996
+sg8
+S'University of Toronto'
+p997
+sa(dp998
+g11
+S'Literature'
+p999
+sg2
+S'Academy of the Arts and Humanities'
+p1000
+sg4
+S'1988'
+p1001
+sg6
+S'Mr. Bernard Beugnot'
+p1002
+sg8
+VUniversité de Montréal
+p1003
+sa(dp1004
+g11
+S'Literature'
+p1005
+sg2
+S'Academy of the Arts and Humanities'
+p1006
+sg4
+S'2006'
+p1007
+sg6
+S'Alan Bewell'
+p1008
+sg8
+S'University of Toronto'
+p1009
+sa(dp1010
+g11
+S'Plant Biology'
+p1011
+sg2
+S'Academy of Science'
+p1012
+sg4
+S'1982'
+p1013
+sg6
+S'Dr. J. Derek Bewley'
+p1014
+sg8
+S'University of Guelph'
+p1015
+sa(dp1016
+g11
+S'Engineering'
+p1017
+sg2
+S'Academy of Science'
+p1018
+sg4
+S'2000'
+p1019
+sg6
+S'Dr. Vijay Bhargava'
+p1020
+sg8
+S'The University of British Columbia'
+p1021
+sa(dp1022
+g11
+S'Applied Science'
+p1023
+sg2
+S'Academy of Science'
+p1024
+sg4
+S'1997'
+p1025
+sg6
+S'Dr. Prakash Bhartia'
+p1026
+sg8
+S'Natel Engineering Co. Inc.'
+p1027
+sa(dp1028
+g11
+S'Psychology'
+p1029
+sg2
+S'Academy of Social Sciences'
+p1030
+sg4
+S'2003'
+p1031
+sg6
+S'Ellen Bialystok'
+p1032
+sg8
+S'York University'
+p1033
+sa(dp1034
+g11
+S'Anthropology'
+p1035
+sg2
+S'Academy of Social Sciences'
+p1036
+sg4
+S'1990'
+p1037
+sg6
+S'Mr. Gilles Bibeau'
+p1038
+sg8
+VUniversité de Montréal
+p1039
+sa(dp1040
+g11
+S'Demographics'
+p1041
+sg2
+S'Academy of Social Sciences'
+p1042
+sg4
+S'2015'
+p1043
+sg6
+S'Alain Bideau'
+p1044
+sg8
+S'INSHS CNRS Paris France'
+p1045
+sa(dp1046
+g11
+S'Plant Biology'
+p1047
+sg2
+S'Academy of Science'
+p1048
+sg4
+S'1972'
+p1049
+sg6
+S'Dr. R.G.S. Bidwell'
+p1050
+sg8
+S"Queen's University"
+p1051
+sa(dp1052
+g11
+S'Medical Sciences'
+p1053
+sg2
+S'Academy of Science'
+p1054
+sg4
+S'1992'
+p1055
+sg6
+S'John Bienenstock'
+p1056
+sg8
+S'McMaster University'
+p1057
+sa(dp1058
+g11
+S'Mathematics and Computer Sciences'
+p1059
+sg2
+S'Academy of Science'
+p1060
+sg4
+S'1992'
+p1061
+sg6
+S'Dr. Edward Bierstone'
+p1062
+sg8
+S'University of Toronto'
+p1063
+sa(dp1064
+g11
+S'Engineering'
+p1065
+sg2
+S'Academy of Science'
+p1066
+sg4
+S'1980'
+p1067
+sg6
+S'Dr. Roy Billinton'
+p1068
+sg8
+S'University of Saskatchewan'
+p1069
+sa(dp1070
+g11
+S'Economics'
+p1071
+sg2
+S'Academy of Social Sciences'
+p1072
+sg4
+S'1978'
+p1073
+sg6
+S'Dr. Richard Bird'
+p1074
+sg8
+S'University of Toronto'
+p1075
+sa(dp1076
+g11
+S'Physics'
+p1077
+sg2
+S'Academy of Science'
+p1078
+sg4
+S'2002'
+p1079
+sg6
+S'Robert Birgeneau'
+p1080
+sg8
+S'University of Toronto'
+p1081
+sa(dp1082
+g11
+S'Literature'
+p1083
+sg2
+S'Academy of the Arts and Humanities'
+p1084
+sg4
+S'2015'
+p1085
+sg6
+S'Michel Biron'
+p1086
+sg8
+S'McGill University'
+p1087
+sa(dp1088
+g11
+S'Applied Science'
+p1089
+sg2
+S'Academy of Science'
+p1090
+sg4
+S'2011'
+p1091
+sg6
+S'Dr. Viola Birss'
+p1092
+sg8
+S'University of Calgary'
+p1093
+sa(dp1094
+g11
+S'Medical Sciences'
+p1095
+sg2
+S'Academy of Science'
+p1096
+sg4
+S'2012'
+p1097
+sg6
+S'Sandra Black'
+p1098
+sg8
+S'University of Toronto'
+p1099
+sa(dp1100
+g2
+S'Academy of Social Sciences'
+p1101
+sg4
+S'2016'
+p1102
+sg6
+S'Cindy Blackstock'
+p1103
+sg8
+Nsa(dp1104
+g11
+S'Creative Writing'
+p1105
+sg2
+S'Academy of the Arts and Humanities'
+p1106
+sg4
+S'1986'
+p1107
+sg6
+S'Mrs. Marie-Claire Blais'
+p1108
+sg8
+S'Victoria University, University of Toronto'
+p1109
+sa(dp1110
+g11
+S'Creative Writing'
+p1111
+sg2
+S'Academy of the Arts and Humanities'
+p1112
+sg4
+S'1986'
+p1113
+sg6
+S'Mrs. Marie-Claire Blais'
+p1114
+sg8
+S'University of Victoria, University of Toronto'
+p1115
+sa(dp1116
+g11
+S'Political Science'
+p1117
+sg2
+S'Academy of Social Sciences'
+p1118
+sg4
+S'1999'
+p1119
+sg6
+VMr. André Blais
+p1120
+sg8
+VUniversité de Montréal
+p1121
+sa(dp1122
+g11
+S'Engineering'
+p1123
+sg2
+S'Academy of Science'
+p1124
+sg4
+S'2003'
+p1125
+sg6
+S'Dr. Ian Blake'
+p1126
+sg8
+S'The University of British Columbia'
+p1127
+sa(dp1128
+g11
+S'Psychology'
+p1129
+sg2
+S'Academy of Social Sciences'
+p1130
+sg4
+S'1989'
+p1131
+sg6
+S'Madeleine Blanchet'
+p1132
+sg8
+S'Conseil des affaires sociales'
+p1133
+sa(dp1134
+g11
+S'Molecular Biology and Genetics'
+p1135
+sg2
+S'Academy of Science'
+p1136
+sg4
+S'2002'
+p1137
+sg6
+S'Dr. Chris Bleackley'
+p1138
+sg8
+S'University of Alberta'
+p1139
+sa(dp1140
+g11
+S'Microbiology and Biochemistry'
+p1141
+sg2
+S'Academy of Science'
+p1142
+sg4
+S'2017'
+p1143
+sg6
+S'Benjamin Blencowe'
+p1144
+sg8
+S'University of Toronto'
+p1145
+sa(dp1146
+g11
+S'Literature'
+p1147
+sg2
+S'Academy of the Arts and Humanities'
+p1148
+sg4
+S'1979'
+p1149
+sg6
+S'William Blissett'
+p1150
+sg8
+S'University of Toronto'
+p1151
+sa(dp1152
+g11
+S'Creative Writing'
+p1153
+sg2
+S'Academy of the Arts and Humanities'
+p1154
+sg4
+S'1986'
+p1155
+sg6
+S'Edward Blodgett'
+p1156
+sg8
+S'University of Alberta'
+p1157
+sa(dp1158
+g11
+S'Mathematics and Computer Sciences'
+p1159
+sg2
+S'Academy of Science'
+p1160
+sg4
+S'1987'
+p1161
+sg6
+S'Dr. Thomas Bloom'
+p1162
+sg8
+S'University of Toronto'
+p1163
+sa(dp1164
+g11
+S'Microbiology and Biochemistry'
+p1165
+sg2
+S'Academy of Science'
+p1166
+sg4
+S'1999'
+p1167
+sg6
+S'Dr. Rhoda Blostein'
+p1168
+sg8
+S'McGill University'
+p1169
+sa(dp1170
+g11
+S'Earth Sciences'
+p1171
+sg2
+S'Academy of Science'
+p1172
+sg4
+S'2017'
+p1173
+sg6
+S'David Blowes'
+p1174
+sg8
+S'University of Waterloo'
+p1175
+sa(dp1176
+g11
+S'Earth Sciences'
+p1177
+sg2
+S'Academy of Science'
+p1178
+sg4
+S'2016'
+p1179
+sg6
+S'Stewart Blusson'
+p1180
+sg8
+S'Association for Mineral Exploration B.C.'
+p1181
+sa(dp1182
+g11
+S'Economics'
+p1183
+sg2
+S'Academy of Social Sciences'
+p1184
+sg4
+S'1986'
+p1185
+sg6
+S'Dr. Robin Boadway'
+p1186
+sg8
+S"Queen's University"
+p1187
+sa(dp1188
+g11
+S'Molecular Biology and Genetics'
+p1189
+sg2
+S'Academy of Science'
+p1190
+sg4
+S'2001'
+p1191
+sg6
+S'Peter Boag'
+p1192
+sg8
+S"Queen's University"
+p1193
+sa(dp1194
+g11
+S'Anthropology / Archaeology'
+p1195
+sg2
+S'Academy of Social Sciences'
+p1196
+sg4
+S'2002'
+p1197
+sg6
+S'Janice Boddy'
+p1198
+sg8
+S'University of Toronto'
+p1199
+sa(dp1200
+g11
+S'Philosophy / Ethics'
+p1201
+sg2
+S'Academy of the Arts and Humanities'
+p1202
+sg4
+S'1994'
+p1203
+sg6
+VMr. Richard Bodéüs
+p1204
+sg8
+VUniversité de Montréal
+p1205
+sa(dp1206
+g11
+S'Plant Biology'
+p1207
+sg2
+S'Academy of Science'
+p1208
+sg4
+S'2015'
+p1209
+sg6
+S'Joerg Bohlmann'
+p1210
+sg8
+S'The University of British Columbia'
+p1211
+sa(dp1212
+g11
+S'Chemistry'
+p1213
+sg2
+S'Academy of Science'
+p1214
+sg4
+S'1994'
+p1215
+sg6
+S'Diethard Bohme'
+p1216
+sg8
+S'York University'
+p1217
+sa(dp1218
+g2
+S'Academy of Science'
+p1219
+sg4
+S'2017'
+p1220
+sg6
+S'Robert Boily'
+p1221
+sg8
+S'Inforex Inc.'
+p1222
+sa(dp1223
+g2
+S'Academy of Social Sciences'
+p1224
+sg4
+S'2013'
+p1225
+sg6
+VGérard Boismenu
+p1226
+sg8
+VUniversité de Montréal
+p1227
+sa(dp1228
+g11
+S'Literature'
+p1229
+sg2
+S'Academy of the Arts and Humanities'
+p1230
+sg4
+S'1998'
+p1231
+sg6
+VAurélien Boivin
+p1232
+sg8
+VUniversité Laval
+p1233
+sa(dp1234
+g11
+S'Psychology'
+p1235
+sg2
+S'Academy of Social Sciences'
+p1236
+sg4
+S'2009'
+p1237
+sg6
+S'Michel Boivin'
+p1238
+sg8
+VUniversité Laval
+p1239
+sa(dp1240
+g11
+S'Creative Writing'
+p1241
+sg2
+S'Academy of the Arts and Humanities'
+p1242
+sg4
+S'2016'
+p1243
+sg6
+VChristian Bök
+p1244
+sg8
+S'Charles Darwin University'
+p1245
+sa(dp1246
+g11
+S'Economics'
+p1247
+sg2
+S'Academy of Social Sciences'
+p1248
+sg4
+S'2001'
+p1249
+sg6
+S'Dr. Lawrence Boland'
+p1250
+sg8
+S'Simon Fraser University'
+p1251
+sa(dp1252
+g11
+S'Medical Sciences'
+p1253
+sg2
+S'Academy of Science'
+p1254
+sg4
+S'2006'
+p1255
+sg6
+S'Roberto Bolli'
+p1256
+sg8
+S'University of Louisville'
+p1257
+sa(dp1258
+g11
+S'Astronomical Sciences'
+p1259
+sg2
+S'Academy of Science'
+p1260
+sg4
+S'1985'
+p1261
+sg6
+S'Dr. Charles Bolton'
+p1262
+sg8
+S'University of Toronto'
+p1263
+sa(dp1264
+g11
+S'Astronomical Sciences'
+p1265
+sg2
+S'Academy of Science'
+p1266
+sg4
+S'1996'
+p1267
+sg6
+S'J. Richard Bond'
+p1268
+sg8
+S'University of Toronto'
+p1269
+sa(dp1270
+g11
+S'Medical Sciences'
+p1271
+sg2
+S'Academy of Science'
+p1272
+sg4
+S'1999'
+p1273
+sg6
+S'Dr. Roberta Bondar'
+p1274
+sg8
+S'Trent University'
+p1275
+sa(dp1276
+g11
+S'Medical Sciences'
+p1277
+sg2
+S'Academy of Science'
+p1278
+sg4
+S'2008'
+p1279
+sg6
+S'Dr. Arend Bonen'
+p1280
+sg8
+S'University of Guelph'
+p1281
+sa(dp1282
+g11
+S'Literature'
+p1283
+sg2
+S'Academy of the Arts and Humanities'
+p1284
+sg4
+S'1998'
+p1285
+sg6
+S'Prof. Laurence Bongie'
+p1286
+sg8
+S'The University of British Columbia'
+p1287
+sa(dp1288
+g11
+S'Economics'
+p1289
+sg2
+S'Academy of Social Sciences'
+p1290
+sg4
+S'1985'
+p1291
+sg6
+S'Bernard Bonin'
+p1292
+sg8
+S'UQAH'
+p1293
+sa(dp1294
+g11
+S'Physics'
+p1295
+sg2
+S'Academy of Science'
+p1296
+sg4
+S'2005'
+p1297
+sg6
+S'Dr. Douglas Bonn'
+p1298
+sg8
+S'The University of British Columbia'
+p1299
+sa(dp1300
+g11
+S'Molecular Biology and Genetics'
+p1301
+sg2
+S'Academy of Science'
+p1302
+sg4
+S'2005'
+p1303
+sg6
+S'Charles Boone'
+p1304
+sg8
+S'University of Toronto'
+p1305
+sa(dp1306
+g11
+S'Psychology'
+p1307
+sg2
+S'Academy of Social Sciences'
+p1308
+sg4
+S'2015'
+p1309
+sg6
+S'Dr. Betty Booo'
+p1310
+sg8
+S'University of Ottawa'
+p1311
+sa(dp1312
+g11
+S'Animal Biology'
+p1313
+sg2
+S'Academy of Science'
+p1314
+sg4
+S'1999'
+p1315
+sg6
+S'John Borden'
+p1316
+sg8
+S'Simon Fraser University'
+p1317
+sa(dp1318
+g11
+S'Mathematics and Computer Sciences'
+p1319
+sg2
+S'Academy of Science'
+p1320
+sg4
+S'1991'
+p1321
+sg6
+S'Dr. Allan Borodin'
+p1322
+sg8
+S'University of Toronto'
+p1323
+sa(dp1324
+g11
+S'Law'
+p1325
+sg2
+S'Academy of Social Sciences'
+p1326
+sg4
+S'2007'
+p1327
+sg6
+S'Dr. John Borrows'
+p1328
+sg8
+S'University of Victoria'
+p1329
+sa(dp1330
+g11
+S'Mathematics and Computer Sciences'
+p1331
+sg2
+S'Academy of Science'
+p1332
+sg4
+S'1994'
+p1333
+sg6
+S'Dr. Jonathan Borwein'
+p1334
+sg8
+S'University of Newcastle'
+p1335
+sa(dp1336
+g11
+S'Classics / Humanities'
+p1337
+sg2
+S'Academy of the Arts and Humanities'
+p1338
+sg4
+S'2007'
+p1339
+sg6
+S'Mandakranta Bose'
+p1340
+sg8
+S'The University of British Columbia'
+p1341
+sa(dp1342
+g11
+S'History'
+p1343
+sg2
+S'Academy of the Arts and Humanities'
+p1344
+sg4
+S'1976'
+p1345
+sg6
+S'Prof. J. Bosher'
+p1346
+sg8
+S'York University'
+p1347
+sa(dp1348
+g11
+S'History'
+p1349
+sg2
+S'Academy of the Arts and Humanities'
+p1350
+sg4
+S'1989'
+p1351
+sg6
+S'Robert Bothwell'
+p1352
+sg8
+S'University of Toronto'
+p1353
+sa(dp1354
+g11
+S'Literature'
+p1355
+sg2
+S'Academy of the Arts and Humanities'
+p1356
+sg4
+S'1999'
+p1357
+sg6
+S'Mr. Jacques Bouchard'
+p1358
+sg8
+VUniversité de Montréal
+p1359
+sa(dp1360
+g11
+S'History'
+p1361
+sg2
+S'Academy of Social Sciences'
+p1362
+sg4
+S'1985'
+p1363
+sg6
+VMr. Gérard Bouchard
+p1364
+sg8
+VUniversité du Québec à Chicoutimi
+p1365
+sa(dp1366
+g11
+S'Ocean Sciences'
+p1367
+sg2
+S'Academy of Science'
+p1368
+sg4
+S'2011'
+p1369
+sg6
+S'Bernard Boudreau'
+p1370
+sg8
+S'Dalhousie University'
+p1371
+sa(dp1372
+g11
+S'Philosophy / Ethics'
+p1373
+sg2
+S'Academy of the Arts and Humanities'
+p1374
+sg4
+S'1995'
+p1375
+sg6
+S'Josiane Boulad-Ayoub'
+p1376
+sg8
+VUniversité du Québec à Montréal
+p1377
+sa(dp1378
+g11
+S'Creative Writing'
+p1379
+sg2
+S'Academy of the Arts and Humanities'
+p1380
+sg4
+S'1997'
+p1381
+sg6
+VMr. Hédi Bouraoui
+p1382
+sg8
+S'York University'
+p1383
+sa(dp1384
+g11
+S'Psychology'
+p1385
+sg2
+S'Academy of Social Sciences'
+p1386
+sg4
+S'2012'
+p1387
+sg6
+S'Richard Bourhis'
+p1388
+sg8
+VUniversité du Québec à Montréal
+p1389
+sa(dp1390
+g11
+S'Geography'
+p1391
+sg2
+S'Academy of Social Sciences'
+p1392
+sg4
+S'1985'
+p1393
+sg6
+S'Dr. Larry Bourne'
+p1394
+sg8
+S'University of Toronto'
+p1395
+sa(dp1396
+g11
+S'Chemistry'
+p1397
+sg2
+S'Academy of Science'
+p1398
+sg4
+S'1964'
+p1399
+sg6
+S'Dr. Arthur Bourns'
+p1400
+sg8
+S'McMaster University'
+p1401
+sa(dp1402
+g11
+S'Medical Sciences'
+p1403
+sg2
+S'Academy of Science'
+p1404
+sg4
+S'2016'
+p1405
+sg6
+S'Charles Bourque'
+p1406
+sg8
+S'McGill University'
+p1407
+sa(dp1408
+g11
+S'Mathematics and Computer Sciences'
+p1409
+sg2
+S'Academy of Science'
+p1410
+sg4
+S'2014'
+p1411
+sg6
+S'Craig Boutilier'
+p1412
+sg8
+S'University of Toronto'
+p1413
+sa(dp1414
+g11
+S'Animal Biology'
+p1415
+sg2
+S'Academy of Science'
+p1416
+sg4
+S'2006'
+p1417
+sg6
+S'Stan Boutin'
+p1418
+sg8
+S'University of Alberta'
+p1419
+sa(dp1420
+g2
+S'Academy of Science'
+p1421
+sg4
+S'2014'
+p1422
+sg6
+S'Michel Bouvier'
+p1423
+sg8
+VUniversité de Montréal
+p1424
+sa(dp1425
+g11
+S'Ocean Sciences'
+p1426
+sg2
+S'Academy of Science'
+p1427
+sg4
+S'1995'
+p1428
+sg6
+S'Dr. Anthony Bowen'
+p1429
+sg8
+S'Dalhousie University'
+p1430
+sa(dp1431
+g2
+S'Academy of Science'
+p1432
+sg4
+S'2014'
+p1433
+sg6
+S'Mark Boyce'
+p1434
+sg8
+S'University of Alberta'
+p1435
+sa(dp1436
+g11
+S'Mathematics and Computer Sciences'
+p1437
+sg2
+S'Academy of Science'
+p1438
+sg4
+S'1980'
+p1439
+sg6
+S'David Boyd'
+p1440
+sg8
+S'The University of British Columbia'
+p1441
+sa(dp1442
+g11
+S'Law'
+p1443
+sg2
+S'Academy of Social Sciences'
+p1444
+sg4
+S'2012'
+p1445
+sg6
+S'Susan Boyd'
+p1446
+sg8
+S'The University of British Columbia'
+p1447
+sa(dp1448
+g11
+S'Sociology'
+p1449
+sg2
+S'Academy of Social Sciences'
+p1450
+sg4
+S'1997'
+p1451
+sg6
+S'Dr. Monica Boyd'
+p1452
+sg8
+S'University of Toronto'
+p1453
+sa(dp1454
+g11
+S'Economics'
+p1455
+sg2
+S'Academy of Social Sciences'
+p1456
+sg4
+S'1992'
+p1457
+sg6
+S'Marcel Boyer'
+p1458
+sg8
+VUniversité de Montréal
+p1459
+sa(dp1460
+g2
+S'Academy of the Arts and Humanities'
+p1461
+sg4
+S'2013'
+p1462
+sg6
+S'Bettina Bradbury'
+p1463
+sg8
+S'York University'
+p1464
+sa(dp1465
+g11
+S'Classics / Humanities'
+p1466
+sg2
+S'Academy of the Arts and Humanities'
+p1467
+sg4
+S'1996'
+p1468
+sg6
+S'Keith Bradley'
+p1469
+sg8
+S'University of Notre Dame'
+p1470
+sa(dp1471
+g11
+S'Classics / Humanities'
+p1472
+sg2
+S'Academy of the Arts and Humanities'
+p1473
+sg4
+S'1996'
+p1474
+sg6
+S'Keith Bradley'
+p1475
+sg8
+S'University of Victoria'
+p1476
+sa(dp1477
+g11
+S'Physics'
+p1478
+sg2
+S'Academy of Science'
+p1479
+sg4
+S'2015'
+p1480
+sg6
+S'Robert Brandenberger'
+p1481
+sg8
+S'McGill University'
+p1482
+sa(dp1483
+g11
+S'Molecular Biology and Genetics'
+p1484
+sg2
+S'Academy of Science'
+p1485
+sg4
+S'2002'
+p1486
+sg6
+S'Philip Branton'
+p1487
+sg8
+S'McGill University'
+p1488
+sa(dp1489
+g11
+S'Applied Science'
+p1490
+sg2
+S'Academy of Science'
+p1491
+sg4
+S'2004'
+p1492
+sg6
+S'Dr. John Brash'
+p1493
+sg8
+S'McMaster University'
+p1494
+sa(dp1495
+g11
+S'Mathematics and Computer Sciences'
+p1496
+sg2
+S'Academy of Science'
+p1497
+sg4
+S'1996'
+p1498
+sg6
+S'Mr. Gilles Brassard'
+p1499
+sg8
+VUniversité de Montréal
+p1500
+sa(dp1501
+g2
+S'Academy of the Arts and Humanities'
+p1502
+sg4
+S'2010'
+p1503
+sg6
+S'Marta Braun'
+p1504
+sg8
+S'Ryerson University'
+p1505
+sa(dp1506
+g11
+S'Political Science'
+p1507
+sg2
+S'Academy of Social Sciences'
+p1508
+sg4
+S'1976'
+p1509
+sg6
+S'Dr. Michael Brecher'
+p1510
+sg8
+S'McGill University'
+p1511
+sa(dp1512
+g11
+S'Psychology'
+p1513
+sg2
+S'Academy of Social Sciences'
+p1514
+sg4
+S'1995'
+p1515
+sg6
+S'Albert Bregman'
+p1516
+sg8
+S'McGill University'
+p1517
+sa(dp1518
+g11
+S'Economics'
+p1519
+sg2
+S'Academy of Social Sciences'
+p1520
+sg4
+S'1999'
+p1521
+sg6
+S'Dr. Reuven Brenner'
+p1522
+sg8
+S'McGill University'
+p1523
+sa(dp1524
+g11
+S'Sociology'
+p1525
+sg2
+S'Academy of Social Sciences'
+p1526
+sg4
+S'1974'
+p1527
+sg6
+S'Dr. Raymond Breton'
+p1528
+sg8
+S'University of Toronto'
+p1529
+sa(dp1530
+g11
+S'Administration / Management'
+p1531
+sg2
+S'Academy of Social Sciences'
+p1532
+sg4
+S'2009'
+p1533
+sg6
+VProf. Michèle Breton
+p1534
+sg8
+VUniversité de Montréal
+p1535
+sa(dp1536
+g11
+S'Mathematics and Computer Sciences'
+p1537
+sg2
+S'Academy of Science'
+p1538
+sg4
+S'1985'
+p1539
+sg6
+S'Dr. David Brillinger'
+p1540
+sg8
+S'University of California Berkeley'
+p1541
+sa(dp1542
+g11
+S'Microbiology and Biochemistry'
+p1543
+sg2
+S'Academy of Science'
+p1544
+sg4
+S'2010'
+p1545
+sg6
+S'David Brindley'
+p1546
+sg8
+S'University of Alberta'
+p1547
+sa(dp1548
+g11
+S'Chemistry'
+p1549
+sg2
+S'Academy of Science'
+p1550
+sg4
+S'1984'
+p1551
+sg6
+S'Dr. Christopher Brion'
+p1552
+sg8
+S'The University of British Columbia'
+p1553
+sa(dp1554
+g11
+S'Languages / Philology'
+p1555
+sg2
+S'Academy of the Arts and Humanities'
+p1556
+sg4
+S'2009'
+p1557
+sg6
+S'Mrs. Annie Brisset'
+p1558
+sg8
+S'University of Ottawa'
+p1559
+sa(dp1560
+g11
+S'Philosophy / Ethics'
+p1561
+sg2
+S'Academy of the Arts and Humanities'
+p1562
+sg4
+S'1997'
+p1563
+sg6
+S'Mr. Luc Brisson'
+p1564
+sg8
+S'C.N.R.S.'
+p1565
+sa(dp1566
+g2
+S'Academy of Social Sciences'
+p1567
+sg4
+S'2013'
+p1568
+sg6
+S'Deborah Britzman'
+p1569
+sg8
+S'York University'
+p1570
+sa(dp1571
+g11
+S'Criminology'
+p1572
+sg2
+S'Academy of Social Sciences'
+p1573
+sg4
+S'2007'
+p1574
+sg6
+S'Prof. Serge Brochu'
+p1575
+sg8
+VUniversité de Montréal
+p1576
+sa(dp1577
+g11
+S'Political Science'
+p1578
+sg2
+S'Academy of Social Sciences'
+p1579
+sg4
+S'2002'
+p1580
+sg6
+S'Janine Brodie'
+p1581
+sg8
+S'University of Alberta'
+p1582
+sa(dp1583
+g2
+S'Academy of the Arts and Humanities'
+p1584
+sg4
+S'2013'
+p1585
+sg6
+S'Timothy Brook'
+p1586
+sg8
+S'The University of British Columbia'
+p1587
+sa(dp1588
+g11
+S'Chemistry'
+p1589
+sg2
+S'Academy of Science'
+p1590
+sg4
+S'1977'
+p1591
+sg6
+S'Dr. Adrian Brook'
+p1592
+sg8
+S'University of Toronto'
+p1593
+sa(dp1594
+g11
+S'Animal Biology'
+p1595
+sg2
+S'Academy of Science'
+p1596
+sg4
+S'2004'
+p1597
+sg6
+S'Daniel Brooks'
+p1598
+sg8
+S'University of Toronto'
+p1599
+sa(dp1600
+g11
+S'Microbiology and Biochemistry'
+p1601
+sg2
+S'Academy of Science'
+p1602
+sg4
+S'2009'
+p1603
+sg6
+S'John Brosnan'
+p1604
+sg8
+S'Memorial University of Newfoundland'
+p1605
+sa(dp1606
+g11
+S'Microbiology and Biochemistry'
+p1607
+sg2
+S'Academy of Science'
+p1608
+sg4
+S'2009'
+p1609
+sg6
+S'John Brosnan'
+p1610
+sg8
+S'Memorial University'
+p1611
+sa(dp1612
+g11
+S'Medical Sciences'
+p1613
+sg2
+S'Academy of Science'
+p1614
+sg4
+S'1980'
+p1615
+sg6
+S'Dr. John Brown'
+p1616
+sg8
+S'The University of British Columbia'
+p1617
+sa(dp1618
+g11
+S'Chemistry'
+p1619
+sg2
+S'Academy of Science'
+p1620
+sg4
+S'2009'
+p1621
+sg6
+S'Robert Brown'
+p1622
+sg8
+S"Queen's University"
+p1623
+sa(dp1624
+g11
+S'Microbiology and Biochemistry'
+p1625
+sg2
+S'Academy of Science'
+p1626
+sg4
+S'2004'
+p1627
+sg6
+S'Gregory Brown'
+p1628
+sg8
+S'University of Toronto'
+p1629
+sa(dp1630
+g11
+S'Chemistry'
+p1631
+sg2
+S'Academy of Science'
+p1632
+sg4
+S'2009'
+p1633
+sg6
+S'Robert Brown'
+p1634
+sg8
+S"Queen's University"
+p1635
+sa(dp1636
+g11
+S'Microbiology and Biochemistry'
+p1637
+sg2
+S'Academy of Science'
+p1638
+sg4
+S'2004'
+p1639
+sg6
+S'Gregory Brown'
+p1640
+sg8
+S'McMaster University'
+p1641
+sa(dp1642
+g11
+S'Medical Sciences'
+p1643
+sg2
+S'Academy of Science'
+p1644
+sg4
+S'1980'
+p1645
+sg6
+S'Dr. John Brown'
+p1646
+sg8
+S'The University of British Columbia'
+p1647
+sa(dp1648
+g2
+S'Academy of Science'
+p1649
+sg4
+S'2016'
+p1650
+sg6
+S'Dr. Patricia Brubaker'
+p1651
+sg8
+S'University of Toronto'
+p1652
+sa(dp1653
+g11
+S'Medical Sciences'
+p1654
+sg2
+S'Academy of Science'
+p1655
+sg4
+S'1980'
+p1656
+sg6
+S'Dr. W. Robert Bruce'
+p1657
+sg8
+S'University of Toronto'
+p1658
+sa(dp1659
+g11
+S'Earth Sciences'
+p1660
+sg2
+S'Academy of Science'
+p1661
+sg4
+S'1997'
+p1662
+sg6
+S'James Bruce'
+p1663
+sg8
+S'Canadian Climate Program Board'
+p1664
+sa(dp1665
+g11
+S'Law'
+p1666
+sg2
+S'Academy of Social Sciences'
+p1667
+sg4
+S'2011'
+p1668
+sg6
+S'Alan Brudner'
+p1669
+sg8
+S'University of Toronto'
+p1670
+sa(dp1671
+g11
+S'Chemistry'
+p1672
+sg2
+S'Academy of Science'
+p1673
+sg4
+S'1994'
+p1674
+sg6
+S'Paul Brumer'
+p1675
+sg8
+S'University of Toronto'
+p1676
+sa(dp1677
+g11
+S'Medical Sciences'
+p1678
+sg2
+S'Academy of Science'
+p1679
+sg4
+S'2015'
+p1680
+sg6
+S'Robert Brunham'
+p1681
+sg8
+S'The University of British Columbia'
+p1682
+sa(dp1683
+g2
+S'Academy of Social Sciences'
+p1684
+sg4
+S'2013'
+p1685
+sg6
+VJutta Brunnée
+p1686
+sg8
+S'University of Toronto'
+p1687
+sa(dp1688
+g11
+S'Art History'
+p1689
+sg2
+S'Academy of the Arts and Humanities'
+p1690
+sg4
+S'2015'
+p1691
+sg6
+S'Kathryn Brush'
+p1692
+sg8
+S'Western University'
+p1693
+sa(dp1694
+g11
+S'Engineering'
+p1695
+sg2
+S'Academy of Science'
+p1696
+sg4
+S'1994'
+p1697
+sg6
+S'Dr. Leonard Bruton'
+p1698
+sg8
+S'University of Calgary'
+p1699
+sa(dp1700
+g11
+S'Mathematics and Computer Sciences'
+p1701
+sg2
+S'Academy of Science'
+p1702
+sg4
+S'2007'
+p1703
+sg6
+S'Prof. David Brydges'
+p1704
+sg8
+S'The University of British Columbia'
+p1705
+sa(dp1706
+g11
+S'Literature'
+p1707
+sg2
+S'Academy of the Arts and Humanities'
+p1708
+sg4
+S'2008'
+p1709
+sg6
+S'Diana Brydon'
+p1710
+sg8
+S'University of Manitoba'
+p1711
+sa(dp1712
+g11
+S'Sociology'
+p1713
+sg2
+S'Academy of Social Sciences'
+p1714
+sg4
+S'2008'
+p1715
+sg6
+S'Robert Brym'
+p1716
+sg8
+S'University of Toronto'
+p1717
+sa(dp1718
+g11
+S'Engineering'
+p1719
+sg2
+S'Academy of Science'
+p1720
+sg4
+S'2001'
+p1721
+sg6
+S'Thomas Brzustowski'
+p1722
+sg8
+S'University of Ottawa'
+p1723
+sa(dp1724
+g11
+S'Linguistics'
+p1725
+sg2
+S'Academy of the Arts and Humanities'
+p1726
+sg4
+S'2007'
+p1727
+sg6
+S'Vit Bubenik'
+p1728
+sg8
+S'Memorial University of Newfoundland'
+p1729
+sa(dp1730
+g11
+S'Linguistics'
+p1731
+sg2
+S'Academy of the Arts and Humanities'
+p1732
+sg4
+S'2007'
+p1733
+sg6
+S'Vit Bubenik'
+p1734
+sg8
+S'Memorial University'
+p1735
+sa(dp1736
+g11
+S'Medical Sciences'
+p1737
+sg2
+S'Academy of Science'
+p1738
+sg4
+S'1994'
+p1739
+sg6
+S'Manuel Buchwald'
+p1740
+sg8
+S'University of Toronto'
+p1741
+sa(dp1742
+g11
+S'History'
+p1743
+sg2
+S'Academy of the Arts and Humanities'
+p1744
+sg4
+S'2003'
+p1745
+sg6
+S'John (Jack) Bumsted'
+p1746
+sg8
+S'University of Manitoba'
+p1747
+sa(dp1748
+g11
+S'Chemistry'
+p1749
+sg2
+S'Academy of Science'
+p1750
+sg4
+S'2014'
+p1751
+sg6
+S'Erwin Buncel'
+p1752
+sg8
+S"Queen's University"
+p1753
+sa(dp1754
+g11
+S'Microbiology and Biochemistry'
+p1755
+sg2
+S'Academy of Science'
+p1756
+sg4
+S'1995'
+p1757
+sg6
+S'david bundle'
+p1758
+sg8
+S'University of Alberta'
+p1759
+sa(dp1760
+g11
+S'Philosophy / Ethics'
+p1761
+sg2
+S'Academy of the Arts and Humanities'
+p1762
+sg4
+S'1992'
+p1763
+sg6
+S'Dr. Mario Bunge'
+p1764
+sg8
+S'McGill University'
+p1765
+sa(dp1766
+g11
+S'Philosophy / Ethics'
+p1767
+sg2
+S'Academy of the Arts and Humanities'
+p1768
+sg4
+S'1998'
+p1769
+sg6
+S'John Burbidge'
+p1770
+sg8
+S'Trent University'
+p1771
+sa(dp1772
+g11
+S'Mathematics and Computer Sciences'
+p1773
+sg2
+S'Academy of Science'
+p1774
+sg4
+S'1973'
+p1775
+sg6
+S'Donald Bures'
+p1776
+sg8
+S'The University of British Columbia'
+p1777
+sa(dp1778
+g11
+S'Arts'
+p1779
+sg2
+S'Academy of the Arts and Humanities'
+p1780
+sg4
+S'2014'
+p1781
+sg6
+S'John Burge'
+p1782
+sg8
+S"Queen's University"
+p1783
+sa(dp1784
+g11
+S'Physics'
+p1785
+sg2
+S'Academy of Science'
+p1786
+sg4
+S'2008'
+p1787
+sg6
+S'Clifford Burgess'
+p1788
+sg8
+S'McMaster University'
+p1789
+sa(dp1790
+g11
+S'Classics / Humanities'
+p1791
+sg2
+S'Academy of the Arts and Humanities'
+p1792
+sg4
+S'2012'
+p1793
+sg6
+S'Richard Burgess'
+p1794
+sg8
+S'University of Ottawa'
+p1795
+sa(dp1796
+g11
+S'Chemistry'
+p1797
+sg2
+S'Academy of Science'
+p1798
+sg4
+S'2009'
+p1799
+sg6
+S'Prof. Jillian Buriak'
+p1800
+sg8
+S'University of Alberta'
+p1801
+sa(dp1802
+g11
+S'Molecular Biology and Genetics'
+p1803
+sg2
+S'Academy of Science'
+p1804
+sg4
+S'1995'
+p1805
+sg6
+S'Stephen Burley'
+p1806
+sg8
+S'SGX Pharmaceuticals'
+p1807
+sa(dp1808
+g11
+S'Molecular Biology and Genetics'
+p1809
+sg2
+S'Academy of Science'
+p1810
+sg4
+S'1995'
+p1811
+sg6
+S'Stephen Burley'
+p1812
+sg8
+S'Rutgers University'
+p1813
+sa(dp1814
+g11
+S'Anthropology / Archaeology'
+p1815
+sg2
+S'Academy of Social Sciences'
+p1816
+sg4
+S'1977'
+p1817
+sg6
+S'Kenelm Burridge'
+p1818
+sg8
+S'The University of British Columbia'
+p1819
+sa(dp1820
+g11
+S'Earth Sciences'
+p1821
+sg2
+S'Academy of Science'
+p1822
+sg4
+S'1983'
+p1823
+sg6
+S'Dr. Ian Burton'
+p1824
+sg8
+S'University of Toronto'
+p1825
+sa(dp1826
+g11
+S'Molecular Biology and Genetics'
+p1827
+sg2
+S'Academy of Science'
+p1828
+sg4
+S'1997'
+p1829
+sg6
+S'Howard Bussey'
+p1830
+sg8
+S'McGill University'
+p1831
+sa(dp1832
+g11
+S'Earth Sciences'
+p1833
+sg2
+S'Academy of Science'
+p1834
+sg4
+S'2003'
+p1835
+sg6
+S'Dr. R. Bustin'
+p1836
+sg8
+S'The University of British Columbia'
+p1837
+sa(dp1838
+g11
+S'Earth Sciences'
+p1839
+sg2
+S'Academy of Science'
+p1840
+sg4
+S'2003'
+p1841
+sg6
+S'Dr. R. Bustin'
+p1842
+sg8
+S'The University of British Columbia'
+p1843
+sa(dp1844
+g11
+S'Physics'
+p1845
+sg2
+S'Academy of Science'
+p1846
+sg4
+S'1988'
+p1847
+sg6
+S'William Buyers'
+p1848
+sg8
+S'National Research Council Canada'
+p1849
+sa(dp1850
+g11
+S'Physics'
+p1851
+sg2
+S'Academy of Science'
+p1852
+sg4
+S'1988'
+p1853
+sg6
+S'William Buyers'
+p1854
+sg8
+S'National Research Council'
+p1855
+sa(dp1856
+g11
+S'Earth Sciences'
+p1857
+sg2
+S'Academy of Science'
+p1858
+sg4
+S'1996'
+p1859
+sg6
+S'Dr. Louis Cabri'
+p1860
+sg8
+S'Cabri Consulting Inc.'
+p1861
+sa(dp1862
+g11
+S'Earth Sciences'
+p1863
+sg2
+S'Academy of Science'
+p1864
+sg4
+S'1996'
+p1865
+sg6
+S'Dr. Louis Cabri'
+p1866
+sg8
+S'Memorial University'
+p1867
+sa(dp1868
+g11
+S'Arts'
+p1869
+sg2
+S'Academy of the Arts and Humanities'
+p1870
+sg4
+S'2014'
+p1871
+sg6
+VGeneviève Cadieux
+p1872
+sg8
+S'Concordia University'
+p1873
+sa(dp1874
+g11
+S'Physics'
+p1875
+sg2
+S'Academy of Science'
+p1876
+sg4
+S'1990'
+p1877
+sg6
+VMr. Alain Caillé
+p1878
+sg8
+VUniversité de Montréal
+p1879
+sa(dp1880
+g11
+S'Applied Science'
+p1881
+sg2
+S'Academy of Science'
+p1882
+sg4
+S'2003'
+p1883
+sg6
+S'Peter Caines'
+p1884
+sg8
+S'McGill University'
+p1885
+sa(dp1886
+g11
+S'Medical Sciences'
+p1887
+sg2
+S'Academy of Science'
+p1888
+sg4
+S'2009'
+p1889
+sg6
+S'John Cairncross'
+p1890
+sg8
+S'University of Calgary'
+p1891
+sa(dp1892
+g11
+S'Political Science'
+p1893
+sg2
+S'Academy of Social Sciences'
+p1894
+sg4
+S'1979'
+p1895
+sg6
+S'Alan Cairns'
+p1896
+sg8
+S'University of Waterloo'
+p1897
+sa(dp1898
+g2
+S'Academy of the Arts and Humanities'
+p1899
+sg4
+S'2013'
+p1900
+sg6
+S'Dr. Debra Cairns'
+p1901
+sg8
+S'University of Alberta'
+p1902
+sa(dp1903
+g11
+S'Earth Sciences'
+p1904
+sg2
+S'Academy of Science'
+p1905
+sg4
+S'2014'
+p1906
+sg6
+S'Georges Calas'
+p1907
+sg8
+VSorbonne Université CNRS Paris
+p1908
+sa.
