@@ -185,7 +185,7 @@ class NAMDealer(AD):
         tries = 0
         page_count = 1
         new_page = True  # Means info in this page had been processed.
-        while tries < self.max_retry:
+        while tries < (self.max_retry+1):
             try:
                 if new_page:
                     url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
@@ -199,17 +199,22 @@ class NAMDealer(AD):
 
                     logger.info("Finished page {}, {} urls had been recorded.".format(page_count, len(self.url_list)))
                     new_page = False
+                    url_elems = None
 
                 if not new_page:
-                    next_elem.click()  # Means only click "ONCE"
-                    new_page = True
-                    if new_page:
+                    if url_elems is None:
+                        next_elem.click()  # Means only click "ONCE"
+                    time.sleep(1)
+                    url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
+                    # logger.info(url_elems)
+                    if len(url_elems) != 0:
+                        new_page = True
                         page_count += 1
                         tries = 0
             except BaseException as e:
                 tries += 1
                 time.sleep(self.timeout)
-                if tries > self.max_retry:
+                if tries >= self.max_retry:
                     logger.info("Tried too many times, and we got at this page: X")
                     self.dealer_dump(True)
                     print(e.message)
