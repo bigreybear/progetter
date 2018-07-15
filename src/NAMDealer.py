@@ -14,29 +14,15 @@ import socket
 class NAMDealer(AD):
     def __init__(self):
         AD.__init__(self)
-        self.header = {
-            'POST': "/wp-content/themes/NAMTheme/directory/index.php HTTP/1.1",
-            'Host': "nam.edu",
-            'Connection': "keep-alive",
-            'Content-Length': "27",
-            'Accept': "*/*",
-            'Origin': "https://nam.edu",
-            'X-Requested-With': "XMLHttpRequest",
-            'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36",
-            'Content-Type': "application/x-www-form-urlencoded; charset=UTF-8",
-            'DNT': "1",
-            'Referer': "https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1",
-            'Accept-Encoding': "utf-8",
-            'Accept-Language': "en",
-            'Cookie': "PHPSESSID=0af4ccb79dd34cbbe5c882d520353588; _ga=GA1.2.1390685861.1531564907; _gid=GA1.2.334374399.1531564907; __qca=P0-1027726874-1531564908621; __atuvc=5%7C28; __atuvs=5b49d383a698a885004"
-        }
+        # self.xpath_dic['href'] = '//div[@class="dir-member-name"]/a/@href'
+        self.xpath_dic['name'] = '//div[@class="dir-member-details"]/h3'
+        self.xpath_dic['year_selected'] = '//div[@class="member-info-section"]/div'
+        # self.xpath_dic['citation'] = '//div[@class="member-details-text"]/p'
+        self.xpath_dic['previous_service'] = '//div[@class="member-info-section"]/ul/li'
+        self.xpath_dic['organization'] = '//div[@class="dir-member-details"]'
 
-        self.page_prefix = "https://nam.edu/directory/?lastName=&firstName=&parentInstitution=" \
-                           "&yearStart=&yearEnd=&presence=1#page-1"
-        self.xpath_dic['href'] = '//div[@class="dir-member-name"]/a/@href'
-        self.xpath_dic['name'] = '//div[@class="member-details-wrap"]/h1'
-        self.xpath_dic['year_selected'] = '//div[@class="member-sml-details hidden-sm hidden-xs"]/p'
-        self.xpath_dic['citation'] = '//div[@class="member-details-text"]/p'
+        self.selenium_dic = {}
+        self.browser = None
 
         self.tmp_save_name = "nam.tmp"
         self.fin_save_name = "nam.bin"
@@ -85,93 +71,16 @@ class NAMDealer(AD):
             # ***** ***** ***** ***** ***#
             self.rebuild(url_=cmds['url_rebuild_src'])
             for purl in self.url_list:
-                self.personal_page("{}/{}".format(self.person_page_root, purl))
+                new_prf = self.single_page_by_selenium(purl)
+                self.prf_list.append(new_prf)
+                self.dict_printer(new_prf)
+                logger.info("Processed {} / {} professors.".format(len(self.prf_list), len(self.url_list)))
                 self.dealer_dump(prf_=True)
             self.dealer_dump(prf_=True, fin_=True)
+
+        if self.browser is not None:
+            self.browser.quit()
         return 0
-
-    def personal_page(self, url_=None):
-        if url_ is None:
-            content_ = self.pros_page(self.page_prefix)
-        else:
-            content_ = self.pros_page(url_)
-        tree = etree.HTML(content_)
-        data_ = {}
-        for key, value in self.xpath_dic.items():
-            if len(tree.xpath(value)) == 1:
-                data_[key] = tree.xpath(value)[0].text.encode('utf-8')
-            else:
-                for e_part in tree.xpath(value):
-                    if e_part.text is not None:
-                        data_[key] = e_part.text.encode('utf-8')
-        self.dict_printer(data_)
-        self.prf_list.append(data_)
-        logger.info("Accumulated {} data.".format(len(self.prf_list)))
-
-    def to_debug(self):
-
-        browser = webdriver.Chrome()
-        browser.get("https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1")
-        xpath = '//*[@class="page-link next"]'
-        xpath_a = '//*[@class="dir-member-name"]/a'
-        for tries in range(self.max_retry):
-            try:
-                el1 = browser.find_element_by_xpath(xpath)
-                el2 = browser.find_element_by_xpath(xpath_a)
-            except BaseException as e:
-                if tries < (self.max_retry - 1):
-                    time.sleep(self.interval_time)
-                    logger.info("{}...".format(tries))
-                    continue
-                else:
-                    raise e
-
-        print(el2)
-        el1.click()
-        try:
-            elem = browser.find_element_by_xpath(xpath)
-        except BaseException:
-            logger.info("No more Next.")
-            browser.quit()
-            return
-        return
-
-    def pros_page(self, url=None, method_=GET, data_=None):
-        logger.info("Test pros_page.")
-        if url is None:
-            url = self.page_prefix
-        _content = None
-        if method_ == POST:
-            if data_ is None:
-                logger.error("No data for POST request for {}.".format(url))
-            else:
-                # actually run code
-                data_ = urllib.urlencode(data_)
-                _req = urllib2.Request(url, headers=self.header, data=data_)
-                logger.info("Formed a POST request for url: {}".format(_req.data))
-        else:
-            _req = urllib2.Request(url, headers=self.header)
-            logger.info("Formed a GET request for url: {}".format(_req))
-
-        for tries in range(self.max_retry):
-            try:
-                time.sleep(self.interval_time)
-                logger.info("Start to open...")
-                _content = urllib2.urlopen(_req, timeout=self.timeout * 1000, data=data_)
-                break
-            except BaseException as e:
-                if tries < (self.max_retry - 1):
-                    logger.error("Catch a exception of {}.".format(e.message))
-                    logger.error("Connection failed, try {} time(s), at url: {}".format(tries, url))
-                    continue
-                else:
-                    logger.error("Tried {} times to connect url:{}, but failed.".format(self.max_retry, url))
-                    logger.error(e.message)
-                    exit()
-        _ret = _content.read()
-        _content.close()
-        logger.debug("Processing url: {}".format(url))
-        return _ret
 
     def selenium_worker(self, _start_url=""):
         """
@@ -180,16 +89,16 @@ class NAMDealer(AD):
         """
         browser = webdriver.Chrome()
         browser.get(_start_url)
-        self.xpath_dic['next_button'] = '//*[@class="page-link next"]'
-        self.xpath_dic['url_elem'] = '//*[@class="dir-member-name"]/a'
+        self.selenium_dic['next_button'] = '//*[@class="page-link next"]'
+        self.selenium_dic['url_elem'] = '//*[@class="dir-member-name"]/a'
         tries = 0
         page_count = 1
         new_page = True  # Means info in this page had been processed.
         while tries < (self.max_retry+1):
             try:
                 if new_page:
-                    url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
-                    next_elem = browser.find_element_by_xpath(self.xpath_dic['next_button'])
+                    url_elems = browser.find_elements_by_xpath(self.selenium_dic['url_elem'])
+                    next_elem = browser.find_element_by_xpath(self.selenium_dic['next_button'])
                     if next_elem is None:
                         logger.info("Finally finished.")
                         self.dealer_dump(True, False, True)
@@ -205,7 +114,7 @@ class NAMDealer(AD):
                     if url_elems is None:
                         next_elem.click()  # Means only click "ONCE"
                     time.sleep(1)
-                    url_elems = browser.find_elements_by_xpath(self.xpath_dic['url_elem'])
+                    url_elems = browser.find_elements_by_xpath(self.selenium_dic['url_elem'])
                     # logger.info(url_elems)
                     if len(url_elems) != 0:
                         new_page = True
@@ -225,8 +134,34 @@ class NAMDealer(AD):
         browser.quit()
         return
 
+    def single_page_by_selenium(self, _url):
+        def get_elem_text(__xpath):
+            return [x.text for x in self.browser.find_elements_by_xpath(__xpath)]
+        _this_prf = {}
+        try:
+            if self.browser is None:
+                self.browser = webdriver.Chrome()
+            self.browser.get(_url)
+
+            for key, value in self.xpath_dic.items():
+                _this_prf[key] = "; ".join(get_elem_text(value))
+                if key == "organization":
+                    _this_prf[key] = _this_prf[key][_this_prf[key].find('\n')+1:]
+                if key == "year_selected":
+                    _this_prf["state"] = _this_prf[key][_this_prf[key].rfind(':')+2:]
+                    _this_prf["year_selected"] = _this_prf[key][_this_prf[key].find(':') + 2:_this_prf[key].find(';')]
+
+            return _this_prf
+        except BaseException as e:
+            logger.info(e.message)
+            self.browser.quit()
+
+
 if __name__ == '__main__':
     nam = NAMDealer()
     # nam.router({'phase': 1, 'url_rebuild_src': "tmp"})
     # nam.to_debug()
-    nam.selenium_worker("https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1")
+    # nam.selenium_worker("https://nam.edu/directory/?lastName=&firstName=&parentInstitution=&yearStart=&yearEnd=&presence=1")
+    cmd = {'url_rebuild_src': "url_nam.tmp", 'phase': 2}
+    nam.router(cmd)
+    # nam.rebuild(url_="url_nam.tmp")
