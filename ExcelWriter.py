@@ -38,11 +38,11 @@ class ExcelWriter:
             for a_key in a_row:
                 if a_key not in self.coord_index:
                     self.modify_coordination(a_key)
-                self.sheet.write(row_count, self.coord_index[a_key], a_row[a_key].decode('utf-8'))
+                self.sheet.write(row_count, self.coord_index[a_key], a_row[a_key])
             row_count += 1
         self.wbk.save(filename)
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("./raw/prf_aas.bin")
-    ew.write_excel("./out/prf_aas.xls")
+    ew = ExcelWriter("./raw/prf_nam.bin")
+    ew.write_excel("./out/prf_nam.xls")

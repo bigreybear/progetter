@@ -72,12 +72,13 @@ class AbsDealer:
                 time.sleep(self.interval_time)
                 _content = urllib2.urlopen(_req, timeout=self.timeout * 1000, data=data_)
                 break
-            except urllib2.URLError:
+            except BaseException as e:
                 if tries < (self.max_retry - 1):
+                    logger.error("Going to try {} time(s) at {}.".format(tries, url))
                     continue
                 else:
                     logger.error("Tried {} times to connect url:{}, but failed.".format(self.max_retry, url))
-                    raise urllib2.URLError
+                    raise e
         _ret = _content.read()
         _content.close()
         logger.debug("Processing url: {}".format(url))
