@@ -72,7 +72,11 @@ class TRSDealer(AD):
 
     def get_bio(self, _p_url):
         _url = self.person_page_root + _p_url
-        _content = etree.HTML(urllib.urlopen(_url).read())
+        try:
+            _content = etree.HTML(urllib.urlopen(_url).read())
+        except UnicodeError:
+            _url = urllib.quote(_url.encode('utf8'), ':/')
+            _content = etree.HTML(urllib.urlopen(_url).read())
         return _content.xpath(self.xpath_dic['bio'])[0].text
 
     def json_handler(self, url_return):
