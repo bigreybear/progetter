@@ -19,26 +19,28 @@ class TAEDealer(AD):
         # self.xpath_dic['previous_service'] = '//div[@class="member-info-section"]/ul/li'
         # self.xpath_dic['bio'] = '//div[@class="expandableBio"]/p'
 
+        self.xpath_dic['Present and Previous Positions'] = '//b[text()="Present and Previous Positions"]'
+        self.xpath_dic['Fields of Scholarship'] = '//b[text()="Fields of Scholarship"]'
+        self.xpath_dic['Honours and Awards'] = '//b[text()="Honours and Awards"]'
+
+        self.xpath_dic['Email'] = '//td[text()="Email:"]/following-sibling::td'
+
         self.url_xpath = '//span[@class="name"]/b/a/@href'
         self.next_button = '//span[@class="last"]/../@href'
 
-        # # what is needed in return json
-        # self.target_list = [
-        #     "ElectedYear",
-        #     "FullNameWithHonours",
-        #     "InstitutionName",
-        #     "MemberType",
-        #     "Position",
-        #     "ScientificAreas",
-        #     "Title"
-        # ]
+        # what is aimed to return by a list of str
+        self.target_list = [
+            "Honours and Awards",
+            "Fields of Scholarship",
+            "Present and Previous Positions"
+        ]
 
         self.tmp_save_name = "tae.tmp"
         self.fin_save_name = "tae.bin"
         self.person_page_root = ""
         self.current_page = ""
         self.valve = 50
-        self.timeout = 5
+        self.timeout = 3
         self.max_retry = 8
 
     def collect_urls(self, _start_url=None):
@@ -60,8 +62,19 @@ class TAEDealer(AD):
                 _content = self.simple_get(nxt_els[0], True)
         self.dealer_dump(True, False, True)
 
+    def personal_info(self, _url):
+        _content = etree.HTML(self.simple_get(_url, True))
 
+        _this_prf = {}
+        for target in self.target_list:
+            if _content.xpath(self.xpath_dic[target])[0] is not None:
+                _this_prf[target] = "; ".join([x.text[:-1] for x in _content.xpath(self.xpath_dic[target])[0].getnext().getchildren()])
+
+        print(_content.xpath(self.xpath_dic['Email']).text)  # CANNOT FIND CORRECT ELEMENT
+        self.dict_printer(_this_prf)
 
 if __name__ == '__main__':
     tae = TAEDealer()
-    tae.collect_urls(tae.test_url)
+    # print(tae.simple_get(tae.test_url))
+    # tae.collect_urls(tae.test_url)
+    tae.personal_info("https://www.ae-info.org/ae/User/Zwirner_Fabio")

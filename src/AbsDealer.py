@@ -50,9 +50,14 @@ class AbsDealer:
         """
         Return the read of the html.
         """
+        _req = urllib2.Request(_url, headers=self.header)
         for tries in range(self.max_retry):
             try:
-                _content = urllib2.urlopen(_url)
+                logger.debug("Start open at {}.".format(_url))
+                _content = urllib2.urlopen(_req, timeout=self.timeout)
+                logger.debug("Start read.")
+                _ret = _content.read()
+                break
             except BaseException as e:
                 if not retry or (tries >= self.max_retry-1):
                     logger.error("Got an error of timeout.")
@@ -60,7 +65,7 @@ class AbsDealer:
                 logger.error("Got an error and will retry at {} time(s)".format(tries))
                 time.sleep(self.interval_time)
                 continue
-        return _content.read()
+        return _ret
 
     def pros_page(self, url=None, method_=GET, data_=None):
         """
