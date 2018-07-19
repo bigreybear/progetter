@@ -46,14 +46,32 @@ class AbsDealer:
         self.xpath_dic = {}
         pass
 
+    def simple_get(self, _url=None, retry=False):
+        """
+        Return the read of the html.
+        """
+        for tries in range(self.max_retry):
+            try:
+                _content = urllib2.urlopen(_url)
+            except BaseException as e:
+                if not retry or (tries >= self.max_retry-1):
+                    logger.error("Got an error of timeout.")
+                    raise e
+                logger.error("Got an error and will retry at {} time(s)".format(tries))
+                time.sleep(self.interval_time)
+                continue
+        return _content.read()
+
     def pros_page(self, url=None, method_=GET, data_=None):
         """
+        [DEPRECATED]
         To get the content of a page, without deal it with bs4, without construct url itself.
         :param url: The fetch url.
         :param method_: Specify GET or POST method to retrieve data.
         :param data_: A dictionary contains data POST method needs.
         :return: page source of the url.
         """
+        logger.debug("Entered pros_page.")
         if url is None:
             url = self.page_prefix
         _content = None
@@ -63,25 +81,28 @@ class AbsDealer:
             else:
                 data_ = urllib.urlencode(data_).encode('utf-8')
                 _req = urllib2.Request(url, headers=self.header, data=data_)
-                logger.info("Formed a POST request for url: {}".format(_req.data))
+                # logger.info("Formed a POST request for url: {}".format(_req.data))
         else:
             _req = urllib2.Request(url, headers=self.header)
-            logger.info("Formed a GET request for url: {}".format(_req))
+            # logger.info("Formed a GET request for url: {}".format(_req))
         for tries in range(self.max_retry):
             try:
-                time.sleep(self.interval_time)
+                logger.debug("Try to open in GET mode.")
                 _content = urllib2.urlopen(_req, timeout=self.timeout * 1000, data=data_)
+                logger.debug("Opened in GET mode.")
                 break
             except BaseException as e:
                 if tries < (self.max_retry - 1):
                     logger.error("Going to try {} time(s) at {}.".format(tries, url))
+                    time.sleep(self.interval_time)
                     continue
                 else:
                     logger.error("Tried {} times to connect url:{}, but failed.".format(self.max_retry, url))
                     raise e
+        logger.debug("Over from for loop.")
         _ret = _content.read()
         _content.close()
-        logger.debug("Processing url: {}".format(url))
+        # logger.debug("Processing url: {}".format(url))
         return _ret
 
     def personal_page(self, url=None):

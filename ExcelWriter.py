@@ -44,5 +44,5 @@ class ExcelWriter:
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("./raw/prf_nam.bin")
-    ew.write_excel("./out/prf_nam.xls")
+    ew = ExcelWriter("./raw/prf_trs.bin")
+    ew.write_excel("./out/prf_trs.xls")
