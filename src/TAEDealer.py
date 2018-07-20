@@ -1,7 +1,12 @@
+# -*- coding:utf-8 -*-
 from AbsDealer import AbsDealer as AD
 import lxml.etree as etree
 import time
 from loggetter import logger
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
+
 
 class TAEDealer(AD):
     def __init__(self):
@@ -46,7 +51,7 @@ class TAEDealer(AD):
         self.person_page_root = ""
         self.current_page = ""
         self.valve = 50
-        self.timeout = 3
+        self.timeout = 8
         self.max_retry = 8
 
     def collect_urls(self, _start_url=None):
@@ -66,44 +71,60 @@ class TAEDealer(AD):
         self.dealer_dump(True, False, True)
 
     def personal_info(self, _url):
-        _content = etree.HTML(self.simple_get(_url, True))
-
+        sg = self.simple_get(_url, True)
+        if sg is None:
+            return None
+        _content = etree.HTML(sg)
         _this_prf = {}
         for target in self.target_list:
             if len(_content.xpath(self.xpath_dic[target])) > 0 and \
                     _content.xpath(self.xpath_dic[target])[0] is not None:
                 try:
                     _this_prf[target] = "; ".join([x.text[:-1] for x in _content.xpath(self.xpath_dic[target])[0].getnext().getchildren()])
-                except TypeError as e:
+                except BaseException as e:
                     _this_prf[target] = ""
-                    logger.error("An error occurred.\n{}".format(e.message))
+                    logger.error("An error occurred at {}(tips:{}).\n{}".format(_url, target, e.message))
 
         for target in self.target_list_2:
             if len(_content.xpath(self.xpath_dic[target])) > 0 and \
                     _content.xpath(self.xpath_dic[target])[0] is not None:
                 try:
                     _this_prf[target] = _content.xpath(self.xpath_dic[target])[0].getnext().text
-                except TypeError as e:
+                except BaseException as e:
                     _this_prf[target] = ""
-                    logger.error("An error occurred.\n{}".format(e.message))
+                    logger.error("An error occurred at {}(tips:{}).\n{}".format(_url, target, e.message))
 
-        _this_prf['name'] = _content.xpath(self.xpath_dic['name'])[0].getchildren()[0].text
-        _this_prf['Section'] = _content.xpath(self.xpath_dic['Section'])[0].getnext().getchildren()[0].text
+        try:
+            _this_prf['name'] = _content.xpath(self.xpath_dic['name'])[0].getchildren()[0].text
+            _this_prf['Section'] = _content.xpath(self.xpath_dic['Section'])[0].getnext().getchildren()[0].text
+        except BaseException as e:
+            logger.error("An error occurred at {}(tips:{}).\n{}".format(_url, "name or section", e.message))
+            return None
 
         self.dict_printer(_this_prf)
         return _this_prf
 
     def collect_personal_info(self):
         for url in self.url_list:
-            time.sleep(0.5)
-            self.prf_list.append(self.personal_info(url))
+            r_url = "https://www.ae-info.org/ae/Member/" + url[str(url).rfind("/")+1:]  # little trick to accelerate
+            time.sleep(0.1)
+            pi = self.personal_info(r_url)
+            if pi is not None:
+                self.prf_list.append(pi)
             self.dealer_dump(False, True, False)
-            print("{}/{} professors had been dumped.".format(len(self.prf_list), len(self.url_list)))
+            print("{}/{} professors had been dumped, {} professors failed fetching.".format(
+                len(self.prf_list), len(self.url_list), len(self.failed_url))
+            )
         self.dealer_dump(False, True, True)
 
+
 if __name__ == '__main__':
+    """
+     https://www.ae-info.org/ae/User/Fälthammar_Carl-Gunne
+    """
     tae = TAEDealer()
     # tae.collect_urls(tae.test_url)
     tae.rebuild("url_tae.bin")
-    tae.url_list = list(set(tae.url_list))
+    tae.url_list = sorted(list(set(tae.url_list)))
     tae.collect_personal_info()
+    # tae.personal_info("https://www.ae-info.org/ae/User/Fälthammar_Carl-Gunne")

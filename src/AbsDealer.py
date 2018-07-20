@@ -1,9 +1,11 @@
+# -*- coding:utf-8 -*-
 import pickle
 import os
 from loggetter import logger
 import urllib2
 import urllib
 import time
+import re, urlparse
 
 LAST_PAGE = -1
 ERROR_PAGE = 0
@@ -23,6 +25,8 @@ class AbsDealer:
         self.max_retry = 10
         self.timeout = 40
         self.request_prefix = ""
+
+        self.logger = logger
 
         # self.prj_loc = "F:\PyProject\ProfGetter\\"
         self.prj_loc = "D:\GitRepo\progetter\\"
@@ -44,12 +48,25 @@ class AbsDealer:
         self.url_list = []
         # specify how to pick data from lowest page
         self.xpath_dic = {}
+        # record which url was not successfully visited.
+        self.failed_url = []
         pass
 
     def simple_get(self, _url=None, retry=False):
         """
         Return the read of the html.
+        Resolved problems when non-ascii in _url, which may not be a problem in urllib.
         """
+        def url_encode_non_ascii(b):
+            return re.sub('[\x80-\xFF]', lambda c: '%%%02x' % ord(c.group(0)), b)
+
+        def iri_2_uri(iri):
+            parts = urlparse.urlparse(iri)
+            return urlparse.urlunparse(
+                part.encode('idna') if parti == 1 else url_encode_non_ascii(part.encode('utf-8'))
+                for parti, part in enumerate(parts)
+            )
+
         _req = urllib2.Request(_url, headers=self.header)
         for tries in range(self.max_retry):
             try:
@@ -60,16 +77,19 @@ class AbsDealer:
                 break
             except BaseException as e:
                 if not retry or (tries >= self.max_retry-1):
-                    logger.error("Got an error of timeout.")
-                    raise e
+                    logger.error("Got an error at {}.\n{}".format(_url, e.message))
+                    self.failed_url.append(_url)
+                    return None
                 logger.error("Got an error and will retry at {} time(s)".format(tries))
+                _url = iri_2_uri(_url)
+                _req = urllib2.Request(_url, headers=self.header)
                 time.sleep(self.interval_time)
                 continue
         return _ret
 
     def pros_page(self, url=None, method_=GET, data_=None):
         """
-        [DEPRECATED]
+        [DEPRECATED] since 2018.7.20.
         To get the content of a page, without deal it with bs4, without construct url itself.
         :param url: The fetch url.
         :param method_: Specify GET or POST method to retrieve data.
@@ -133,18 +153,6 @@ class AbsDealer:
         :return:
         """
 
-    def periodical_dump_prf(self):
-        """
-        Periodically dump the PRF_LIST into a middle file named by TMP_SAVE_NAME.
-        :return:
-        """
-
-    def periodical_dump_url(self):
-        """
-        Periodically dump the URL_LIST into a middle file named by TMP_SAVE_NAME.
-        :return:
-        """
-
     def rebuild(self, url_=None, prf_=None):
         """
         To rebuild the url_list or prf_list from a source file.
@@ -184,6 +192,7 @@ class AbsDealer:
         ready_prf_ = False
         ready_url_ = False
 
+        # define the directory
         if not fin_:
             os.chdir("{}/middle/".format(self.prj_loc))
             file_name_ = self.tmp_save_name
@@ -201,6 +210,7 @@ class AbsDealer:
             ready_prf_ = True
             ready_url_ = True
 
+        # dump data
         if url_ and ready_url_:
             with open("url_{}".format(file_name_), "wb") as f:
                 pickle.dump(self.url_list, f)
@@ -209,6 +219,12 @@ class AbsDealer:
             with open("prf_{}".format(file_name_), "wb") as f:
                 pickle.dump(self.prf_list, f)
             logger.info("Dump {} data into prf_{}".format(len(self.prf_list), file_name_))
+
+        if ready_prf_ or ready_url_:
+            with open("fail_url_{}".format(file_name_), "wb") as f:
+                pickle.dump(self.failed_url, f)
+            logger.info("Dump {} data into fail_url_{}".format(len(self.failed_url), file_name_))
+
         if (not url_) and (not prf_):
             logger.error("Not specified to dump url or professor data.")
             os.chdir(ori_path_)
