@@ -53,6 +53,7 @@ class TAEDealer(AD):
         self.valve = 50
         self.timeout = 8
         self.max_retry = 8
+        self.interval_time = 0.5
 
     def collect_urls(self, _start_url=None):
         _content = self.simple_get(_start_url, True)
