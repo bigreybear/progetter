@@ -56,6 +56,8 @@ class AbsDealer:
         """
         Return the read of the html.
         Resolved problems when non-ascii in _url, which may not be a problem in urllib.
+        :type _url str
+        :type retry bool
         """
         def url_encode_non_ascii(b):
             return re.sub('[\x80-\xFF]', lambda c: '%%%02x' % ord(c.group(0)), b)
@@ -86,6 +88,9 @@ class AbsDealer:
                 time.sleep(self.interval_time)
                 continue
         return _ret
+
+    def collect_urls(self, _start_url=None):
+        return
 
     def pros_page(self, url=None, method_=GET, data_=None):
         """
