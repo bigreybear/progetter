@@ -62,17 +62,19 @@ class TWASDealer(AD):
     def collect_urls(self, _start_url="https://twas.org/directory"):
         url_i = 0
         _flag = True
+        _last_len = 0
         while _flag:
             time.sleep(1)
             _read = self.get_from_twas("https://twas.org/directory?page={}".format(url_i))
             tree = etree.HTML(_read)
             for target in tree.xpath(self.url_xpath):
-                if target is None or len(target) == 0:
-                    _flag = False
-                    break
                 if target not in self.non_target:
                     print(str(target))
                     self.url_list.append(str(target))
+            if len(self.url_list) - _last_len > 0:
+                _last_len = len(self.url_list)
+            else:  # For there could be some other urls in content, we don't judge just on length.
+                _flag = False
             self.dealer_dump(True, False, False)
             print("Has dumped {} urls.".format(len(self.url_list)))
             url_i += 1
