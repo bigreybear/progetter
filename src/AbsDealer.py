@@ -15,6 +15,14 @@ GET = 0
 
 
 class AbsDealer:
+    """
+    Through so many practices, I find out that there are only three steps to crawl professors information from website.
+    1. Get the page of professors' list, and parse how to reach the url of each professor, take'em down.
+    2. Get a parser to analyze each page of a professor (It's the JOB) , and catch the necessary information.
+    3. Get a loop, run the function wrote at step.2 based on the urls from step.1.
+    NOTICE: A simple_get will figure out the problem pulling data while using GET.
+    NOTICE2: Multiple "except" states will help when there's some black sheep format page within the professors.
+    """
     def __init__(self):
         self.header = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
                                      "Chrome/64.0.3282.119 Safari/537.36"}
@@ -51,6 +59,16 @@ class AbsDealer:
         # record which url was not successfully visited.
         self.failed_url = []
         pass
+
+    def _deprecated(func):
+        """
+        :param function func:
+        :return:
+        """
+        def wrapper(self, *args, **kwargs):
+            logger.warn("This method ({}) is deprecated.".format(func.__name__))
+            return func(self, *args, **kwargs)
+        return wrapper
 
     def simple_get(self, _url=None, retry=False):
         """
@@ -92,6 +110,13 @@ class AbsDealer:
     def collect_urls(self, _start_url=None):
         return
 
+    def collect_personal_info(self):
+        return
+
+    def parse_personal_info(self, _content=None):
+        return
+
+    @_deprecated
     def pros_page(self, url=None, method_=GET, data_=None):
         """
         [DEPRECATED] since 2018.7.20.
@@ -135,23 +160,29 @@ class AbsDealer:
         # logger.debug("Processing url: {}".format(url))
         return _ret
 
+    @_deprecated
     def personal_page(self, url=None):
         """
+        [DEPRECATED] since 2018.7.31
         If this website have every professor a personal page, we will get info from here.
         :param url: professor's personal page url.
         :return:
         """
 
+    @_deprecated
     def router(self, cmd=None):
         """
+        [DEPRECATED] since 2018.7.31
         Core method to Control how to get every professor's personal page.
         Need to construct url for every @method:pros_page.
         :param cmd: K-V commands to control the router, according to different website.
         :return:
         """
 
+    @_deprecated
     def one_page_pros(self, content_=None):
         """
+        [DEPRECATED] since 2018.7.31
         To deal a page of pros, get every professor's personal page url and save it (if necessary),
         or rarely, pick the data of every professor directly and save it and so on.
         :param content_: urllib2 read output of the pros_page.

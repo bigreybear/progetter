@@ -81,7 +81,8 @@ class TAEDealer(AD):
             if len(_content.xpath(self.xpath_dic[target])) > 0 and \
                     _content.xpath(self.xpath_dic[target])[0] is not None:
                 try:
-                    _this_prf[target] = "; ".join([x.text[:-1] for x in _content.xpath(self.xpath_dic[target])[0].getnext().getchildren()])
+                    _this_prf[target] = "; ".join([x.text[:-1] for x in _content.xpath(self.xpath_dic[target])[0].
+                                                  getnext().getchildren()])
                 except BaseException as e:
                     _this_prf[target] = ""
                     logger.error("An error occurred at {}(tips:{}).\n{}".format(_url, target, e.message))
