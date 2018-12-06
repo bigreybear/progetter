@@ -31,7 +31,9 @@ class NobelDealer(AD):
         self.xpath_dic['elected'] = '//div[text()="Elected"]/../text()'
         self.xpath_dic['section'] = '//div[text()="Section:"]/../text()'
 
-        self.url_xpath = '//div[@class="views-field views-field-title"]/span[@class="field-content"]/a/@href'
+        # self.url_xpath = '//div[@class="views-field views-field-title"]/span[@class="field-content"]/a/@href'
+        self.url_xpath = '//p/a/@href'
+
         self.next_button = ''
 
         # what is aimed to return by a list of str
@@ -50,8 +52,12 @@ class NobelDealer(AD):
             "/article/victor-ramos-wins-twas-lenovo-prize"
         ]
 
-        self.tmp_save_name = "twas.tmp"
-        self.fin_save_name = "twas.bin"
+        self.root_path = [
+            "https://www.nobelprize.org/prizes/lists/all-nobel-prizes-in-physics/"
+        ]
+
+        self.tmp_save_name = "nobel.tmp"
+        self.fin_save_name = "nobel.bin"
         self.person_page_root = "https://twas.org"
         self.current_page = ""
         self.valve = 50
@@ -76,7 +82,9 @@ class NobelDealer(AD):
         _last_len = 0
         while _flag is True:
             time.sleep(1)
-            _read = self.get_from_twas("https://twas.org/directory?page={}".format(url_i))
+            _read = self.get_from_twas(_start_url)
+            # _read = self.simple_get(_start_url, True)
+            print _read
             tree = etree.HTML(_read)
             for target in tree.xpath(self.url_xpath):  # fill in the url_list
                 if target not in self.non_target:
@@ -121,7 +129,7 @@ class NobelDealer(AD):
 
 if __name__ == '__main__':
     print("1700")
-    twas = NobelDealer()
+    nobel = NobelDealer()
     # twas.rebuild("url_twas.bin")
     # twas.collect_personal_info()
-    twas.pros_page("a")
+    nobel.collect_urls(nobel.root_path[0])
