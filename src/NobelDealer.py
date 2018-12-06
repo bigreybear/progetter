@@ -9,7 +9,7 @@ import gzip
 # sys.setdefaultencoding("utf-8")
 
 
-class TWASDealer(AD):
+class NobelDealer(AD):
     def __init__(self):
         AD.__init__(self)
         self.test_url = ""
@@ -121,7 +121,7 @@ class TWASDealer(AD):
 
 if __name__ == '__main__':
     print("1700")
-    twas = TWASDealer()
+    twas = NobelDealer()
     # twas.rebuild("url_twas.bin")
     # twas.collect_personal_info()
     twas.pros_page("a")
