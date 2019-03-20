@@ -57,7 +57,7 @@ class NobelDealer(AD):
         self.valve = 50
         self.timeout = 8
         self.max_retry = 8
-        self.interval_time = 2
+        self.interval_time = 5
 
     def get_from_twas(self, _url):
         """
@@ -130,17 +130,40 @@ class NobelDealer(AD):
                         elif _pure_p.find("Prize share: ") != -1:
                             _pure_p = _pure_p[len("Prize share: "):]
                             _this_prf['share'] = _pure_p
+                        elif _pure_p.find("Died: ") != -1:
+                            _pure_p = _pure_p[len("Died: "):]
+                            _this_prf['died'] = _pure_p
+                        elif _pure_p.find("Residence at the time of the award: ") != -1:
+                            _pure_p = _pure_p[len("Residence at the time of the award: "):]
+                            _this_prf['residence when award'] = _pure_p
+                        elif _pure_p.find("Language: ") != -1:
+                            _pure_p = _pure_p[len("Language: "):]
+                            _this_prf['language'] = _pure_p
+                        elif _pure_p.find("Founded: ") != -1:
+                            _pure_p = _pure_p[len("Founede: "):]
+                            _this_prf['founded'] = _pure_p
+                        elif _pure_p.find("Contribution: ") != -1:
+                            _pure_p = _pure_p[len("Contribution: "):]
+                            _this_prf['contribution'] = _pure_p
+                        elif _pure_p.find("Role: ") != -1:
+                            _pure_p = _pure_p[len("Role: "):]
+                            _this_prf['role'] = _pure_p
+                        elif _pure_p.find("Also awarded: ") != -1:
+                            _pure_p = _pure_p[len("Also awarded: "):]
+                            _this_prf['also reward'] = _pure_p
                         else:
-                            _this_prf['name'] = _pure_p
+                            if len(_pure_p) >= 1:
+                                _this_prf['name'] = _pure_p
                             try:
                                 #  HACK WAY TO GET YEAR
                                 _prize_and_year = etree.HTML(_content).xpath('//div[@class="content"]/p/text()[contains(.,"Nobel")]')[0]
                                 _prize_and_year = ' '.join(_prize_and_year.split())
                                 _prize_and_year = _prize_and_year[len("The Nobel Prize in")+1:]
-                                [_cate, _year] = _prize_and_year.split()
-                                _this_prf['category'] = _cate
-                                _this_prf['year'] = _year
-                            except AttributeError:
+                                _cate_and_year = _prize_and_year.split()
+                                _this_prf['category'] = " ".join(_cate_and_year[:-1])
+                                _this_prf['year'] = _cate_and_year[-1]
+                            except AttributeError as e:
+                                logger.error("Error occurred.{}", format(e))
                                 continue
 
                 except AttributeError:
@@ -178,6 +201,7 @@ if __name__ == '__main__':
     # nobel.collect_urls(nobel.root_path[0])
     # for i in nobel.root_path:
     #     nobel.collect_urls(i)
-    nobel.rebuild("url_nobel.bin")
-    nobel.collect_personal_info()
-    # nobel.parse_personal_info(nobel.get_from_twas("https://www.nobelprize.org/prizes/physics/2013/higgs/facts/"))
+    # nobel.rebuild("url_nobel.bin")
+    # nobel.collect_personal_info()
+    nobel.parse_personal_info(nobel.get_from_twas("https://www.nobelprize.org/prizes/peace/2017/ican/facts/"))
+    # nobel.simple_get("https://www.nobelprize.org/prizes/medicine/2018/honjo/facts/")

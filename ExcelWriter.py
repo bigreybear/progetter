@@ -1,6 +1,11 @@
 import xlwt
 import pickle
 import copy
+import sys
+import StringIO
+import gzip
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 
 class ExcelWriter:
@@ -28,7 +33,7 @@ class ExcelWriter:
         self.sheet.write(0, self.index_num-1, new_key)
 
     def write_excel(self, filename):
-        self.wbk = xlwt.Workbook()
+        self.wbk = xlwt.Workbook(encoding='utf-8')
         row_count = 1
         self.sheet = self.wbk.add_sheet('sheet1')
         for old_key in self.coord_index:
@@ -38,11 +43,13 @@ class ExcelWriter:
             for a_key in a_row:
                 if a_key not in self.coord_index:
                     self.modify_coordination(a_key)
-                self.sheet.write(row_count, self.coord_index[a_key], a_row[a_key])
+                content = a_row[a_key]
+                content = content.encode('utf-8')
+                self.sheet.write(row_count, self.coord_index[a_key], content)
             row_count += 1
         self.wbk.save(filename)
 
 
 if __name__ == '__main__':
-    ew = ExcelWriter("./raw/prf_twas.bin")
-    ew.write_excel("./out/prf_twas.xls")
+    ew = ExcelWriter("./raw/prf_pulitzer.bin")
+    ew.write_excel("./out/prf_pulitzer.xls")

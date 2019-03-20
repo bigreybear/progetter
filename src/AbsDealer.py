@@ -24,8 +24,8 @@ class AbsDealer:
     NOTICE2: Multiple "except" states will help when there's some black sheep format page within the professors.
     """
     def __init__(self):
-        self.header = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
-                                     "Chrome/64.0.3282.119 Safari/537.36"}
+        self.header = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, "
+                                     "like Gecko) Chrome/72.0.3626.121 Safari/537.36"}
         self.is_debug = False
         # time between two request, not to be banned.
         self.interval_time = 2
@@ -37,7 +37,8 @@ class AbsDealer:
         self.logger = logger
 
         # self.prj_loc = "F:\PyProject\ProfGetter\\"
-        self.prj_loc = "D:\GitRepo\progetter\\"
+        # self.prj_loc = "D:\GitRepo\progetter\\"
+        self.prj_loc = "/Users/leon/Documents/Dev/progetter"
         # periodically, pickle dump the PRF_LIST or URL_LIST to middle/TMP_SAVE_NAME to save the process,
         # and the finished file name.
         self.tmp_save_name = ""
@@ -58,6 +59,7 @@ class AbsDealer:
         self.xpath_dic = {}
         # record which url was not successfully visited.
         self.failed_url = []
+        self.success_url = []
         pass
 
     def _deprecated(func):
@@ -94,10 +96,11 @@ class AbsDealer:
                 _content = urllib2.urlopen(_req, timeout=self.timeout)
                 logger.debug("Start read.")
                 _ret = _content.read()
+                self.success_url.append(_url)
                 break
             except BaseException as e:
                 if not retry or (tries >= self.max_retry-1):
-                    logger.error("Got an error at {}.\n{}".format(_url, e.message))
+                    logger.error("Got an error at {}.\n{}".format(_url, e))
                     self.failed_url.append(_url)
                     return None
                 logger.error("Got an error and will retry at {} time(s)".format(tries))
